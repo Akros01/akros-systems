@@ -135,7 +135,7 @@
     .brief-band { background: var(--blue-deep); color: var(--sheet); border-top: 1px solid var(--blue-deep); border-bottom: 1px solid var(--blue-deep); }
     .brief-band .section { border-top: 0; }
     .brief-band .section-head p { color: #c6dbe3; }
-    .brief-band .folio { color: #88a9b7; }
+    .brief-band .folio { color: #a9c6d2; }
     .record-list { margin: 0; border-top: 1px solid rgba(247, 251, 252, .32); }
     .record { display: grid; grid-template-columns: minmax(125px, .32fr) 1fr; gap: 26px; padding: 18px 0; border-bottom: 1px solid rgba(247, 251, 252, .22); }
     .record dt { color: var(--orange); font: 600 13px/1.35 "Barlow", sans-serif; }
@@ -145,7 +145,8 @@
     .trade:nth-child(3n + 1) { background: rgba(247, 251, 252, .35); }
     .how-section { background: var(--ink); color: var(--sheet); border-top: 1px solid var(--ink); }
     .how-section .section { border-top: 0; }
-    .how-section .folio { color: #89a6b2; }
+    .how-section .folio { color: #a9c6d2; }
+    .how-section .section-head p { color: #c6dbe3; }
     .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 36px; }
     .step { padding-top: 17px; border-top: 3px solid var(--orange); }
     .step-number { display: block; margin-bottom: 19px; color: var(--orange); font: 600 12px/1 "Barlow", sans-serif; letter-spacing: .1em; }
@@ -217,6 +218,7 @@
       .plan-grid, .faq-layout, .legal-grid { grid-template-columns: 1fr; }
       .faq-layout { gap: 32px; }
       .trade-grid { grid-template-columns: repeat(2, 1fr); }
+      .trade:last-child { grid-column: 1 / -1; }
       .trade:nth-child(3n + 1) { background: transparent; }
       .trade:nth-child(odd) { background: rgba(247, 251, 252, .35); }
     }

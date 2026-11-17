@@ -11,6 +11,9 @@ Examples
   # A weekly brief for one customer: pools and new homes in three ZIPs, last 7 days
   python3 tools/permits/brief.py --metro dallas --cats pools,new-homes --zips 75214,75218,75230 --days 7 --name "Swim Solutions"
 
+  # Pools that passed final inspection in the last 7 days (Austin and Los Angeles feeds say when)
+  python3 tools/permits/brief.py --metro austin --cats pools --stage finished --days 7
+
 Job types (--cats) depend on the feed; run with --list to see what each metro has.
 Writes briefs/<name-or-metro>-<cats>-<start>-to-<end>.csv and a .txt summary to paste into an email.
 """
@@ -24,10 +27,16 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import METROS  # noqa: E402
-from sources import FETCHERS  # noqa: E402
+from sources import FETCHERS, FINISHED  # noqa: E402
 
 COLUMNS = ["issued_date", "permit_number", "job_type", "address", "zip", "city_or_area", "description",
-           "permit_type", "contractor", "declared_value", "source_link"]
+           "permit_type", "contractor", "declared_value", "source_link", "finished_date"]
+# Work on a pool that is already there: not a new pool owner, so left out of finished-pool lists.
+EXISTING_POOL = re.compile(r"existing (swimming )?pool|re-?plaster|resurfac|pool (remodel|renovation|repair)"
+                           r"|(remodel|renovat\w*|repair\w*) (of )?(the |an )?(existing )?(swimming )?pool", re.I)
+# "Cody Pools, Inc. **MAIN", "Denali Pools LLC***Main***" -> the company name alone.
+BRANCH_TAG = re.compile(r"\*+\s*main\b\s*\**|\*+", re.I)
+NO_NAME = {"", "Not Given", "None", "N/A", "Na", "Owner", "Homeowner", "Owner Builder"}
 JOB_TYPES = {
     "austin": "new-homes pools additions-remodels demolition accessory repairs hvac solar batteries "
               "electrical-service irrigation water-heaters",
@@ -52,6 +61,11 @@ def main():
     ap.add_argument("--days", type=int, default=7, help="days back from --until (default 7)")
     ap.add_argument("--since", help="first issue date, YYYY-MM-DD (overrides --days)")
     ap.add_argument("--until", help="last issue date, YYYY-MM-DD (default today)")
+    ap.add_argument("--stage", choices=["issued", "finished"], default="issued",
+                    help="issued: permits issued in the window (default). finished: work that passed its final "
+                         "inspection in the window (" + ", ".join(sorted(FINISHED)) + " only)")
+    ap.add_argument("--include-existing", action="store_true",
+                    help="with --stage finished and pools: keep work on pools that already existed")
     ap.add_argument("--name", default="", help="customer or prospect name, used in the file name")
     ap.add_argument("--out", default="briefs")
     ap.add_argument("--list", action="store_true", help="show the job types each metro supports")
@@ -70,18 +84,28 @@ def main():
         print(f"{a.metro} has no job type {', '.join(unknown)}. Choose from: {JOB_TYPES[a.metro]}")
         return 2
     zips = {z.strip() for z in a.zips.split(",") if z.strip()}
+    finished = a.stage == "finished"
+    if finished and a.metro not in FINISHED:
+        print(f"The {a.metro} feed does not say when work passed final inspection. "
+              f"--stage finished works for: {', '.join(sorted(FINISHED))}")
+        return 2
 
-    recs = FETCHERS[a.metro](since.isoformat(), detail=True)
-    seen, rows = set(), []
+    recs = (FETCHERS[a.metro](since.isoformat(), detail=True, finished=True) if finished
+            else FETCHERS[a.metro](since.isoformat(), detail=True))
+    seen, rows, existing = set(), [], 0
     for r in recs:
         if r["id"] in seen or not set(r["cats"]) & set(cats):
             continue
-        if not since.isoformat() <= r["issued"] <= until.isoformat():
+        d = r.get("detail", {})
+        when = d.get("finished_date", "") if finished else r["issued"]
+        if not when or not since.isoformat() <= when <= until.isoformat():
             continue
         if zips and (r["area"] or "") not in zips:
             continue
+        if finished and "pools" in r["cats"] and not a.include_existing and EXISTING_POOL.search(d.get("description", "")):
+            existing += 1
+            continue
         seen.add(r["id"])
-        d = r.get("detail", {})
         rows.append({
             "issued_date": r["issued"],
             "permit_number": d.get("permit_number") or r["id"],
@@ -94,11 +118,13 @@ def main():
             "contractor": d.get("contractor", ""),
             "declared_value": f"{r['value']:.0f}" if r["value"] else "",
             "source_link": d.get("source_link", ""),
+            "finished_date": d.get("finished_date", ""),
         })
-    rows.sort(key=lambda x: (x["issued_date"], x["zip"], x["address"]), reverse=True)
+    sort_key = "finished_date" if finished else "issued_date"
+    rows.sort(key=lambda x: (x[sort_key], x["zip"], x["address"]), reverse=True)
 
     os.makedirs(a.out, exist_ok=True)
-    stem = "-".join(x for x in (slug(a.name) or a.metro, slug("-".join(cats)),
+    stem = "-".join(x for x in (slug(a.name) or a.metro, slug("-".join(cats)), "finished" if finished else "",
                                 f"{since.isoformat()}-to-{until.isoformat()}") if x)
     csv_path = os.path.join(a.out, stem + ".csv")
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
@@ -109,18 +135,28 @@ def main():
     metro = METROS[a.metro]
     by_zip = collections.Counter((x["zip"], x["city_or_area"]) for x in rows)
     label = ", ".join(cats)
+    what = "passed final inspection" if finished else "issued"
     lines = [
+        f"{metro['name']}: {label} permits that {what} {since:%b} {since.day} to {until:%b} {until.day}, {until.year}"
+        if finished else
         f"{metro['name']}: {label} permits issued {since:%b} {since.day} to {until:%b} {until.day}, {until.year}",
-        f"{len(rows)} permit{'s' if len(rows) != 1 else ''}" + (f" in ZIP {', '.join(sorted(zips))}" if zips else ""),
+        f"{len(rows)} permit{'s' if len(rows) != 1 else ''}" + (f" in ZIP {', '.join(sorted(zips))}" if zips else "")
+        + (f" ({existing} more were work on a pool that already existed, left out)" if existing else ""),
         "",
         "By ZIP:" if a.metro != "chicago" else "By community area:",
     ]
     for (z, place), n in sorted(by_zip.items(), key=lambda kv: (-kv[1], kv[0][0])):
         lines.append(f"  {z or 'unknown'}{' ' + place if place else ''}: {n}")
+    builders = collections.Counter(b for b in (BRANCH_TAG.sub("", x["contractor"]).strip().title() for x in rows)
+                                   if b not in NO_NAME)
+    if rows and sum(builders.values()) >= len(rows) / 2:
+        lines += ["", "Builders on the most of these permits:"]
+        lines += [f"  {b}: {n}" for b, n in builders.most_common(5)]
     lines += ["", "Newest first:"]
     for x in rows[:15]:
-        who = f" ({x['contractor'].title()})" if x["contractor"] else ""
-        lines.append(f"  {x['issued_date']}  {x['address'].title()}, {x['zip']}  {x['description'][:70]}{who}")
+        who = f" ({BRANCH_TAG.sub('', x['contractor']).strip().title()})" if x["contractor"] else ""
+        day = x["finished_date"] if finished else x["issued_date"]
+        lines.append(f"  {day}  {x['address'].title()}, {x['zip']}  {x['description'][:70]}{who}")
     if len(rows) > 15:
         lines.append(f"  ...and {len(rows) - 15} more in the attached spreadsheet.")
     lines += ["", f"Source: {metro['source']} ({metro['source_url']}). Public records; may be incomplete or delayed."]

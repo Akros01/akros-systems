@@ -103,12 +103,15 @@ ADU = re.compile(r"accessory dwelling|\bj?adu\b|junior accessory", re.I)
 
 
 # ---------------------------------------------------------------- Austin
-def austin(since, detail=False):
+def austin(since, detail=False, finished=False):
+    """finished=True: permits whose final inspection passed on or after `since` (any issue date)."""
+    when = (f"statusdate >= '{since}T00:00:00' AND status_current = 'Final'" if finished
+            else f"issue_date >= '{since}T00:00:00'")
     rows = socrata(
         "data.austintexas.gov", "3syk-w9eu",
-        f"issue_date >= '{since}T00:00:00' AND permit_class_mapped = 'Residential'",
+        f"{when} AND permit_class_mapped = 'Residential'",
         "permit_number,permittype,work_class,permit_class,description,issue_date,original_zip,original_city,total_job_valuation"
-        + (",permit_type_desc,original_address1,contractor_company_name,link" if detail else ""))
+        + (",permit_type_desc,original_address1,contractor_company_name,link,status_current,statusdate" if detail else ""))
     out = []
     for r in rows:
         pt, wc = r.get("permittype", ""), r.get("work_class", "")
@@ -145,7 +148,9 @@ def austin(since, detail=False):
                           dict(address=r.get("original_address1"), description=d,
                                permit_type=" / ".join(x for x in (r.get("permit_type_desc") or pt, pc, wc) if x),
                                contractor=r.get("contractor_company_name"),
-                               source_link=link_url(r.get("link"))) if detail else None))
+                               source_link=link_url(r.get("link")),
+                               finished_date=(r.get("statusdate") or "")[:10]
+                               if r.get("status_current") == "Final" else "") if detail else None))
     return out
 
 
@@ -238,12 +243,15 @@ LA_REMODEL = re.compile(r"REMODEL|KITCHEN|BATH|ALTERATION|INTERIOR|RENOVAT|ADDIT
 LA_WILDFIRE = re.compile(r"WILDFIRE|FIRE REBUILD|REBUILD[^.]{0,40}FIRE", re.I)
 
 
-def los_angeles(since, detail=False):
+def los_angeles(since, detail=False, finished=False):
+    """finished=True: permits finaled on or after `since` (any issue date)."""
+    when = (f"status_date >= '{since}T00:00:00' AND status_desc = 'Permit Finaled'" if finished
+            else f"issue_date >= '{since}T00:00:00'")
     rows = socrata(
         "data.lacity.org", "pi9x-tg5x",
-        f"issue_date >= '{since}T00:00:00' AND permit_sub_type = '1 or 2 Family Dwelling'",
+        f"{when} AND permit_sub_type = '1 or 2 Family Dwelling'",
         "permit_nbr,zip_code,cpa,permit_type,use_desc,work_desc,issue_date,valuation,status_desc"
-        + (",primary_address,:id" if detail else ""))
+        + (",primary_address,status_date,:id" if detail else ""))
     out = []
     for r in rows:
         wd, pt, use = r.get("work_desc", "") or "", r.get("permit_type", ""), r.get("use_desc", "")
@@ -277,7 +285,9 @@ def los_angeles(since, detail=False):
                           r.get("cpa") or None, cats, money(r.get("valuation")),
                           dict(address=r.get("primary_address"), description=wd,
                                permit_type=" / ".join(x for x in (pt, use) if x), contractor="",
-                               source_link=f"https://data.lacity.org/resource/pi9x-tg5x/{r[':id']}" if r.get(":id") else "")
+                               source_link=f"https://data.lacity.org/resource/pi9x-tg5x/{r[':id']}" if r.get(":id") else "",
+                               finished_date=(r.get("status_date") or "")[:10]
+                               if r.get("status_desc") == "Permit Finaled" else "")
                           if detail else None))
     return out
 
@@ -410,6 +420,9 @@ def sacramento(since, detail=False):
                                source_link="") if detail else None))
     return out
 
+
+# Feeds that say when work passed its final inspection (brief.py --stage finished).
+FINISHED = {"austin", "los-angeles"}
 
 FETCHERS = {
     "austin": austin,

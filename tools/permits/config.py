@@ -9,6 +9,10 @@ CONTACT_EMAIL = "abdul321@gmail.com"
 ALMANAC_HOME = "https://akros01.github.io/permit-sample/"
 ALMANAC_SAMPLE = "https://akros01.github.io/permit-sample/sample.html"
 
+# Tipoff Territory: exclusive per trade and ZIP group, with postcards mailed for the customer.
+TERRITORY_PRICE = "$1,000"
+TERRITORY_CARDS = 300  # postcards a month included
+
 METROS = {
     "austin": {
         "name": "Austin, TX", "short": "Austin", "area": "ZIP",

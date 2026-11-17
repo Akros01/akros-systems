@@ -414,7 +414,8 @@
    ]
   ],
   "median_value": null,
-  "valued": 0
+  "valued": 0,
+  "builders": []
  },
  "cats": {
   "fences-patios": {
@@ -598,7 +599,8 @@
     ]
    ],
    "median_value": 5489.0,
-   "valued": 67
+   "valued": 67,
+   "builders": []
   },
   "demolition": {
    "cur": 57,
@@ -756,7 +758,8 @@
     ]
    ],
    "median_value": 24550.0,
-   "valued": 57
+   "valued": 57,
+   "builders": []
   },
   "porches-decks": {
    "cur": 74,
@@ -949,7 +952,8 @@
     ]
    ],
    "median_value": 11000.0,
-   "valued": 74
+   "valued": 74,
+   "builders": []
   },
   "roofing": {
    "cur": 144,
@@ -1267,7 +1271,8 @@
     ]
    ],
    "median_value": 22123.5,
-   "valued": 144
+   "valued": 144,
+   "builders": []
   },
   "additions-remodels": {
    "cur": 160,
@@ -1575,7 +1580,8 @@
     ]
    ],
    "median_value": 100000.0,
-   "valued": 159
+   "valued": 159,
+   "builders": []
   },
   "garages": {
    "cur": 60,
@@ -1778,7 +1784,8 @@
     ]
    ],
    "median_value": 28075.0,
-   "valued": 60
+   "valued": 60,
+   "builders": []
   },
   "solar": {
    "cur": 97,
@@ -1956,7 +1963,8 @@
     ]
    ],
    "median_value": 18680.0,
-   "valued": 97
+   "valued": 97,
+   "builders": []
   },
   "windows-doors": {
    "cur": 23,
@@ -2059,7 +2067,8 @@
     ]
    ],
    "median_value": 11900.0,
-   "valued": 23
+   "valued": 23,
+   "builders": []
   },
   "new-homes": {
    "cur": 34,
@@ -2177,7 +2186,8 @@
     ]
    ],
    "median_value": 420000.0,
-   "valued": 34
+   "valued": 34,
+   "builders": []
   }
  }
 }

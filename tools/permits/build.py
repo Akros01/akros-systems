@@ -65,7 +65,8 @@ def aggregate(metro, recs, today):
 
     def blank():
         return {"cur": 0, "prev": 0, "weekly": [0] * WEEKS_SHOWN, "areas": collections.Counter(),
-                "places": collections.defaultdict(collections.Counter), "values": []}
+                "places": collections.defaultdict(collections.Counter), "values": [],
+                "builders": collections.Counter()}
 
     cats = collections.defaultdict(blank)
     total = blank()
@@ -83,6 +84,8 @@ def aggregate(metro, recs, today):
                     t["areas"][r["area"]] += 1
                     if r["place"]:
                         t["places"][r["area"]][r["place"]] += 1
+                if r.get("builder"):
+                    t["builders"][r["builder"]] += 1
             if r["value"]:
                 for c in r["cats"]:
                     cats[c]["values"].append(r["value"])
@@ -95,8 +98,12 @@ def aggregate(metro, recs, today):
                  for a, n in b["areas"].most_common()]
         vals = sorted(b["values"])
         median = statistics.median(vals) if len(vals) >= 8 and len(vals) >= 0.5 * max(b["cur"], 1) else None
+        # A builder is published only if the name reads as a business (2+ permits) or is on 3+ permits,
+        # so an owner-builder's own name never appears.
+        builders = [[name, n] for name, n in b["builders"].most_common()
+                    if n >= 3 or (n >= 2 and sources.BUSINESS.search(name))][:10]
         return {"cur": b["cur"], "prev": b["prev"], "weekly": b["weekly"], "areas": areas,
-                "median_value": median, "valued": len(vals)}
+                "median_value": median, "valued": len(vals), "builders": builders}
 
     return {
         "metro": metro,
@@ -108,6 +115,27 @@ def aggregate(metro, recs, today):
         "total": finish(total),
         "cats": {c: finish(b) for c, b in cats.items()},
     }
+
+
+def finished_counts(fetch, agg):
+    """Permits whose final inspection passed inside the page window, by job type. Counts only:
+    the detail records are read for the inspection date and then dropped."""
+    try:
+        recs = fetch(agg["start"], detail=True, finished=True)
+    except Exception as err:  # the main numbers still publish
+        print(f"finished-work fetch failed ({err!r})", file=sys.stderr)
+        return {}
+    out, seen = collections.Counter(), set()
+    for r in recs:
+        done = r["detail"].get("finished_date", "")
+        if r["id"] in seen or not agg["start"] <= done <= agg["end"]:
+            continue
+        seen.add(r["id"])
+        for c in r["cats"]:
+            if c == "pools" and sources.EXISTING_POOL.search(r["detail"].get("description", "")):
+                continue
+            out[c] += 1
+    return dict(out)
 
 
 def load_dates(agg):
@@ -224,10 +252,21 @@ def cat_page(metro, cat, agg, all_aggs):
         stat_items.append(("vs. prior 4 weeks", R.change_text(b["cur"], b["prev"], ok)))
     if b.get("median_value"):
         stat_items.append(("Median declared value", R.usd(b["median_value"])))
+    done = agg.get("finished", {}).get(cat, 0)
+    if done:
+        stat_items.append(("Passed final inspection", R.num(done)))
     extra = ""
+    if done:
+        if cat == "pools":
+            what = (f"{R.num(done)} new pools in {E(m['short'])} passed the city's final inspection, so their "
+                    "owners are now choosing who looks after them")
+        else:
+            what = f"{R.num(done)} {E(c['short'])} in {E(m['short'])} passed the city's final inspection"
+        extra = (f'<p class="note">In the same four weeks, {what}. <a href="{TIPOFF_HOME}#plans">Tipoff</a> '
+                 'sends their addresses every week.</p>')
     if cat == "wildfire-rebuilds":
         nh = agg["cats"].get("new-homes", {}).get("cur", 0)
-        extra = (f'<p class="note">This page counts new single-family and duplex permits whose filed scope of work '
+        extra += (f'<p class="note">This page counts new single-family and duplex permits whose filed scope of work '
                  f'describes a 2025 wildfire rebuild. They are {round(100 * b["cur"] / nh) if nh else 0}% of the '
                  f'{R.num(nh)} <a href="{R.path(metro, "new-homes")}">new-home permits</a> in {E(m["short"])} over the same four weeks.</p>')
     trades = "".join(f"<li>{E(x)}</li>" for x in c["trades"])
@@ -248,6 +287,7 @@ def cat_page(metro, cat, agg, all_aggs):
 </section>
 <section class="block"><h2>Week by week</h2>{R.weekly_chart(agg['weeks'], b['weekly'], f"{c['title']} per week in {m['short']}")}{value_note}</section>
 <section class="block"><h2>By {E(R.area_word(metro, 1))}</h2>{R.area_table(metro, b['areas'], b['cur'], f"{c['title']} by {R.area_word(metro, 1)}, last four weeks")}</section>
+{R.builders_block(metro, cat, b.get('builders', []), b['cur'], end)}
 <section class="block trades"><h2>Who works from {E(c['short'])}</h2><p>{E(c['why'])} Trades that start after this permit:</p><ul class="chips">{trades}</ul></section>
 {R.cta_block(metro, cat, f"{metro}-{cat}")}
 {R.about_data(metro, agg)}
@@ -321,7 +361,7 @@ def about_page(all_aggs, today):
 <p>Some feeds arrive late. For each metro we use the latest date whose trailing week holds at least 60% of a normal week's records, and count the four weeks to that date. The previous four weeks are shown for comparison.</p>
 <p>A permit is counted once, on its issue date. Supplemental and revision permits are left out where the feed marks them.</p>
 <h2>What we don't publish</h2>
-<p>These pages show counts by job type and ZIP code (or community area in Chicago). They never show owner names, phone numbers or street addresses, even where the public record includes them.</p>
+<p>These pages show counts by job type and ZIP code (or community area in Chicago), and the companies named on the most permits. A company is listed only when its name reads as a business or appears on three or more permits, so homeowners who pull their own permits never appear. The pages never show owner names, phone numbers or street addresses, even where the public record includes them.</p>
 <h2>Corrections</h2>
 <p>Spot a number that looks wrong? Email <a href="mailto:{R.CONTACT_EMAIL}">{R.CONTACT_EMAIL}</a>.</p></section>"""
     return R.page(title="How the permit pages are built: sources and method | Akros Systems",
@@ -351,6 +391,8 @@ def main(offline=False):
                 if len(recs) < 50:
                     raise ValueError(f"only {len(recs)} records")
                 agg = aggregate(metro, recs, today)
+                if metro in sources.FINISHED:
+                    agg["finished"] = finished_counts(fetch, agg)
                 with open(saved, "w", encoding="utf-8") as f:
                     json.dump(agg, f, indent=1)
                 print(f"{metro}: {agg['total']['cur']} permits, data through {agg['end']}")

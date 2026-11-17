@@ -279,7 +279,49 @@
    ]
   ],
   "median_value": null,
-  "valued": 0
+  "valued": 0,
+  "builders": [
+   [
+    "Base Power",
+    309
+   ],
+   [
+    "Radiant Plumbing And Air Conditioning",
+    50
+   ],
+   [
+    "Radiant Plumbing & Ac",
+    50
+   ],
+   [
+    "Strand Brothers Service Experts",
+    42
+   ],
+   [
+    "McCullough Heating & Air",
+    34
+   ],
+   [
+    "Service Wizard LLC",
+    31
+   ],
+   [
+    "Stan's Heating, Air, Plumbing, & Electrical",
+    27
+   ],
+   [
+    "We Level It {Formally Centex House Leveling}",
+    19
+   ],
+   [
+    "Douglas Foundation Repair",
+    18
+   ],
+   [
+    "Renewal By Andersen",
+    18
+   ]
+  ]
  },
  "cats": {
   "batteries": {
@@ -488,7 +530,13 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Base Power",
+     309
+    ]
+   ]
   },
   "new-homes": {
    "cur": 171,
@@ -631,7 +679,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 3
+   "valued": 3,
+   "builders": [
+    [
+     "Mill Creek Residential Sfr",
+     17
+    ],
+    [
+     "Trophy Signature Homes",
+     9
+    ],
+    [
+     "Greater General Construction LLC",
+     8
+    ],
+    [
+     "Taylor Morrison Of Texas, Inc",
+     8
+    ],
+    [
+     "Perry Homes LLC",
+     6
+    ],
+    [
+     "Kb Home",
+     6
+    ],
+    [
+     "Milestone Community Builders, LLC",
+     6
+    ],
+    [
+     "Prominence Homes, LLC",
+     5
+    ],
+    [
+     "Paradisa Homes, LLC",
+     5
+    ],
+    [
+     "Joseph Companies",
+     4
+    ]
+   ]
   },
   "electrical-service": {
    "cur": 139,
@@ -829,7 +919,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Radiant Plumbing And Air Conditioning",
+     8
+    ],
+    [
+     "Fox Service Company",
+     5
+    ],
+    [
+     "Eskew Electric",
+     5
+    ],
+    [
+     "Power Home Remodeling",
+     4
+    ],
+    [
+     "D And C Electric, Inc",
+     4
+    ],
+    [
+     "Ies Residential, Inc",
+     3
+    ],
+    [
+     "Service Company Of San Antonio LLC Dba Mr Electric Of Austin",
+     3
+    ],
+    [
+     "Charge Pro LLC",
+     3
+    ],
+    [
+     "Numo Electrical Services",
+     3
+    ],
+    [
+     "LP General Services Contractor",
+     3
+    ]
+   ]
   },
   "water-heaters": {
    "cur": 207,
@@ -1017,7 +1149,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Radiant Plumbing & Ac",
+     50
+    ],
+    [
+     "Reliant Plumbing",
+     17
+    ],
+    [
+     "Sweetwater Home Services",
+     16
+    ],
+    [
+     "New Abacus, LLC",
+     15
+    ],
+    [
+     "American Residential Services (Ars) - Rescue Rooter",
+     12
+    ],
+    [
+     "Proven Plumbing LLC",
+     11
+    ],
+    [
+     "Stan's Heating, Air, & Plumbing",
+     10
+    ],
+    [
+     "Salt Light & Electric",
+     6
+    ],
+    [
+     "Christianson Plumbing",
+     6
+    ],
+    [
+     "Beyond Wow Plumbing",
+     5
+    ]
+   ]
   },
   "irrigation": {
    "cur": 198,
@@ -1185,7 +1359,8 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": []
   },
   "repairs": {
    "cur": 214,
@@ -1383,7 +1558,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 8
+   "valued": 8,
+   "builders": [
+    [
+     "We Level It {Formally Centex House Leveling}",
+     19
+    ],
+    [
+     "Douglas Foundation Repair",
+     18
+    ],
+    [
+     "Renewal By Andersen",
+     17
+    ],
+    [
+     "Gl Hunt Foundation Repair",
+     16
+    ],
+    [
+     "Foundation Support Specialists",
+     16
+    ],
+    [
+     "Home Depot USA Inc",
+     16
+    ],
+    [
+     "Pwd-Austin, LLC (D/B/A Or Registered Trade Name) Pella Windows & Doors Of Austin",
+     12
+    ],
+    [
+     "Olshan Foundation Repair",
+     7
+    ],
+    [
+     "Levelsmart Foundation",
+     5
+    ],
+    [
+     "Hercules Foundation Repair",
+     3
+    ]
+   ]
   },
   "hvac": {
    "cur": 353,
@@ -1596,7 +1813,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Strand Brothers Service Experts",
+     42
+    ],
+    [
+     "Radiant Plumbing And Air Conditioning",
+     42
+    ],
+    [
+     "McCullough Heating & Air",
+     34
+    ],
+    [
+     "Service Wizard LLC",
+     31
+    ],
+    [
+     "Stan's Heating, Air, Plumbing, & Electrical",
+     27
+    ],
+    [
+     "Abc Home And Commercial Services",
+     15
+    ],
+    [
+     "Honest Plumbing & Air",
+     13
+    ],
+    [
+     "American Residential Services (Ars)",
+     10
+    ],
+    [
+     "Alamo Austin Air Conditioning & Heating Inc",
+     9
+    ],
+    [
+     "Austin Air Conditioning",
+     7
+    ]
+   ]
   },
   "additions-remodels": {
    "cur": 108,
@@ -1764,7 +2023,33 @@
     ]
    ],
    "median_value": null,
-   "valued": 4
+   "valued": 4,
+   "builders": [
+    [
+     "Nuhorizon Remodeling",
+     3
+    ],
+    [
+     "Lfm Development Inc",
+     3
+    ],
+    [
+     "Fast Forward Construction And Remodeling LLC",
+     2
+    ],
+    [
+     "Cohen Homes LLC",
+     2
+    ],
+    [
+     "ATX Construction Handyman And Remodeling",
+     2
+    ],
+    [
+     "Arsenal Property Strategies LLC",
+     2
+    ]
+   ]
   },
   "solar": {
    "cur": 37,
@@ -1892,7 +2177,41 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Power Home Remodeling",
+     7
+    ],
+    [
+     "Freedom Solar Power",
+     5
+    ],
+    [
+     "512 Solar, LLC",
+     3
+    ],
+    [
+     "Ion Developer LLC",
+     2
+    ],
+    [
+     "Texas Solar Guys, LLC",
+     2
+    ],
+    [
+     "Aether Energy",
+     2
+    ],
+    [
+     "Horus Partners",
+     2
+    ],
+    [
+     "Atma Energy, Inc",
+     2
+    ]
+   ]
   },
   "pools": {
    "cur": 65,
@@ -2010,7 +2329,45 @@
     ]
    ],
    "median_value": null,
-   "valued": 1
+   "valued": 1,
+   "builders": [
+    [
+     "Cody Pools, Inc",
+     7
+    ],
+    [
+     "Paradisa Homes, LLC",
+     5
+    ],
+    [
+     "Denali Pools LLC",
+     3
+    ],
+    [
+     "Zach Savage Homes, LLC",
+     3
+    ],
+    [
+     "Avery Building Company",
+     3
+    ],
+    [
+     "Golden Hour Pools",
+     2
+    ],
+    [
+     "Austin Pool Builders",
+     2
+    ],
+    [
+     "Hayat Homes",
+     2
+    ],
+    [
+     "Milestone Community Builders, LLC",
+     2
+    ]
+   ]
   },
   "demolition": {
    "cur": 60,
@@ -2108,7 +2465,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Paradisa Homes, LLC",
+     8
+    ],
+    [
+     "Dar Construction",
+     6
+    ],
+    [
+     "Canedo Builders",
+     5
+    ],
+    [
+     "Joseph Design Build",
+     4
+    ],
+    [
+     "Arsenal Property Strategies LLC",
+     4
+    ],
+    [
+     "Select Deconstruction And Demolition",
+     3
+    ],
+    [
+     "Rivendale Homes Texas LLC/ Pavillian Communities Texas, LLC",
+     3
+    ],
+    [
+     "Venditti, LLC",
+     3
+    ],
+    [
+     "Cody Pools, Inc",
+     2
+    ],
+    [
+     "A.R. Lucas Construction LLC",
+     2
+    ]
+   ]
   },
   "accessory": {
    "cur": 15,
@@ -2176,7 +2575,27 @@
     ]
    ],
    "median_value": null,
-   "valued": 0
+   "valued": 0,
+   "builders": [
+    [
+     "Hoch Construction LLC",
+     2
+    ]
+   ]
   }
+ },
+ "finished": {
+  "repairs": 169,
+  "pools": 48,
+  "electrical-service": 138,
+  "hvac": 325,
+  "demolition": 45,
+  "water-heaters": 116,
+  "additions-remodels": 84,
+  "irrigation": 146,
+  "solar": 35,
+  "new-homes": 155,
+  "batteries": 101,
+  "accessory": 10
  }
 }

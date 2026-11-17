@@ -5,6 +5,11 @@ By default every record that leaves this module carries only: permit id,
 issue date, ZIP (or Chicago community area), a place label, job types and
 declared value. That is all the public pages ever see.
 
+Records also carry the builder: the company named on the permit, where the
+feed has one. The pages publish a builder only when the name reads as a
+business or appears on several permits, so an owner-builder's own name never
+shows.
+
 With detail=True (used only by brief.py, for private customer lists and
 samples that are never committed or published) each record also carries the
 property address, the filed description, the permit type, the contractor named
@@ -80,13 +85,44 @@ def place_name(value):
     return re.sub(r"\bMc([a-z])", lambda m: "Mc" + m.group(1).upper(), text) or None
 
 
-def record(pid, issued, area, place, cats, value=None, detail=None):
+BUSINESS = re.compile(
+    r"\b(LLC|L\.L\.C|INC|CORP|CORPORATION|CO|COMPANY|LTD|LP|PLLC|POOLS?|SPAS?|HOMES?|HOMEBUILDERS?|BUILDERS?|"
+    r"BUILDING|CONSTRUCTION|CONTRACTING|CONTRACTORS?|REMODEL\w*|RENOVATIONS?|SOLAR|ENERGY|ELECTRIC\w*|PLUMBING|"
+    r"MECHANICAL|AIR|HVAC|HEATING|COOLING|ROOFING|EXTERIORS?|OUTDOOR\w*|LANDSCAP\w*|DESIGNS?|GROUP|SERVICES?|"
+    r"ENTERPRISES?|DEVELOPMENT|PROPERTIES|PARTNERS|SYSTEMS|FENCE|FENCING|DECKS?|COMMUNITIES|RESIDENTIAL|"
+    r"INDUSTRIES|SOLUTIONS|OASIS|CUSTOM)\b", re.I)
+NOT_A_NAME = {"NOT GIVEN", "NONE", "N/A", "NA", "OWNER", "HOMEOWNER", "OWNER BUILDER", "SELF", "UNKNOWN", "TBD"}
+UPPER_WORDS = {"Llc": "LLC", "Lp": "LP", "Pllc": "PLLC", "Dfw": "DFW", "Atx": "ATX", "Ii": "II", "Iii": "III",
+               "Usa": "USA", "Hvac": "HVAC", "Tx": "TX", "Ca": "CA"}
+# Work on a pool that is already there: not a new pool, so kept out of finished-pool counts and lists.
+EXISTING_POOL = re.compile(r"existing (swimming )?pool|re-?plaster|resurfac|pool (remodel|renovation|repair)"
+                           r"|(remodel|renovat\w*|repair\w*) (of )?(the |an )?(existing )?(swimming )?pool", re.I)
+
+
+def builder_name(value):
+    """The company named on a permit, tidied: 'CODY POOLS, INC. **MAIN' -> 'Cody Pools, Inc.'."""
+    text = re.sub(r"\*+\s*main\b\s*\**|\*+|\(\s*main\s*\)", "", str(value or ""), flags=re.I)
+    text = re.sub(r"\s*#.*$", "", text)  # Collin CAD appends job codes: 'TROPHY #WIMBLEDON-4095-Q'
+    text = re.sub(r"\s+", " ", text).strip(" ,.-/")
+    if not text or text.upper() in NOT_A_NAME:
+        return None
+    name = re.sub(r"\bMc([a-z])", lambda m: "Mc" + m.group(1).upper(), text.title())
+    name = re.sub(r"[A-Za-z]+", lambda m: UPPER_WORDS.get(m.group(0), m.group(0)), name)
+    return re.sub(r"'S\b", "'s", name)
+
+
+def record(pid, issued, area, place, cats, value=None, detail=None, *, builder=None):
     rec = {"id": str(pid), "issued": issued.isoformat(), "area": area, "place": place_name(place),
-           "cats": cats, "value": value}
+           "cats": cats, "value": value, "builder": builder_name(builder)}
     if detail is not None:
         rec["detail"] = {k: re.sub(r"\s+", " ", str(v)).strip() if v not in (None, "") else ""
                          for k, v in detail.items()}
     return rec
+
+
+def record_link(domain, dataset, field, value):
+    """A link to one permit in the city's feed, keyed on its permit number (stable across re-publishes)."""
+    return f"https://{domain}/resource/{dataset}.json?" + urllib.parse.urlencode({field: str(value)})
 
 
 def link_url(value):
@@ -110,8 +146,9 @@ def austin(since, detail=False, finished=False):
     rows = socrata(
         "data.austintexas.gov", "3syk-w9eu",
         f"{when} AND permit_class_mapped = 'Residential'",
-        "permit_number,permittype,work_class,permit_class,description,issue_date,original_zip,original_city,total_job_valuation"
-        + (",permit_type_desc,original_address1,contractor_company_name,link,status_current,statusdate" if detail else ""))
+        "permit_number,permittype,work_class,permit_class,description,issue_date,original_zip,original_city,total_job_valuation,"
+        "contractor_company_name"
+        + (",permit_type_desc,original_address1,link,status_current,statusdate" if detail else ""))
     out = []
     for r in rows:
         pt, wc = r.get("permittype", ""), r.get("work_class", "")
@@ -150,7 +187,8 @@ def austin(since, detail=False, finished=False):
                                contractor=r.get("contractor_company_name"),
                                source_link=link_url(r.get("link")),
                                finished_date=(r.get("statusdate") or "")[:10]
-                               if r.get("status_current") == "Final" else "") if detail else None))
+                               if r.get("status_current") == "Final" else "") if detail else None,
+                          builder=r.get("contractor_company_name")))
     return out
 
 
@@ -172,8 +210,8 @@ def collin(since, detail=False):
     rows = socrata(
         "data.texas.gov", "82ee-gbj5",
         f"permitissueddate >= '{since}T00:00:00' AND proprescom = 'Residential'",
-        "permitid,permittypedescr,permitissueddate,permitcomments,situscity,situszip,permitvalue"
-        + (",situsconcatshort,permitbuildername,:id" if detail else ""))
+        "permitid,permittypedescr,permitissueddate,permitcomments,situscity,situszip,permitvalue,permitbuildername"
+        + (",situsconcatshort" if detail else ""))
     out = []
     for r in rows:
         t, c = r.get("permittypedescr", ""), (r.get("permitcomments") or "").upper()
@@ -189,8 +227,8 @@ def collin(since, detail=False):
                           (r.get("situscity") or "").title() or None, [cat], money(r.get("permitvalue")),
                           dict(address=r.get("situsconcatshort"), description=r.get("permitcomments"),
                                permit_type=t, contractor=r.get("permitbuildername"),
-                               source_link=f"https://data.texas.gov/resource/82ee-gbj5/{r[':id']}" if r.get(":id") else "")
-                          if detail else None))
+                               source_link=record_link("data.texas.gov", "82ee-gbj5", "permitid", r["permitid"]))
+                          if detail else None, builder=r.get("permitbuildername")))
     return out
 
 
@@ -213,8 +251,8 @@ def dallas(since, detail=False):
     months = months_back(today, 4)
     likes = " OR ".join(f"issued_date like '{m:02d}/%/{y % 100:02d}'" for m, y in months)
     rows = socrata("www.dallasopendata.com", "e7gq-4sah", f"({likes})",
-                   "permit_number,permit_type,issued_date,zip_code,value"
-                   + (",street_address,contractor,work_description,:id" if detail else ""))
+                   "permit_number,permit_type,issued_date,zip_code,value,contractor"
+                   + (",street_address,work_description" if detail else ""))
     out = []
     for r in rows:
         cat = DALLAS_TYPES.get(r.get("permit_type", ""))
@@ -230,8 +268,8 @@ def dallas(since, detail=False):
         out.append(record(r["permit_number"], issued, zip5(r.get("zip_code")), None, [cat], money(r.get("value")),
                           dict(address=street, description=r.get("work_description"),
                                permit_type=r.get("permit_type"), contractor=r.get("contractor"),
-                               source_link=f"https://www.dallasopendata.com/resource/e7gq-4sah/{r[':id']}" if r.get(":id") else "")
-                          if detail else None))
+                               source_link=record_link("www.dallasopendata.com", "e7gq-4sah", "permit_number", r["permit_number"]))
+                          if detail else None, builder=r.get("contractor")))
     return out
 
 
@@ -251,7 +289,7 @@ def los_angeles(since, detail=False, finished=False):
         "data.lacity.org", "pi9x-tg5x",
         f"{when} AND permit_sub_type = '1 or 2 Family Dwelling'",
         "permit_nbr,zip_code,cpa,permit_type,use_desc,work_desc,issue_date,valuation,status_desc"
-        + (",primary_address,status_date,:id" if detail else ""))
+        + (",primary_address,status_date" if detail else ""))
     out = []
     for r in rows:
         wd, pt, use = r.get("work_desc", "") or "", r.get("permit_type", ""), r.get("use_desc", "")
@@ -285,7 +323,7 @@ def los_angeles(since, detail=False, finished=False):
                           r.get("cpa") or None, cats, money(r.get("valuation")),
                           dict(address=r.get("primary_address"), description=wd,
                                permit_type=" / ".join(x for x in (pt, use) if x), contractor="",
-                               source_link=f"https://data.lacity.org/resource/pi9x-tg5x/{r[':id']}" if r.get(":id") else "",
+                               source_link=record_link("data.lacity.org", "pi9x-tg5x", "permit_nbr", r["permit_nbr"]),
                                finished_date=(r.get("status_date") or "")[:10]
                                if r.get("status_desc") == "Permit Finaled" else "")
                           if detail else None))
@@ -367,8 +405,9 @@ def sacramento(since, detail=False):
     today = dt.date.today()
     likes = " OR ".join(f"Status_Date LIKE '{m:02d}/%/{y}'" for m, y in months_back(today, 4))
     fields = "OBJECTID,Application,Type,Sub_Type,Category,Status_Date,Current_Status,ZIP,Comm_Plan_Area,Activity_Code,Work_Desc,Valuation"
+    fields += ",Contractor"
     if detail:
-        fields += ",Address,Contractor"
+        fields += ",Address"
     rows, offset = [], 0
     while True:
         params = {"where": f"Type = 'Residential' AND ({likes})", "outFields": fields, "f": "json",
@@ -417,7 +456,7 @@ def sacramento(since, detail=False):
                           money(r.get("Valuation")),
                           dict(address=r.get("Address"), description=wd,
                                permit_type=" / ".join(x for x in (st, cat_) if x), contractor=r.get("Contractor"),
-                               source_link="") if detail else None))
+                               source_link="") if detail else None, builder=r.get("Contractor")))
     return out
 
 

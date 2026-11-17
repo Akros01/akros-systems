@@ -1,7 +1,7 @@
 {
  "metro": "collin-county",
  "built": "2026-11-17",
- "latest": "2026-11-10",
+ "latest": "2026-11-13",
  "end": "2026-11-09",
  "start": "2026-10-13",
  "weeks": [
@@ -184,96 +184,109 @@
    ]
   ],
   "median_value": null,
-  "valued": 0
+  "valued": 0,
+  "builders": [
+   [
+    "Dr Horton",
+    54
+   ],
+   [
+    "Trophy",
+    32
+   ],
+   [
+    "Grenadier",
+    25
+   ],
+   [
+    "Perry",
+    15
+   ],
+   [
+    "Starlight",
+    14
+   ],
+   [
+    "Lennar",
+    14
+   ],
+   [
+    "Stratum Foundation Repair",
+    12
+   ],
+   [
+    "Gl Hunt",
+    11
+   ],
+   [
+    "Elite Foundation Repairs",
+    11
+   ],
+   [
+    "Olshan Foundation",
+    10
+   ]
+  ]
  },
  "cats": {
-  "pools": {
-   "cur": 50,
-   "prev": 53,
+  "accessory": {
+   "cur": 16,
+   "prev": 22,
    "weekly": [
-    24,
-    15,
-    14,
-    0,
-    18,
+    7,
+    7,
+    5,
     3,
-    6,
-    23
+    7,
+    2,
+    2,
+    5
    ],
    "areas": [
     [
-     "75009",
-     "Celina",
-     14
-    ],
-    [
-     "75078",
-     "Prosper",
-     11
+     "75098",
+     "Wylie",
+     4
     ],
     [
      "75002",
      "Lucas",
-     5
-    ],
-    [
-     "75166",
-     "Lavon",
-     4
-    ],
-    [
-     "75071",
-     "McKinney",
      3
     ],
     [
-     "75035",
-     "Frisco",
+     "75173",
+     "Josephine",
      3
-    ],
-    [
-     "75409",
-     "Anna",
-     2
-    ],
-    [
-     "75454",
-     "Melissa",
-     2
     ],
     [
      "75407",
      "Princeton",
+     2
+    ],
+    [
+     "75071",
+     "McKinney",
      1
     ],
     [
-     "75098",
-     "Wylie",
+     "75078",
+     "Prosper",
      1
     ],
     [
-     "75252",
-     "Dallas",
-     1
-    ],
-    [
-     "75189",
-     "Royse City",
-     1
-    ],
-    [
-     "75034",
+     "75035",
      "Frisco",
      1
     ],
     [
-     "75442",
-     "Farmersville",
+     "75164",
+     "Josephine",
      1
     ]
    ],
    "median_value": null,
-   "valued": 5
+   "valued": 4,
+   "builders": []
   },
   "new-homes": {
    "cur": 309,
@@ -391,7 +404,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 71
+   "valued": 71,
+   "builders": [
+    [
+     "Dr Horton",
+     54
+    ],
+    [
+     "Trophy",
+     32
+    ],
+    [
+     "Grenadier",
+     25
+    ],
+    [
+     "Perry",
+     15
+    ],
+    [
+     "Starlight",
+     14
+    ],
+    [
+     "Lennar",
+     14
+    ],
+    [
+     "Trophy Signature",
+     10
+    ],
+    [
+     "Landon",
+     9
+    ],
+    [
+     "Meritage",
+     8
+    ],
+    [
+     "Pulte",
+     8
+    ]
+   ]
   },
   "foundation": {
    "cur": 133,
@@ -479,7 +534,128 @@
     ]
    ],
    "median_value": null,
-   "valued": 51
+   "valued": 51,
+   "builders": [
+    [
+     "Stratum Foundation Repair",
+     12
+    ],
+    [
+     "Gl Hunt",
+     11
+    ],
+    [
+     "Elite Foundation Repairs",
+     11
+    ],
+    [
+     "Olshan Foundation",
+     10
+    ],
+    [
+     "Pinnacle Foundation Repair",
+     9
+    ],
+    [
+     "Williamson Foundation Repair",
+     6
+    ],
+    [
+     "Olshan Foundation Repair",
+     5
+    ],
+    [
+     "Align Foundation Repair",
+     5
+    ],
+    [
+     "Ram Jack",
+     5
+    ],
+    [
+     "Texas Foundation Experts",
+     3
+    ]
+   ]
+  },
+  "fences-patios": {
+   "cur": 63,
+   "prev": 77,
+   "weekly": [
+    13,
+    17,
+    44,
+    3,
+    9,
+    12,
+    8,
+    34
+   ],
+   "areas": [
+    [
+     "75035",
+     "Frisco",
+     20
+    ],
+    [
+     "75002",
+     "Allen",
+     15
+    ],
+    [
+     "75009",
+     "Celina",
+     6
+    ],
+    [
+     "75013",
+     "Allen",
+     6
+    ],
+    [
+     "75094",
+     "Murphy",
+     4
+    ],
+    [
+     "75034",
+     "Frisco",
+     4
+    ],
+    [
+     "75454",
+     "Melissa",
+     3
+    ],
+    [
+     "75033",
+     "Frisco",
+     2
+    ],
+    [
+     "75078",
+     "Prosper",
+     1
+    ],
+    [
+     "75407",
+     "Princeton",
+     1
+    ],
+    [
+     "75069",
+     "McKinney",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 25,
+   "builders": [
+    [
+     "Cisco Fencing",
+     3
+    ]
+   ]
   },
   "roofing": {
    "cur": 112,
@@ -562,161 +738,49 @@
     ]
    ],
    "median_value": null,
-   "valued": 26
-  },
-  "fences-patios": {
-   "cur": 63,
-   "prev": 77,
-   "weekly": [
-    13,
-    17,
-    44,
-    3,
-    9,
-    12,
-    8,
-    34
-   ],
-   "areas": [
+   "valued": 26,
+   "builders": [
     [
-     "75035",
-     "Frisco",
-     20
-    ],
-    [
-     "75002",
-     "Allen",
-     15
-    ],
-    [
-     "75009",
-     "Celina",
-     6
-    ],
-    [
-     "75013",
-     "Allen",
-     6
-    ],
-    [
-     "75094",
-     "Murphy",
-     4
-    ],
-    [
-     "75034",
-     "Frisco",
-     4
-    ],
-    [
-     "75454",
-     "Melissa",
+     "All Hart LLC",
      3
     ],
     [
-     "75033",
-     "Frisco",
+     "Imperial Roofing And Construction Inc",
+     3
+    ],
+    [
+     "Crystal Roofing And Construction",
+     3
+    ],
+    [
+     "Infinite Roofing",
+     3
+    ],
+    [
+     "Legacy Roofing & General Contracting",
+     3
+    ],
+    [
+     "Proco Roofing",
      2
     ],
     [
-     "75078",
-     "Prosper",
-     1
-    ],
-    [
-     "75407",
-     "Princeton",
-     1
-    ],
-    [
-     "75069",
-     "McKinney",
-     1
-    ]
-   ],
-   "median_value": null,
-   "valued": 25
-  },
-  "accessory": {
-   "cur": 16,
-   "prev": 22,
-   "weekly": [
-    7,
-    7,
-    5,
-    3,
-    7,
-    2,
-    2,
-    5
-   ],
-   "areas": [
-    [
-     "75098",
-     "Wylie",
-     4
-    ],
-    [
-     "75002",
-     "Lucas",
-     3
-    ],
-    [
-     "75173",
-     "Josephine",
-     3
-    ],
-    [
-     "75407",
-     "Princeton",
+     "Rcsa Roofing And Construction",
      2
     ],
     [
-     "75071",
-     "McKinney",
-     1
+     "Iron Bull Roofing",
+     2
     ],
     [
-     "75078",
-     "Prosper",
-     1
+     "Exclusive Roofing",
+     2
     ],
     [
-     "75035",
-     "Frisco",
-     1
-    ],
-    [
-     "75164",
-     "Josephine",
-     1
+     "Town And Country Roofing",
+     2
     ]
-   ],
-   "median_value": null,
-   "valued": 4
-  },
-  "demolition": {
-   "cur": 3,
-   "prev": 9,
-   "weekly": [
-    5,
-    2,
-    2,
-    0,
-    2,
-    1,
-    0,
-    0
-   ],
-   "areas": [
-    [
-     "75002",
-     "Lucas",
-     3
-    ]
-   ],
-   "median_value": null,
-   "valued": 1
+   ]
   },
   "solar": {
    "cur": 24,
@@ -784,7 +848,41 @@
     ]
    ],
    "median_value": null,
-   "valued": 4
+   "valued": 4,
+   "builders": [
+    [
+     "Sunrun",
+     4
+    ],
+    [
+     "Solartime USA LLC",
+     2
+    ]
+   ]
+  },
+  "demolition": {
+   "cur": 3,
+   "prev": 9,
+   "weekly": [
+    5,
+    2,
+    2,
+    0,
+    2,
+    1,
+    0,
+    0
+   ],
+   "areas": [
+    [
+     "75002",
+     "Lucas",
+     3
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
   },
   "additions-remodels": {
    "cur": 22,
@@ -862,7 +960,126 @@
     ]
    ],
    "median_value": null,
-   "valued": 5
+   "valued": 5,
+   "builders": []
+  },
+  "pools": {
+   "cur": 50,
+   "prev": 53,
+   "weekly": [
+    24,
+    15,
+    14,
+    0,
+    18,
+    3,
+    6,
+    23
+   ],
+   "areas": [
+    [
+     "75009",
+     "Celina",
+     14
+    ],
+    [
+     "75078",
+     "Prosper",
+     11
+    ],
+    [
+     "75002",
+     "Lucas",
+     5
+    ],
+    [
+     "75166",
+     "Lavon",
+     4
+    ],
+    [
+     "75071",
+     "McKinney",
+     3
+    ],
+    [
+     "75035",
+     "Frisco",
+     3
+    ],
+    [
+     "75409",
+     "Anna",
+     2
+    ],
+    [
+     "75454",
+     "Melissa",
+     2
+    ],
+    [
+     "75407",
+     "Princeton",
+     1
+    ],
+    [
+     "75098",
+     "Wylie",
+     1
+    ],
+    [
+     "75252",
+     "Dallas",
+     1
+    ],
+    [
+     "75189",
+     "Royse City",
+     1
+    ],
+    [
+     "75034",
+     "Frisco",
+     1
+    ],
+    [
+     "75442",
+     "Farmersville",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 5,
+   "builders": [
+    [
+     "Foley Pools",
+     6
+    ],
+    [
+     "Hauk Custom Pools",
+     4
+    ],
+    [
+     "Riverbend Sandler Pools",
+     4
+    ],
+    [
+     "Canyon Oak Pools",
+     2
+    ],
+    [
+     "Venture Custom Pools",
+     2
+    ],
+    [
+     "Tidalwave Custom Pools",
+     2
+    ],
+    [
+     "Texas Outdoor Oasis",
+     2
+    ]
+   ]
   }
  }
 }

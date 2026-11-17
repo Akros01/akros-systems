@@ -15,7 +15,7 @@ Counts of residential building permits by job type and ZIP code, read from each 
 - [Chicago, IL](https://akros01.github.io/akros-systems/permits/chicago/)
 - [Sources and method](https://akros01.github.io/akros-systems/permits/about/)
 
-The pages show counts only: no owner names, phone numbers or street addresses.
+The pages show counts and the builders named on the most permits (companies only): no owner names, phone numbers or street addresses.
 
 ## How it runs
 
@@ -42,4 +42,17 @@ python3 tools/permits/brief.py --metro dallas --cats pools,new-homes --zips 7521
 
 # Job types each metro supports
 python3 tools/permits/brief.py --list
+
+# Pools that just passed final inspection (Austin and Los Angeles report it)
+python3 tools/permits/brief.py --metro austin --cats pools --stage finished --days 7
 ```
+
+## Territory postcards
+
+Territory customers ($1,000 a month) get a postcard with their name and offer mailed to every new matching homeowner in their ZIP group, up to 300 a month. `tools/permits/postcards.py` does it through [PostGrid](https://www.postgrid.com/):
+
+1. Copy `tools/permits/postcard-customer.example.json` to `briefs/customers/<name>.json` and fill it in (company, phone, offer, ZIPs, return address).
+2. `python3 tools/permits/postcards.py --customer briefs/customers/<name>.json --preview` writes the card images and the list of who would get one. Send the images to the customer.
+3. Once they approve, set `"approved": true` and run it with `--send` and `POSTGRID_API_KEY` set. A PostGrid test key creates the orders without printing; a live key mails and charges.
+
+Cards go to "Current Resident"; owner names are never used. Each run sends finished-work cards first, skips any address that customer has already mailed, and stops at the monthly allowance. Customer files and send logs hold addresses, so they stay in `briefs/` and are never committed.

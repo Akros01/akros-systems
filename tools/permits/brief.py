@@ -27,13 +27,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import METROS  # noqa: E402
-from sources import FETCHERS, FINISHED  # noqa: E402
+from sources import EXISTING_POOL, FETCHERS, FINISHED  # noqa: E402
 
 COLUMNS = ["issued_date", "permit_number", "job_type", "address", "zip", "city_or_area", "description",
            "permit_type", "contractor", "declared_value", "source_link", "finished_date"]
-# Work on a pool that is already there: not a new pool owner, so left out of finished-pool lists.
-EXISTING_POOL = re.compile(r"existing (swimming )?pool|re-?plaster|resurfac|pool (remodel|renovation|repair)"
-                           r"|(remodel|renovat\w*|repair\w*) (of )?(the |an )?(existing )?(swimming )?pool", re.I)
 # "Cody Pools, Inc. **MAIN", "Denali Pools LLC***Main***" -> the company name alone.
 BRANCH_TAG = re.compile(r"\*+\s*main\b\s*\**|\*+", re.I)
 NO_NAME = {"", "Not Given", "None", "N/A", "Na", "Owner", "Homeowner", "Owner Builder"}
@@ -47,6 +44,44 @@ JOB_TYPES = {
     "chicago": "solar roofing porches-decks garages fences-patios windows-doors new-homes additions-remodels demolition",
     "sacramento": "pools new-homes adus additions-remodels demolition hvac solar roofing fences-patios",
 }
+
+
+def collect(metro, cats, zips, since, until, stage="issued", include_existing=False):
+    """Matching permits as brief rows, newest first, plus how many existing-pool jobs were left out."""
+    finished = stage == "finished"
+    recs = (FETCHERS[metro](since.isoformat(), detail=True, finished=True) if finished
+            else FETCHERS[metro](since.isoformat(), detail=True))
+    seen, rows, existing = set(), [], 0
+    for r in recs:
+        if r["id"] in seen or not set(r["cats"]) & set(cats):
+            continue
+        d = r.get("detail", {})
+        when = d.get("finished_date", "") if finished else r["issued"]
+        if not when or not since.isoformat() <= when <= until.isoformat():
+            continue
+        if zips and (r["area"] or "") not in zips:
+            continue
+        if finished and "pools" in r["cats"] and not include_existing and EXISTING_POOL.search(d.get("description", "")):
+            existing += 1
+            continue
+        seen.add(r["id"])
+        rows.append({
+            "issued_date": r["issued"],
+            "permit_number": d.get("permit_number") or r["id"],
+            "job_type": "+".join(c for c in r["cats"] if c in cats),
+            "address": d.get("address", ""),
+            "zip": r["area"] or "",
+            "city_or_area": r["place"] or "",
+            "description": d.get("description", ""),
+            "permit_type": d.get("permit_type", ""),
+            "contractor": d.get("contractor", ""),
+            "declared_value": f"{r['value']:.0f}" if r["value"] else "",
+            "source_link": d.get("source_link", ""),
+            "finished_date": d.get("finished_date", ""),
+        })
+    key = "finished_date" if finished else "issued_date"
+    rows.sort(key=lambda x: (x[key], x["zip"], x["address"]), reverse=True)
+    return rows, existing
 
 
 def slug(text):
@@ -90,38 +125,7 @@ def main():
               f"--stage finished works for: {', '.join(sorted(FINISHED))}")
         return 2
 
-    recs = (FETCHERS[a.metro](since.isoformat(), detail=True, finished=True) if finished
-            else FETCHERS[a.metro](since.isoformat(), detail=True))
-    seen, rows, existing = set(), [], 0
-    for r in recs:
-        if r["id"] in seen or not set(r["cats"]) & set(cats):
-            continue
-        d = r.get("detail", {})
-        when = d.get("finished_date", "") if finished else r["issued"]
-        if not when or not since.isoformat() <= when <= until.isoformat():
-            continue
-        if zips and (r["area"] or "") not in zips:
-            continue
-        if finished and "pools" in r["cats"] and not a.include_existing and EXISTING_POOL.search(d.get("description", "")):
-            existing += 1
-            continue
-        seen.add(r["id"])
-        rows.append({
-            "issued_date": r["issued"],
-            "permit_number": d.get("permit_number") or r["id"],
-            "job_type": "+".join(c for c in r["cats"] if c in cats),
-            "address": d.get("address", ""),
-            "zip": r["area"] or "",
-            "city_or_area": r["place"] or "",
-            "description": d.get("description", ""),
-            "permit_type": d.get("permit_type", ""),
-            "contractor": d.get("contractor", ""),
-            "declared_value": f"{r['value']:.0f}" if r["value"] else "",
-            "source_link": d.get("source_link", ""),
-            "finished_date": d.get("finished_date", ""),
-        })
-    sort_key = "finished_date" if finished else "issued_date"
-    rows.sort(key=lambda x: (x[sort_key], x["zip"], x["address"]), reverse=True)
+    rows, existing = collect(a.metro, cats, zips, since, until, a.stage, a.include_existing)
 
     os.makedirs(a.out, exist_ok=True)
     stem = "-".join(x for x in (slug(a.name) or a.metro, slug("-".join(cats)), "finished" if finished else "",

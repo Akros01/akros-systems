@@ -1,66 +1,66 @@
 {
  "metro": "college-station",
  "built": "2026-11-17",
- "latest": "2026-11-13",
- "end": "2026-11-10",
- "start": "2026-10-14",
+ "latest": "2026-11-16",
+ "end": "2026-11-16",
+ "start": "2026-10-20",
  "weeks": [
   [
-   "2026-09-16",
-   "2026-09-22"
+   "2026-09-22",
+   "2026-09-28"
   ],
   [
-   "2026-09-23",
-   "2026-09-29"
+   "2026-09-29",
+   "2026-10-05"
   ],
   [
-   "2026-09-30",
-   "2026-10-06"
+   "2026-10-06",
+   "2026-10-12"
   ],
   [
-   "2026-10-07",
-   "2026-10-13"
+   "2026-10-13",
+   "2026-10-19"
   ],
   [
-   "2026-10-14",
-   "2026-10-20"
+   "2026-10-20",
+   "2026-10-26"
   ],
   [
-   "2026-10-21",
-   "2026-10-27"
+   "2026-10-27",
+   "2026-11-02"
   ],
   [
-   "2026-10-28",
-   "2026-11-03"
+   "2026-11-03",
+   "2026-11-09"
   ],
   [
-   "2026-11-04",
-   "2026-11-10"
+   "2026-11-10",
+   "2026-11-16"
   ]
  ],
  "total": {
-  "cur": 38,
-  "prev": 26,
+  "cur": 32,
+  "prev": 36,
   "weekly": [
-   4,
-   10,
    8,
-   4,
+   8,
+   5,
    15,
+   9,
+   6,
    8,
-   7,
-   8
+   9
   ],
   "areas": [
    [
     "77845",
     "College Station",
-    28
+    21
    ],
    [
     "77840",
     "College Station",
-    10
+    11
    ]
   ],
   "median_value": null,
@@ -69,40 +69,40 @@
  },
  "cats": {
   "roofing": {
-   "cur": 16,
-   "prev": 7,
+   "cur": 9,
+   "prev": 16,
    "weekly": [
-    0,
-    6,
-    0,
+    5,
     1,
-    9,
+    0,
+    10,
     2,
-    4,
-    1
+    3,
+    2,
+    2
    ],
    "areas": [
     [
      "77845",
      "College Station",
-     13
+     5
     ],
     [
      "77840",
      "College Station",
-     3
+     4
     ]
    ],
-   "median_value": 15800.0,
-   "valued": 14,
+   "median_value": 12219.0,
+   "valued": 9,
    "builders": []
   },
   "hvac": {
    "cur": 0,
    "prev": 1,
    "weekly": [
-    0,
     1,
+    0,
     0,
     0,
     0,
@@ -116,23 +116,23 @@
    "builders": []
   },
   "additions-remodels": {
-   "cur": 3,
-   "prev": 3,
+   "cur": 4,
+   "prev": 2,
    "weekly": [
+    0,
     1,
     1,
     0,
     1,
     0,
     1,
-    0,
     2
    ],
    "areas": [
     [
      "77845",
      "College Station",
-     2
+     3
     ],
     [
      "77840",
@@ -141,47 +141,18 @@
     ]
    ],
    "median_value": null,
-   "valued": 2,
+   "valued": 3,
    "builders": []
   },
   "windows-doors": {
-   "cur": 6,
-   "prev": 3,
-   "weekly": [
-    0,
-    0,
-    1,
-    2,
-    2,
-    2,
-    1,
-    1
-   ],
-   "areas": [
-    [
-     "77845",
-     "College Station",
-     4
-    ],
-    [
-     "77840",
-     "College Station",
-     2
-    ]
-   ],
-   "median_value": null,
-   "valued": 0,
-   "builders": []
-  },
-  "foundation": {
-   "cur": 3,
-   "prev": 3,
+   "cur": 4,
+   "prev": 5,
    "weekly": [
     0,
     1,
     2,
-    0,
-    1,
+    2,
+    2,
     1,
     1,
     0
@@ -195,6 +166,35 @@
     [
      "77845",
      "College Station",
+     2
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "foundation": {
+   "cur": 3,
+   "prev": 4,
+   "weekly": [
+    1,
+    2,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     2
+    ],
+    [
+     "77840",
+     "College Station",
      1
     ]
    ],
@@ -204,15 +204,15 @@
   },
   "pools": {
    "cur": 4,
-   "prev": 0,
+   "prev": 1,
    "weekly": [
     0,
     0,
     0,
-    0,
-    2,
     1,
+    2,
     0,
+    1,
     1
    ],
    "areas": [
@@ -232,23 +232,23 @@
    "builders": []
   },
   "demolition": {
-   "cur": 1,
-   "prev": 4,
+   "cur": 2,
+   "prev": 3,
    "weekly": [
-    1,
     1,
     2,
     0,
     0,
     0,
     1,
-    0
+    0,
+    1
    ],
    "areas": [
     [
      "77840",
      "College Station",
-     1
+     2
     ]
    ],
    "median_value": null,
@@ -256,27 +256,27 @@
    "builders": []
   },
   "fences-patios": {
-   "cur": 2,
-   "prev": 4,
+   "cur": 3,
+   "prev": 3,
    "weekly": [
-    2,
     0,
-    2,
-    0,
+    1,
+    1,
     1,
     0,
     0,
-    1
+    1,
+    2
    ],
    "areas": [
     [
      "77845",
      "College Station",
-     2
+     3
     ]
    ],
    "median_value": null,
-   "valued": 2,
+   "valued": 3,
    "builders": []
   },
   "solar": {
@@ -287,10 +287,10 @@
     0,
     1,
     0,
-    0,
     1,
     0,
-    2
+    2,
+    0
    ],
    "areas": [
     [

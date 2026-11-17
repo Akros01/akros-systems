@@ -1,0 +1,469 @@
+{
+ "metro": "marin-county",
+ "built": "2026-11-17",
+ "latest": "2026-11-16",
+ "end": "2026-11-16",
+ "start": "2026-10-20",
+ "weeks": [
+  [
+   "2026-09-22",
+   "2026-09-28"
+  ],
+  [
+   "2026-09-29",
+   "2026-10-05"
+  ],
+  [
+   "2026-10-06",
+   "2026-10-12"
+  ],
+  [
+   "2026-10-13",
+   "2026-10-19"
+  ],
+  [
+   "2026-10-20",
+   "2026-10-26"
+  ],
+  [
+   "2026-10-27",
+   "2026-11-02"
+  ],
+  [
+   "2026-11-03",
+   "2026-11-09"
+  ],
+  [
+   "2026-11-10",
+   "2026-11-16"
+  ]
+ ],
+ "total": {
+  "cur": 28,
+  "prev": 29,
+  "weekly": [
+   6,
+   7,
+   5,
+   11,
+   9,
+   5,
+   5,
+   9
+  ],
+  "areas": [
+   [
+    "94941",
+    "Mill Valley",
+    10
+   ],
+   [
+    "94904",
+    "Greenbrae",
+    5
+   ],
+   [
+    "94970",
+    "Stinson Beach",
+    2
+   ],
+   [
+    "94924",
+    "Bolinas",
+    2
+   ],
+   [
+    "94937",
+    "Inverness",
+    2
+   ],
+   [
+    "94901",
+    "San Rafael",
+    2
+   ],
+   [
+    "94903",
+    "San Rafael",
+    2
+   ],
+   [
+    "94956",
+    "Point Reyes Station",
+    1
+   ],
+   [
+    "94945",
+    "Novato",
+    1
+   ],
+   [
+    "94960",
+    "San Anselmo",
+    1
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": [
+   [
+    "Owner/Builder",
+    9
+   ],
+   [
+    "Groundworks California LLC",
+    2
+   ],
+   [
+    "J G Lino Construction Inc",
+    2
+   ]
+  ]
+ },
+ "cats": {
+  "fences-patios": {
+   "cur": 7,
+   "prev": 5,
+   "weekly": [
+    0,
+    2,
+    0,
+    3,
+    3,
+    0,
+    2,
+    2
+   ],
+   "areas": [
+    [
+     "94941",
+     "Mill Valley",
+     3
+    ],
+    [
+     "94904",
+     "Greenbrae",
+     2
+    ],
+    [
+     "94924",
+     "Bolinas",
+     1
+    ],
+    [
+     "94960",
+     "San Anselmo",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 7,
+   "builders": [
+    [
+     "Owner/Builder",
+     3
+    ]
+   ]
+  },
+  "additions-remodels": {
+   "cur": 14,
+   "prev": 13,
+   "weekly": [
+    4,
+    2,
+    4,
+    3,
+    4,
+    3,
+    3,
+    4
+   ],
+   "areas": [
+    [
+     "94941",
+     "Mill Valley",
+     5
+    ],
+    [
+     "94937",
+     "Inverness",
+     2
+    ],
+    [
+     "94904",
+     "Greenbrae",
+     2
+    ],
+    [
+     "94903",
+     "San Rafael",
+     2
+    ],
+    [
+     "94956",
+     "Point Reyes Station",
+     1
+    ],
+    [
+     "94970",
+     "Stinson Beach",
+     1
+    ],
+    [
+     "94901",
+     "San Rafael",
+     1
+    ]
+   ],
+   "median_value": 165000.0,
+   "valued": 14,
+   "builders": [
+    [
+     "Owner/Builder",
+     4
+    ],
+    [
+     "J G Lino Construction Inc",
+     2
+    ]
+   ]
+  },
+  "adus": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "siding": {
+   "cur": 0,
+   "prev": 1,
+   "weekly": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "pools": {
+   "cur": 0,
+   "prev": 2,
+   "weekly": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "foundation": {
+   "cur": 3,
+   "prev": 2,
+   "weekly": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "94924",
+     "Bolinas",
+     1
+    ],
+    [
+     "94904",
+     "Greenbrae",
+     1
+    ],
+    [
+     "94901",
+     "San Rafael",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  },
+  "hvac": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "windows-doors": {
+   "cur": 1,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "94941",
+     "Mill Valley",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
+  },
+  "demolition": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "solar": {
+   "cur": 2,
+   "prev": 1,
+   "weekly": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "94945",
+     "Novato",
+     1
+    ],
+    [
+     "94970",
+     "Stinson Beach",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 2,
+   "builders": []
+  },
+  "roofing": {
+   "cur": 0,
+   "prev": 2,
+   "weekly": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "electrical-service": {
+   "cur": 1,
+   "prev": 3,
+   "weekly": [
+    1,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    [
+     "94941",
+     "Mill Valley",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
+  },
+  "batteries": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  }
+ }
+}

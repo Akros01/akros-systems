@@ -471,3 +471,13 @@ FETCHERS = {
     "chicago": chicago,
     "sacramento": sacramento,
 }
+
+
+def _add_registry_feeds():
+    """Feeds configured in feeds.json, read by the generic reader in registry.py."""
+    import registry  # imported here: registry builds on the helpers above
+    for feed in registry.load_feeds():
+        FETCHERS.setdefault(feed["slug"], registry.fetcher(feed))
+
+
+_add_registry_feeds()

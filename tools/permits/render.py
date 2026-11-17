@@ -201,7 +201,8 @@ def cta_block(metro, cat=None, campaign=""):
   <p><strong>Report, $297 a month</strong> after a 14-day trial (card required): the weekly list alone, shared with up to 3 contractors in your trade and ZIP.</p>
   <p class="cta-actions"><a class="button" href="{E(territory_mailto(m['name'], trade_hint))}">Check if your ZIPs are open</a> <a class="text-link" href="{E(sample_mailto(m['name'], trade_hint))}">Email your trade and ZIPs for a free sample</a> <a class="text-link" href="{TIPOFF_PLANS}">See plans</a></p>
 </section>""")
-    parts.append(f"""<section class="cta cta-alt" aria-labelledby="cta-almanac-{E(metro)}">
+    if m.get("almanac"):
+        parts.append(f"""<section class="cta cta-alt" aria-labelledby="cta-almanac-{E(metro)}">
   <p class="cta-kicker">Permit Almanac</p>
   <h2 id="cta-almanac-{E(metro)}">Want the addresses now?</h2>
   <p>The {E(m['short'])} report {almanac_line}. $29, one-time; $69 for any three metros.</p>

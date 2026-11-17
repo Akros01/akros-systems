@@ -1,0 +1,203 @@
+[
+ {
+  "slug": "seattle",
+  "name": "Seattle, WA",
+  "short": "Seattle",
+  "state": "WA",
+  "domain": "data.seattle.gov",
+  "dataset": "76t5-zqzr",
+  "source": "City of Seattle open data: Building Permits",
+  "scope": "City of Seattle building permits for single-family homes and duplexes.",
+  "where": "permitclass = 'Single Family/Duplex'",
+  "all_residential": true,
+  "date": "issueddate",
+  "id": "permitnum",
+  "address": "originaladdress1",
+  "zip": "originalzip",
+  "place": "originalcity",
+  "desc": "description",
+  "type": [
+   "permittypedesc"
+  ],
+  "value": "estprojectcost",
+  "contractor": "contractorcompanyname",
+  "status": "statuscurrent",
+  "source_url": "https://data.seattle.gov/d/76t5-zqzr"
+ },
+ {
+  "slug": "new-york-city",
+  "name": "New York City, NY",
+  "short": "New York City",
+  "state": "NY",
+  "domain": "data.cityofnewyork.us",
+  "dataset": "rbx6-tga4",
+  "source": "NYC open data: DOB NOW Build approved permits",
+  "scope": "Department of Buildings permits whose job description names a one- or two-family home or other residential work; renewals left out.",
+  "where": "filing_reason IS NULL OR filing_reason not like '%Renewal%'",
+  "classify": "desc_first",
+  "date": "issued_date",
+  "id": "job_filing_number",
+  "address": [
+   "house_no",
+   "street_name"
+  ],
+  "zip": "zip_code",
+  "place": "borough",
+  "desc": "job_description",
+  "type": [
+   "work_type"
+  ],
+  "value": "estimated_job_costs",
+  "contractor": "applicant_business_name",
+  "status": "permit_status",
+  "source_url": "https://data.cityofnewyork.us/d/rbx6-tga4"
+ },
+ {
+  "slug": "san-diego-county",
+  "name": "San Diego County, CA",
+  "short": "San Diego County",
+  "state": "CA",
+  "domain": "data.sandiegocounty.gov",
+  "dataset": "red2-qccu",
+  "source": "San Diego County open data: Building Permits",
+  "scope": "Residential permits issued by San Diego County for its unincorporated communities.",
+  "date": "issued_date",
+  "id": "record_id",
+  "address": "street_address",
+  "zip": "zip_code",
+  "place": "city",
+  "desc": "primary_scope_code",
+  "type": [
+   "record_category"
+  ],
+  "value": "valuation",
+  "contractor": "contractor_name",
+  "classify": "desc_first",
+  "source_url": "https://data.sandiegocounty.gov/d/red2-qccu"
+ },
+ {
+  "slug": "montgomery-county-md",
+  "name": "Montgomery County, MD",
+  "short": "Montgomery County",
+  "state": "MD",
+  "domain": "data.montgomerycountymd.gov",
+  "dataset": "m88u-pqki",
+  "source": "Montgomery County open data: Residential Permit",
+  "scope": "Residential building permits issued by Montgomery County's Department of Permitting Services.",
+  "all_residential": true,
+  "classify": "desc_first",
+  "date": "issueddate",
+  "id": "permitno",
+  "address": [
+   "stno",
+   "stname"
+  ],
+  "zip": "zip",
+  "place": "city",
+  "desc": "description",
+  "type": [
+   "worktype"
+  ],
+  "value": "declaredvaluation",
+  "status": "status",
+  "desc_strip": "^customer wants to use eplans,?\\s*",
+  "source_url": "https://data.montgomerycountymd.gov/d/m88u-pqki"
+ },
+ {
+  "slug": "baton-rouge",
+  "name": "Baton Rouge, LA",
+  "short": "Baton Rouge",
+  "state": "LA",
+  "domain": "data.brla.gov",
+  "dataset": "7fq7-8j7r",
+  "source": "East Baton Rouge open data: Building Permits",
+  "scope": "City-parish permits whose type is marked residential (R).",
+  "where": "permittype like '%(R)%'",
+  "all_residential": true,
+  "date": "issueddate",
+  "id": "permitnumber",
+  "address": "address",
+  "zip": "zip",
+  "desc": "projectdescription",
+  "type": [
+   "permittype"
+  ],
+  "value": "projectvalue",
+  "contractor": "contractorname",
+  "default_place": "Baton Rouge",
+  "address_suffix": "\\s+(BATON ROUGE|BAKER|ZACHARY|CENTRAL|PRIDE|GREENWELL SPRINGS|SAINT GABRIEL|ST GABRIEL)\\s+LA\\s+\\d{5}(-\\d{4})?$",
+  "source_url": "https://data.brla.gov/d/7fq7-8j7r"
+ },
+ {
+  "slug": "cincinnati",
+  "name": "Cincinnati, OH",
+  "short": "Cincinnati",
+  "state": "OH",
+  "domain": "data.cincinnati-oh.gov",
+  "dataset": "uhjb-xac9",
+  "source": "City of Cincinnati open data: Building Permits",
+  "scope": "Permits under the Residential Code of Ohio: one-, two- and three-family homes.",
+  "where": "permitclass = 'RCO'",
+  "all_residential": true,
+  "classify": "desc_first",
+  "date": "issueddate",
+  "id": "permitnum",
+  "address": "originaladdress1",
+  "zip": "originalzip",
+  "place": "originalcity",
+  "desc": "description",
+  "type": [
+   "permittypemapped"
+  ],
+  "value": "estprojectcostdec",
+  "contractor": "companyname",
+  "status": "statuscurrent",
+  "source_url": "https://data.cincinnati-oh.gov/d/uhjb-xac9"
+ },
+ {
+  "slug": "college-station",
+  "name": "College Station, TX",
+  "short": "College Station",
+  "state": "TX",
+  "domain": "data.cstx.gov",
+  "dataset": "hrbn-znt6",
+  "source": "City of College Station open data: Permits",
+  "scope": "City of College Station permits for single-family homes and duplexes.",
+  "date": "issued_date",
+  "id": "permit_number",
+  "address": "address_1",
+  "zip": "zip",
+  "place": "city",
+  "desc": "permit_description",
+  "type": [
+   "permit_type",
+   "permit_subtype"
+  ],
+  "value": "valuation",
+  "status": "current_status",
+  "source_url": "https://data.cstx.gov/d/hrbn-znt6"
+ },
+ {
+  "slug": "marin-county",
+  "name": "Marin County, CA",
+  "short": "Marin County",
+  "state": "CA",
+  "domain": "data.marincounty.gov",
+  "dataset": "mkbn-caye",
+  "source": "Marin County open data: Building Permits",
+  "scope": "Residential permits issued by Marin County for its unincorporated areas.",
+  "classify": "desc_first",
+  "date": "issued_date",
+  "id": "permit_number",
+  "address": "address",
+  "zip": "zipcode",
+  "place": "city_town",
+  "desc": "description",
+  "type": [
+   "type_permit"
+  ],
+  "value": "construction_value",
+  "contractor": "contractor",
+  "source_url": "https://data.marincounty.gov/d/mkbn-caye"
+ }
+]

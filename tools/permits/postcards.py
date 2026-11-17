@@ -29,7 +29,7 @@ import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from brief import collect, slug  # noqa: E402
-from config import TERRITORY_CARDS  # noqa: E402
+from config import METROS, TERRITORY_CARDS  # noqa: E402
 from sources import FINISHED  # noqa: E402
 
 API = "https://api.postgrid.com/print-mail/v1/postcards"
@@ -173,7 +173,7 @@ def main():
     held = max(0, len(queue) - max(allowance, 0))
     queue = queue[:max(allowance, 0)]
 
-    state = STATE[c["metro"]]
+    state = STATE.get(c["metro"]) or METROS[c["metro"]].get("state", "")
     cat = c["cats"][0]
     plan_path = os.path.join(work, f"{'preview' if a.preview else 'sent'}-{today.isoformat()}.csv")
     with open(plan_path, "w", newline="", encoding="utf-8") as f:

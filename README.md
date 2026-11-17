@@ -1,12 +1,12 @@
 # Akros Systems
 
-Akros Systems makes [Tipoff](https://tipoff-brief.github.io/), a weekly brief of new residential building permits for home-service contractors, and the [Permit Almanac](https://akros01.github.io/permit-sample/), one-time residential permit reports for six US metros.
+Akros Systems makes [Tipoff](https://tipoff-brief.github.io/), a weekly brief of new residential building permits for home-service contractors, and the [Permit Almanac](https://akros01.github.io/permit-sample/), one-time residential permit reports for six US metros. The public permit pages cover more cities, plus storm reports for every state.
 
 ## Residential permit activity, updated weekly
 
 Counts of residential building permits by job type and ZIP code, read from each city's open-data feed and rebuilt every Monday:
 
-- [All six metros](https://akros01.github.io/akros-systems/permits/)
+- [All metros](https://akros01.github.io/akros-systems/permits/) and [storm reports by state](https://akros01.github.io/akros-systems/permits/storms/)
 - [Austin, TX](https://akros01.github.io/akros-systems/permits/austin/): [new homes](https://akros01.github.io/akros-systems/permits/austin/new-homes/), [pools](https://akros01.github.io/akros-systems/permits/austin/pools/), [additions and remodels](https://akros01.github.io/akros-systems/permits/austin/additions-remodels/)
 - [Collin County, TX](https://akros01.github.io/akros-systems/permits/collin-county/): [new homes](https://akros01.github.io/akros-systems/permits/collin-county/new-homes/), [pools](https://akros01.github.io/akros-systems/permits/collin-county/pools/)
 - [Dallas, TX](https://akros01.github.io/akros-systems/permits/dallas/): [new homes](https://akros01.github.io/akros-systems/permits/dallas/new-homes/), [pools](https://akros01.github.io/akros-systems/permits/dallas/pools/), [additions and remodels](https://akros01.github.io/akros-systems/permits/dallas/additions-remodels/)
@@ -45,6 +45,27 @@ python3 tools/permits/brief.py --list
 
 # Pools that just passed final inspection (Austin and Los Angeles report it)
 python3 tools/permits/brief.py --metro austin --cats pools --stage finished --days 7
+```
+
+## More cities: the feed registry
+
+`tools/permits/feeds.json` lists the permit feeds read by the generic reader in `tools/permits/registry.py` (Seattle, New York City, San Diego County, Montgomery County MD, Baton Rouge, Cincinnati, College Station, Marin County so far). Each entry names the dataset and which columns hold the issue date, permit number, address, ZIP, type and description; job types come from the type and description text.
+
+To add a city, find its permit dataset (the Socrata catalog at api.us.socrata.com lists them), then:
+
+```
+python3 tools/permits/discover.py <domain> <dataset-id> <slug> "<City, ST>"
+```
+
+It proposes the column mapping and prints job-type counts and sample rows for the last 28 days. Check the samples, fix the mapping by hand where needed, add the entry to `feeds.json`, and the next build publishes the city's pages. A feed whose newest permits are weeks old, or that has no street addresses, is left out.
+
+## Storm reports
+
+`tools/permits/storms.py` reads the NOAA Storm Prediction Center's daily reports (hail of an inch or more, damaging wind, tornadoes) for every state, tags each with the nearest ZIP code (`tools/permits/zcta.csv`, from the Census Bureau's ZIP Code Tabulation Areas), and the build publishes `permits/storms/` and a page per state. For a customer's counties or ZIPs:
+
+```
+python3 tools/permits/storms.py --state TX --counties Collin,Denton --days 7
+python3 tools/permits/storms.py --zips 75009,75078 --radius 10 --days 7
 ```
 
 ## Territory postcards

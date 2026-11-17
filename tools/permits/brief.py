@@ -84,6 +84,11 @@ def collect(metro, cats, zips, since, until, stage="issued", include_existing=Fa
     return rows, existing
 
 
+for _m in FETCHERS:
+    JOB_TYPES.setdefault(_m, "new-homes pools additions-remodels adus solar batteries ev-chargers roofing siding "
+                             "windows-doors hvac water-heaters electrical-service demolition foundation fences-patios insulation")
+
+
 def slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 

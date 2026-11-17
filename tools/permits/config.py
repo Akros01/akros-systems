@@ -100,9 +100,19 @@ CATS = {
         "why": "Each rebuild is a whole new house going up on a cleared lot, so its owner needs every system and finish again.",
         "parent": "new-homes",
     },
+    "solar": {
+        "label": "Solar", "title": "Solar permits",
+        "noun": "residential solar permits", "short": "solar permits",
+        "trades": ["Batteries and EV chargers", "Electrical", "Roofing", "Panel cleaning"],
+        "why": "A home going solar is often adding a battery, an EV charger or a panel upgrade too, and roofs get replaced before panels go on.",
+    },
+    "hvac": {
+        "label": "HVAC", "title": "HVAC permits",
+        "noun": "residential heating and cooling permits", "short": "HVAC permits",
+        "trades": ["Insulation", "Duct cleaning", "Electrical", "Solar"],
+        "why": "A homeowner replacing a furnace, air conditioner or heat pump is spending on comfort and energy bills, so insulation, duct sealing and electrical work come next.",
+    },
     # Counted on metro pages only.
-    "hvac": {"label": "HVAC"},
-    "solar": {"label": "Solar"},
     "batteries": {"label": "Home batteries"},
     "roofing": {"label": "Re-roofs"},
     "repairs": {"label": "Repairs and replacements"},
@@ -117,10 +127,30 @@ CATS = {
     "garages": {"label": "Detached garages"},
     "seismic": {"label": "Seismic retrofits"},
     "demolition": {"label": "Demolitions"},
+    "siding": {"label": "Siding"},
+    "ev-chargers": {"label": "EV chargers"},
+    "insulation": {"label": "Insulation"},
 }
 
-PAGE_CATS = ["new-homes", "pools", "additions-remodels", "adus", "wildfire-rebuilds"]
+PAGE_CATS = ["new-homes", "pools", "additions-remodels", "adus", "wildfire-rebuilds", "solar", "hvac"]
 MIN_FOR_PAGE = 10        # permits in the last four weeks
 WINDOW_DAYS = 28
 WEEKS_SHOWN = 8
 INDEXNOW_KEY = "7b61600424cf228c334aea7889bc19ee"
+
+
+def _registry_metros():
+    """Metros read through registry.py: one entry per feed in feeds.json, sold through Tipoff, no Almanac report yet."""
+    import json
+    import os
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "feeds.json")
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        feeds = json.load(f)
+    return {f["slug"]: {"name": f["name"], "short": f["short"], "area": "ZIP", "source": f["source"],
+                        "source_url": f["source_url"], "almanac": None, "tipoff": True, "scope": f["scope"],
+                        "state": f["state"], **({"lag": f["lag"]} if f.get("lag") else {})} for f in feeds}
+
+
+METROS.update(_registry_metros())

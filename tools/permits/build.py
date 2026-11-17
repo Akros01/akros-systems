@@ -21,6 +21,7 @@ sys.path.insert(0, HERE)
 
 import render as R  # noqa: E402
 import sources  # noqa: E402
+import storms  # noqa: E402
 from config import (ALMANAC_HOME, CATS, METROS, MIN_FOR_PAGE, PAGE_CATS, SITE, TIPOFF_HOME,  # noqa: E402
                     WEEKS_SHOWN, WINDOW_DAYS)
 
@@ -319,28 +320,32 @@ def index_page(all_aggs, today):
              '<th scope="col" class="n">Pools</th><th scope="col" class="n">Additions and remodels</th></tr></thead>'
              f'<tbody>{"".join(rows)}</tbody></table></div>')
     total = sum(a["total"]["cur"] for a in all_aggs.values())
+    n_metros = len(all_aggs)
+    states = sorted({METROS[k]["name"].split(", ")[-1] for k in all_aggs})
+    covered = [METROS[k]["short"] for k in all_aggs if METROS[k]["tipoff"]]
     title = "Residential building permits by metro and ZIP, updated weekly | Akros Systems"
-    desc = (f"{R.num(total)} residential permits in the last four weeks across Austin, Collin County, Dallas, "
-            "Los Angeles, Sacramento and Chicago, by job type and ZIP. From public records, rebuilt weekly.")
+    desc = (f"{R.num(total)} residential permits in the last four weeks across {n_metros} US metros in "
+            f"{len(states)} states, by job type and ZIP. From public records, rebuilt weekly.")
     canonical = R.url()
     links = "".join(f'<li><a href="{R.path(k, c)}">{E(CATS[c]["title"])} in {E(METROS[k]["short"])}</a> '
                     f'<span>{R.num(a["cats"][c]["cur"])}</span></li>'
                     for c in PAGE_CATS for k, a in all_aggs.items() if c in page_cats(a))
     body = f"""<section class="hero">
   <p class="category">Public permit records · Rebuilt every week · Updated {E(R.fdate(today))}</p>
-  <h1>Residential permit activity in six metros</h1>
+  <h1>Residential permit activity in {n_metros} US metros</h1>
   <p class="lede">Weekly counts of residential building permits by job type and ZIP code, read from each city's own open-data feed. {R.num(total)} permits in the last four weeks. Built by Akros Systems, the makers of the Tipoff weekly brief and the Permit Almanac.</p>
 </section>
 <section class="block"><h2>Metros</h2>{table}</section>
 <section class="block"><h2>By job type</h2><ul class="page-links">{links}</ul></section>
+<section class="block"><h2>Storm reports, every state</h2><p>Hail of an inch or more, damaging wind and tornado reports from the last 30 days, by state, county and nearest ZIP code, for roofing, siding, gutter and window companies. <a href="{R.path('storms')}">See storm reports by state</a>.</p></section>
 <section class="block"><h2>How contractors use permit data</h2>
 <p>A residential permit is filed while a job is still being planned. For the trades that come after it, a new pool, a new house or an addition is a sign that an owner will soon be choosing pool service, security, landscaping, fencing, window coverings or HVAC work. These pages show where that activity is happening. The addresses themselves are in the paid products below.</p></section>
 <div class="cta-grid">
-<section class="cta"><p class="cta-kicker">Tipoff weekly brief</p><h2>New permits for your trade and ZIPs, every week.</h2><p>Covers Austin, Collin County, Dallas, Los Angeles and Sacramento. Report is $297 a month after a 14-day trial (card required).</p><p class="cta-actions"><a class="button" href="{R.TIPOFF_PLANS}">See Tipoff plans</a></p></section>
+<section class="cta"><p class="cta-kicker">Tipoff weekly brief</p><h2>Own the new jobs in your ZIP codes.</h2><p>Covers {E(", ".join(covered[:-1]) + " and " + covered[-1])}. Territory is {R.TERRITORY_PRICE} a month: one company per trade in each ZIP group, with postcards mailed for you to every matching homeowner. Report is $297 a month after a 14-day trial (card required).</p><p class="cta-actions"><a class="button" href="{R.TIPOFF_PLANS}">See Tipoff plans</a></p></section>
 <section class="cta cta-alt"><p class="cta-kicker">Permit Almanac</p><h2>One metro, one month, every permit.</h2><p>Every residential permit for a month, one row each, by job type and ZIP. $29 per metro, $69 for any three, $129 for all six.</p><p class="cta-actions"><a class="button" href="{ALMANAC_HOME}">See the six reports</a> <a class="text-link" href="{R.ALMANAC_SAMPLE}">Free sample</a></p></section>
 </div>"""
     ld = {"@context": "https://schema.org", "@type": "Dataset",
-          "name": "Residential building permit activity in six US metros", "description": desc, "url": canonical,
+          "name": f"Residential building permit activity in {n_metros} US metros", "description": desc, "url": canonical,
           "creator": {"@type": "Organization", "name": "Akros Systems", "url": TIPOFF_HOME},
           "spatialCoverage": [{"@type": "Place", "name": METROS[k]["name"]} for k in all_aggs],
           "dateModified": today.isoformat(), "isAccessibleForFree": True}
@@ -365,7 +370,7 @@ def about_page(all_aggs, today):
 <h2>Corrections</h2>
 <p>Spot a number that looks wrong? Email <a href="mailto:{R.CONTACT_EMAIL}">{R.CONTACT_EMAIL}</a>.</p></section>"""
     return R.page(title="How the permit pages are built: sources and method | Akros Systems",
-                  description="Sources, method and privacy rules behind Akros Systems' weekly residential permit pages for six US metros.",
+                  description=f"Sources, method and privacy rules behind Akros Systems' weekly residential permit pages for {len(all_aggs)} US metros.",
                   canonical=canonical, body=body, jsonld=None,
                   crumbs=[("Permit activity", R.url()), ("About this data", canonical)])
 
@@ -424,6 +429,10 @@ def main(offline=False):
         for cat in page_cats(agg):
             write(os.path.join(metro, cat), cat_page(metro, cat, agg, all_aggs))
             urls.append(R.url(metro, cat))
+    try:
+        urls += storms.build(today, OUT, write, R, offline=offline)
+    except Exception as err:  # storm pages are extra; permit pages still publish
+        print(f"storm pages skipped ({err!r})", file=sys.stderr)
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(sitemap(urls, today))
     with open(os.path.join(DATA, "urls.json"), "w", encoding="utf-8") as f:

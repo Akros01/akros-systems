@@ -1,0 +1,47 @@
+name: Refresh permit pages
+
+# Rebuilds /permits/ from the cities' open-data feeds every Monday, commits the
+# new pages, and tells IndexNow search engines about them. Run it by hand from
+# the Actions tab with "Run workflow".
+on:
+  schedule:
+    - cron: "37 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-permit-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild pages from the open-data feeds
+        run: python3 tools/permits/build.py
+
+      - name: Commit the new pages
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain -- permits sitemap.xml)" ]; then
+            echo "No changes this week."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A permits sitemap.xml
+          git commit -m "Refresh permit pages for the week of $(date -u +%Y-%m-%d)"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Notify IndexNow
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          sleep 90
+          python3 tools/permits/indexnow.py

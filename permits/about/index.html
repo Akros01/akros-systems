@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How the permit pages are built: sources and method | Akros Systems</title>
+<meta name="description" content="Sources, method and privacy rules behind Akros Systems&#x27; weekly residential permit pages for six US metros.">
+<link rel="canonical" href="https://akros01.github.io/akros-systems/permits/about/">
+<meta name="theme-color" content="#0d2635">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How the permit pages are built: sources and method | Akros Systems">
+<meta property="og:description" content="Sources, method and privacy rules behind Akros Systems&#x27; weekly residential permit pages for six US metros.">
+<meta property="og:url" content="https://akros01.github.io/akros-systems/permits/about/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d2635'/%3E%3Cpath d='M13 45 32 17l19 28' fill='none' stroke='%23f05a28' stroke-width='5'/%3E%3Cpath d='M22 45h20' stroke='%23f7fbfc' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/akros-systems/permits/assets/permits.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Permit activity", "item": "https://akros01.github.io/akros-systems/permits/"}, {"@type": "ListItem", "position": 2, "name": "About this data", "item": "https://akros01.github.io/akros-systems/permits/about/"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/akros-systems/permits/" aria-label="Akros Systems permit data home"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" fill="#0d2635"/><path d="M7 29 20 9l13 20" fill="none" stroke="#f05a28" stroke-width="3.2"/><path d="M13 29h14" stroke="#f7fbfc" stroke-width="2.6"/></svg><span class="brand-name">Akros Systems<span>Permit activity / public record</span></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/akros-systems/permits/">All metros</a>
+      <a href="https://akros01.github.io/permit-sample/">$29 reports</a>
+      <a class="nav-cta" href="https://tipoff-brief.github.io/">Tipoff weekly brief</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<p class="crumbs"><a href="/akros-systems/permits/">Permit activity</a> <span aria-hidden="true">/</span> <span aria-current="page">About this data</span></p>
+<section class="hero"><p class="category">Method and sources</p><h1>How these pages are built</h1>
+<p class="lede">Every number on these pages comes from a city or county open-data feed, read again each week. Nothing is estimated or modeled.</p></section>
+<section class="block prose"><h2>Sources</h2><ul><li><strong>Austin, TX</strong>: <a href="https://data.austintexas.gov/d/3syk-w9eu">City of Austin open data: Issued Construction Permits</a>. City of Austin permits, including its extraterritorial jurisdiction, classed as residential.</li><li><strong>Collin County, TX</strong>: <a href="https://data.texas.gov/d/82ee-gbj5">Collin Central Appraisal District: Building Permits (data.texas.gov)</a>. Residential permits that Frisco, Allen, McKinney, Wylie, Prosper, Celina and the other Collin County cities report to the appraisal district. Cities report permits to the appraisal district in monthly batches, so the latest weeks fill in late and the counts here run low until they do. For that reason we don&#x27;t compare them with the weeks before.</li><li><strong>Dallas, TX</strong>: <a href="https://www.dallasopendata.com/d/e7gq-4sah">City of Dallas open data: Building Permits</a>. City of Dallas residential permits.</li><li><strong>Los Angeles, CA</strong>: <a href="https://data.lacity.org/d/pi9x-tg5x">City of Los Angeles open data: Building Permits Issued from 2020 to Present</a>. City of Los Angeles building permits for one- and two-family dwellings. Other cities in LA County are not included. Supplemental and revision permits are left out.</li><li><strong>Chicago, IL</strong>: <a href="https://data.cityofchicago.org/d/ydr8-5enu">City of Chicago open data: Building Permits</a>. City of Chicago permits whose descriptions identify residential work. Chicago records have no ZIP code, so areas are the city&#x27;s 77 community areas.</li><li><strong>Sacramento, CA</strong>: <a href="https://data.cityofsacramento.org/">City of Sacramento open data: Building Permits Issued (current year)</a>. City of Sacramento residential permits. Unincorporated Sacramento County is not included. The city publishes this feed with a delay of a few weeks.</li></ul>
+<h2>Method</h2>
+<p>Each week we download the last few months of residential permits from every feed and sort each permit into a job type, using the permit type and the scope of work the applicant filed: new homes, pools and spas, additions and remodels, ADUs, HVAC, solar, re-roofs and so on. Permits that don't fit a tracked job type are left out of the counts.</p>
+<p>Some feeds arrive late. For each metro we use the latest date whose trailing week holds at least 60% of a normal week's records, and count the four weeks to that date. The previous four weeks are shown for comparison.</p>
+<p>A permit is counted once, on its issue date. Supplemental and revision permits are left out where the feed marks them.</p>
+<h2>What we don't publish</h2>
+<p>These pages show counts by job type and ZIP code (or community area in Chicago). They never show owner names, phone numbers or street addresses, even where the public record includes them.</p>
+<h2>Corrections</h2>
+<p>Spot a number that looks wrong? Email <a href="mailto:abdul321@gmail.com">abdul321@gmail.com</a>.</p></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><strong>Akros Systems</strong> · Massachusetts, USA. Counts come from public open-data permit feeds and are rebuilt every week. These pages publish no owner names, phone numbers or street addresses.</p>
+    <p><a href="/akros-systems/permits/about/">About this data</a> · <a href="https://tipoff-brief.github.io/">Tipoff</a> · <a href="https://akros01.github.io/permit-sample/">Permit Almanac</a> · <a href="mailto:abdul321@gmail.com">abdul321@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -26,7 +26,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from config import METROS  # noqa: E402
+from config import CATS, METROS  # noqa: E402
 from sources import EXISTING_POOL, FETCHERS, FINISHED  # noqa: E402
 
 COLUMNS = ["issued_date", "permit_number", "job_type", "address", "zip", "city_or_area", "description",
@@ -36,7 +36,7 @@ BRANCH_TAG = re.compile(r"\*+\s*main\b\s*\**|\*+", re.I)
 NO_NAME = {"", "Not Given", "None", "N/A", "Na", "Owner", "Homeowner", "Owner Builder"}
 JOB_TYPES = {
     "austin": "new-homes pools additions-remodels demolition accessory repairs hvac solar batteries "
-              "electrical-service irrigation water-heaters",
+              "electrical-service ev-chargers irrigation water-heaters",
     "collin-county": "new-homes pools additions-remodels solar roofing accessory demolition fences-patios foundation",
     "dallas": "new-homes pools additions-remodels solar roofing hvac foundation accessory demolition",
     "los-angeles": "pools adus new-homes wildfire-rebuilds demolition additions-remodels roofing windows-doors "
@@ -93,6 +93,56 @@ def slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
+def write_brief(metro_slug, cats, zips, since, until, stage="issued", include_existing=False, name="",
+                out="briefs"):
+    """Write the CSV and the .txt summary for one list; return (rows, csv_path, txt_path)."""
+    finished = stage == "finished"
+    rows, existing = collect(metro_slug, cats, zips, since, until, stage, include_existing)
+
+    os.makedirs(out, exist_ok=True)
+    stem = "-".join(x for x in (slug(name) or metro_slug, slug("-".join(cats)), "finished" if finished else "",
+                                f"{since.isoformat()}-to-{until.isoformat()}") if x)
+    csv_path = os.path.join(out, stem + ".csv")
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=COLUMNS)
+        w.writeheader()
+        w.writerows(rows)
+
+    metro = METROS[metro_slug]
+    by_zip = collections.Counter((x["zip"], x["city_or_area"]) for x in rows)
+    names = (CATS.get(c, {}).get("label", c) for c in cats)
+    label = ", ".join(n if n[:2].isupper() else n[:1].lower() + n[1:] for n in names)
+    what = "passed final inspection" if finished else "issued"
+    lines = [
+        f"{metro['name']}: {label} permits that {what} {since:%b} {since.day} to {until:%b} {until.day}, {until.year}"
+        if finished else
+        f"{metro['name']}: {label} permits issued {since:%b} {since.day} to {until:%b} {until.day}, {until.year}",
+        f"{len(rows)} permit{'s' if len(rows) != 1 else ''}" + (f" in ZIP {', '.join(sorted(zips))}" if zips else "")
+        + (f" ({existing} more were work on a pool that already existed, left out)" if existing else ""),
+        "",
+        "By ZIP:" if metro_slug != "chicago" else "By community area:",
+    ]
+    for (z, place), n in sorted(by_zip.items(), key=lambda kv: (-kv[1], kv[0][0])):
+        lines.append(f"  {z or 'unknown'}{' ' + place if place else ''}: {n}")
+    builders = collections.Counter(b for b in (BRANCH_TAG.sub("", x["contractor"]).strip().title() for x in rows)
+                                   if b not in NO_NAME)
+    if rows and sum(builders.values()) >= len(rows) / 2:
+        lines += ["", "Companies named on the most of these permits:"]
+        lines += [f"  {b}: {n}" for b, n in builders.most_common(5)]
+    lines += ["", "Newest first:"]
+    for x in rows[:15]:
+        who = f" ({BRANCH_TAG.sub('', x['contractor']).strip().title()})" if x["contractor"] else ""
+        day = x["finished_date"] if finished else x["issued_date"]
+        lines.append(f"  {day}  {x['address'].title()}, {x['zip']}  {x['description'][:70]}{who}")
+    if len(rows) > 15:
+        lines.append(f"  ...and {len(rows) - 15} more in the attached spreadsheet.")
+    lines += ["", f"Source: {metro['source']} ({metro['source_url']}). Public records; may be incomplete or delayed."]
+    txt_path = os.path.join(out, stem + ".txt")
+    with open(txt_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    return rows, csv_path, txt_path
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--metro", choices=sorted(FETCHERS))
@@ -130,48 +180,8 @@ def main():
               f"--stage finished works for: {', '.join(sorted(FINISHED))}")
         return 2
 
-    rows, existing = collect(a.metro, cats, zips, since, until, a.stage, a.include_existing)
-
-    os.makedirs(a.out, exist_ok=True)
-    stem = "-".join(x for x in (slug(a.name) or a.metro, slug("-".join(cats)), "finished" if finished else "",
-                                f"{since.isoformat()}-to-{until.isoformat()}") if x)
-    csv_path = os.path.join(a.out, stem + ".csv")
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=COLUMNS)
-        w.writeheader()
-        w.writerows(rows)
-
-    metro = METROS[a.metro]
-    by_zip = collections.Counter((x["zip"], x["city_or_area"]) for x in rows)
-    label = ", ".join(cats)
-    what = "passed final inspection" if finished else "issued"
-    lines = [
-        f"{metro['name']}: {label} permits that {what} {since:%b} {since.day} to {until:%b} {until.day}, {until.year}"
-        if finished else
-        f"{metro['name']}: {label} permits issued {since:%b} {since.day} to {until:%b} {until.day}, {until.year}",
-        f"{len(rows)} permit{'s' if len(rows) != 1 else ''}" + (f" in ZIP {', '.join(sorted(zips))}" if zips else "")
-        + (f" ({existing} more were work on a pool that already existed, left out)" if existing else ""),
-        "",
-        "By ZIP:" if a.metro != "chicago" else "By community area:",
-    ]
-    for (z, place), n in sorted(by_zip.items(), key=lambda kv: (-kv[1], kv[0][0])):
-        lines.append(f"  {z or 'unknown'}{' ' + place if place else ''}: {n}")
-    builders = collections.Counter(b for b in (BRANCH_TAG.sub("", x["contractor"]).strip().title() for x in rows)
-                                   if b not in NO_NAME)
-    if rows and sum(builders.values()) >= len(rows) / 2:
-        lines += ["", "Builders on the most of these permits:"]
-        lines += [f"  {b}: {n}" for b, n in builders.most_common(5)]
-    lines += ["", "Newest first:"]
-    for x in rows[:15]:
-        who = f" ({BRANCH_TAG.sub('', x['contractor']).strip().title()})" if x["contractor"] else ""
-        day = x["finished_date"] if finished else x["issued_date"]
-        lines.append(f"  {day}  {x['address'].title()}, {x['zip']}  {x['description'][:70]}{who}")
-    if len(rows) > 15:
-        lines.append(f"  ...and {len(rows) - 15} more in the attached spreadsheet.")
-    lines += ["", f"Source: {metro['source']} ({metro['source_url']}). Public records; may be incomplete or delayed."]
-    txt_path = os.path.join(a.out, stem + ".txt")
-    with open(txt_path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
+    rows, csv_path, txt_path = write_brief(a.metro, cats, zips, since, until, a.stage, a.include_existing,
+                                           a.name, a.out)
     print(f"{len(rows)} permits -> {csv_path}\nsummary -> {txt_path}")
     return 0
 

@@ -136,6 +136,7 @@ BATTERY = re.compile(r"batter|powerwall|energy storage|\bess\b", re.I)
 REROOF = re.compile(r"re-?\s?roof|roof covering|tear[- ]?off|roof replace", re.I)
 HVAC = re.compile(r"\b(hvac|a/c|air condition|heat pump|furnace|condenser|mini[- ]split)\b", re.I)
 ADU = re.compile(r"accessory dwelling|\bj?adu\b|junior accessory", re.I)
+EV_CHARGER = re.compile(r"\bev\b|electric vehicle|\bevse\b|wall connector|(car|vehicle) charg|charging station", re.I)
 
 
 # ---------------------------------------------------------------- Austin
@@ -173,6 +174,8 @@ def austin(since, detail=False, finished=False):
             cat = "solar" if SOLAR.search(d) else ("batteries" if BATTERY.search(d) else None)
         elif pt == "EP" and wc == "Upgrade":
             cat = "electrical-service"
+        elif pt == "EP" and EV_CHARGER.search(d):  # mostly "Install Level 2 EV Charger" (Special Inspections Program)
+            cat = "ev-chargers"
         elif pt == "PP" and wc == "Irrigation":
             cat = "irrigation"
         elif pt == "PP" and wc == "Change Out":

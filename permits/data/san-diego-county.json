@@ -1,0 +1,1749 @@
+{
+ "metro": "san-diego-county",
+ "built": "2026-11-17",
+ "latest": "2026-11-16",
+ "end": "2026-11-12",
+ "start": "2026-10-16",
+ "weeks": [
+  [
+   "2026-09-18",
+   "2026-09-24"
+  ],
+  [
+   "2026-09-25",
+   "2026-10-01"
+  ],
+  [
+   "2026-10-02",
+   "2026-10-08"
+  ],
+  [
+   "2026-10-09",
+   "2026-10-15"
+  ],
+  [
+   "2026-10-16",
+   "2026-10-22"
+  ],
+  [
+   "2026-10-23",
+   "2026-10-29"
+  ],
+  [
+   "2026-10-30",
+   "2026-11-05"
+  ],
+  [
+   "2026-11-06",
+   "2026-11-12"
+  ]
+ ],
+ "total": {
+  "cur": 702,
+  "prev": 770,
+  "weekly": [
+   176,
+   202,
+   153,
+   239,
+   211,
+   181,
+   152,
+   158
+  ],
+  "areas": [
+   [
+    "92040",
+    "Lakeside",
+    76
+   ],
+   [
+    "92028",
+    "Fallbrook",
+    69
+   ],
+   [
+    "91977",
+    "Spring Valley",
+    63
+   ],
+   [
+    "92065",
+    "Ramona",
+    40
+   ],
+   [
+    "92082",
+    "Valley Center",
+    39
+   ],
+   [
+    "92021",
+    "El Cajon",
+    37
+   ],
+   [
+    "91941",
+    "La Mesa",
+    35
+   ],
+   [
+    "92067",
+    "Rancho Santa Fe",
+    33
+   ],
+   [
+    "92127",
+    "San Diego",
+    31
+   ],
+   [
+    "92019",
+    "El Cajon",
+    29
+   ],
+   [
+    "91902",
+    "Bonita",
+    29
+   ],
+   [
+    "92026",
+    "Escondido",
+    23
+   ],
+   [
+    "91901",
+    "Alpine",
+    22
+   ],
+   [
+    "92084",
+    "Vista",
+    20
+   ],
+   [
+    "92003",
+    "Bonsall",
+    19
+   ],
+   [
+    "92069",
+    "San Marcos",
+    18
+   ],
+   [
+    "92029",
+    "Escondido",
+    13
+   ],
+   [
+    "91935",
+    "Jamul",
+    11
+   ],
+   [
+    "92020",
+    "El Cajon",
+    9
+   ],
+   [
+    "92004",
+    "Borrego Springs",
+    9
+   ],
+   [
+    "91978",
+    "Spring Valley",
+    9
+   ],
+   [
+    "92036",
+    "Julian",
+    9
+   ],
+   [
+    "92014",
+    "Del Mar",
+    7
+   ],
+   [
+    "92027",
+    "Escondido",
+    5
+   ],
+   [
+    "92083",
+    "Vista",
+    5
+   ],
+   [
+    "92025",
+    "Escondido",
+    5
+   ],
+   [
+    "91962",
+    "Pine Valley",
+    4
+   ],
+   [
+    "92086",
+    "Warner Springs",
+    3
+   ],
+   [
+    "91906",
+    "Campo",
+    3
+   ],
+   [
+    "91950",
+    "National City",
+    3
+   ],
+   [
+    "92078",
+    "San Marcos",
+    2
+   ],
+   [
+    "92091",
+    "Rancho Santa Fe",
+    2
+   ],
+   [
+    "91931",
+    "Guatay",
+    1
+   ],
+   [
+    "91905",
+    "Boulevard",
+    1
+   ],
+   [
+    "92070",
+    "Santa Ysabel",
+    1
+   ],
+   [
+    "91963",
+    "Potrero",
+    1
+   ],
+   [
+    "92061",
+    "Pauma Valley",
+    1
+   ],
+   [
+    "91916",
+    "Descanso",
+    1
+   ],
+   [
+    "92081",
+    "Vista",
+    1
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": [
+   [
+    "Sunrun",
+    51
+   ],
+   [
+    "The White Glove Guys, Plumbing Drains Heating Air Conditioning",
+    44
+   ],
+   [
+    "Baker Home Energy",
+    24
+   ],
+   [
+    "Semper Solaris",
+    23
+   ],
+   [
+    "Walter Anderson Plumbing LLC",
+    22
+   ],
+   [
+    "Lgcy Electric",
+    19
+   ],
+   [
+    "Lennar Homes Of California LLC",
+    18
+   ],
+   [
+    "Tesla Energy Operations Inc",
+    15
+   ],
+   [
+    "Airmaxx Inc",
+    14
+   ],
+   [
+    "Rescue Rooter",
+    13
+   ]
+  ]
+ },
+ "cats": {
+  "fences-patios": {
+   "cur": 92,
+   "prev": 84,
+   "weekly": [
+    13,
+    26,
+    20,
+    25,
+    20,
+    24,
+    25,
+    23
+   ],
+   "areas": [
+    [
+     "92028",
+     "Fallbrook",
+     15
+    ],
+    [
+     "92040",
+     "Lakeside",
+     9
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     9
+    ],
+    [
+     "92084",
+     "Vista",
+     6
+    ],
+    [
+     "91941",
+     "La Mesa",
+     6
+    ],
+    [
+     "92026",
+     "Escondido",
+     5
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     5
+    ],
+    [
+     "92082",
+     "Valley Center",
+     4
+    ],
+    [
+     "91902",
+     "Bonita",
+     4
+    ],
+    [
+     "92021",
+     "El Cajon",
+     4
+    ],
+    [
+     "92027",
+     "Escondido",
+     3
+    ],
+    [
+     "92065",
+     "Ramona",
+     3
+    ],
+    [
+     "91901",
+     "Alpine",
+     3
+    ],
+    [
+     "92020",
+     "El Cajon",
+     2
+    ],
+    [
+     "91978",
+     "Spring Valley",
+     2
+    ],
+    [
+     "92019",
+     "El Cajon",
+     2
+    ],
+    [
+     "92029",
+     "Escondido",
+     1
+    ],
+    [
+     "92004",
+     "Borrego Springs",
+     1
+    ],
+    [
+     "92127",
+     "San Diego",
+     1
+    ],
+    [
+     "91935",
+     "Jamul",
+     1
+    ],
+    [
+     "92086",
+     "Warner Springs",
+     1
+    ],
+    [
+     "92003",
+     "Bonsall",
+     1
+    ],
+    [
+     "92025",
+     "Escondido",
+     1
+    ],
+    [
+     "92014",
+     "Del Mar",
+     1
+    ],
+    [
+     "92081",
+     "Vista",
+     1
+    ]
+   ],
+   "median_value": 12570.25,
+   "valued": 88,
+   "builders": [
+    [
+     "The Home Depot",
+     11
+    ],
+    [
+     "Semper Solaris",
+     10
+    ],
+    [
+     "Baker Home Energy",
+     7
+    ],
+    [
+     "Sudduth Construction Inc Dba Guardian Roofs Energy Solutions",
+     4
+    ],
+    [
+     "Nr Roofing CA",
+     4
+    ],
+    [
+     "Universal Roofing &Amp; Construction LLC",
+     3
+    ],
+    [
+     "Frontline Roofing Inc",
+     3
+    ],
+    [
+     "Alma Roofing Inc",
+     3
+    ],
+    [
+     "Allweather Roofing LLC",
+     2
+    ],
+    [
+     "Newhaus Roofing &Amp; Construction",
+     2
+    ]
+   ]
+  },
+  "solar": {
+   "cur": 155,
+   "prev": 203,
+   "weekly": [
+    46,
+    49,
+    26,
+    82,
+    61,
+    36,
+    16,
+    42
+   ],
+   "areas": [
+    [
+     "92040",
+     "Lakeside",
+     34
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     16
+    ],
+    [
+     "92003",
+     "Bonsall",
+     14
+    ],
+    [
+     "92065",
+     "Ramona",
+     13
+    ],
+    [
+     "92082",
+     "Valley Center",
+     8
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     8
+    ],
+    [
+     "92084",
+     "Vista",
+     7
+    ],
+    [
+     "92021",
+     "El Cajon",
+     5
+    ],
+    [
+     "92026",
+     "Escondido",
+     4
+    ],
+    [
+     "91935",
+     "Jamul",
+     4
+    ],
+    [
+     "92004",
+     "Borrego Springs",
+     4
+    ],
+    [
+     "91902",
+     "Bonita",
+     4
+    ],
+    [
+     "92036",
+     "Julian",
+     4
+    ],
+    [
+     "91962",
+     "Pine Valley",
+     3
+    ],
+    [
+     "91901",
+     "Alpine",
+     3
+    ],
+    [
+     "92019",
+     "El Cajon",
+     3
+    ],
+    [
+     "92127",
+     "San Diego",
+     3
+    ],
+    [
+     "91941",
+     "La Mesa",
+     3
+    ],
+    [
+     "92020",
+     "El Cajon",
+     2
+    ],
+    [
+     "92083",
+     "Vista",
+     2
+    ],
+    [
+     "91906",
+     "Campo",
+     2
+    ],
+    [
+     "91950",
+     "National City",
+     2
+    ],
+    [
+     "92069",
+     "San Marcos",
+     1
+    ],
+    [
+     "92091",
+     "Rancho Santa Fe",
+     1
+    ],
+    [
+     "91978",
+     "Spring Valley",
+     1
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     1
+    ],
+    [
+     "92027",
+     "Escondido",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": [
+    [
+     "Sunrun",
+     43
+    ],
+    [
+     "Lgcy Electric",
+     18
+    ],
+    [
+     "Lennar Homes Of California LLC",
+     18
+    ],
+    [
+     "Semper Solaris",
+     8
+    ],
+    [
+     "Tesla Energy Operations Inc",
+     7
+    ],
+    [
+     "Baker Home Energy",
+     6
+    ],
+    [
+     "Stellar Solar Electric",
+     5
+    ],
+    [
+     "Blalock Electric Solar",
+     4
+    ],
+    [
+     "Build Brothers Inc",
+     3
+    ],
+    [
+     "Jason Poch Dba Suncore Solar",
+     3
+    ]
+   ]
+  },
+  "adus": {
+   "cur": 18,
+   "prev": 16,
+   "weekly": [
+    5,
+    3,
+    2,
+    6,
+    7,
+    5,
+    5,
+    1
+   ],
+   "areas": [
+    [
+     "92040",
+     "Lakeside",
+     3
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     3
+    ],
+    [
+     "92065",
+     "Ramona",
+     2
+    ],
+    [
+     "91941",
+     "La Mesa",
+     2
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     2
+    ],
+    [
+     "91935",
+     "Jamul",
+     1
+    ],
+    [
+     "92026",
+     "Escondido",
+     1
+    ],
+    [
+     "92082",
+     "Valley Center",
+     1
+    ],
+    [
+     "92019",
+     "El Cajon",
+     1
+    ],
+    [
+     "92084",
+     "Vista",
+     1
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     1
+    ]
+   ],
+   "median_value": 112264.53,
+   "valued": 18,
+   "builders": []
+  },
+  "additions-remodels": {
+   "cur": 141,
+   "prev": 146,
+   "weekly": [
+    31,
+    38,
+    38,
+    39,
+    33,
+    36,
+    49,
+    23
+   ],
+   "areas": [
+    [
+     "92040",
+     "Lakeside",
+     15
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     12
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     11
+    ],
+    [
+     "91941",
+     "La Mesa",
+     10
+    ],
+    [
+     "92127",
+     "San Diego",
+     10
+    ],
+    [
+     "92082",
+     "Valley Center",
+     9
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     9
+    ],
+    [
+     "91902",
+     "Bonita",
+     7
+    ],
+    [
+     "92026",
+     "Escondido",
+     7
+    ],
+    [
+     "92021",
+     "El Cajon",
+     7
+    ],
+    [
+     "91901",
+     "Alpine",
+     5
+    ],
+    [
+     "92069",
+     "San Marcos",
+     5
+    ],
+    [
+     "92029",
+     "Escondido",
+     4
+    ],
+    [
+     "92065",
+     "Ramona",
+     3
+    ],
+    [
+     "91978",
+     "Spring Valley",
+     3
+    ],
+    [
+     "91935",
+     "Jamul",
+     3
+    ],
+    [
+     "92078",
+     "San Marcos",
+     2
+    ],
+    [
+     "92019",
+     "El Cajon",
+     2
+    ],
+    [
+     "92036",
+     "Julian",
+     2
+    ],
+    [
+     "92020",
+     "El Cajon",
+     2
+    ],
+    [
+     "92083",
+     "Vista",
+     1
+    ],
+    [
+     "92084",
+     "Vista",
+     1
+    ],
+    [
+     "92086",
+     "Warner Springs",
+     1
+    ],
+    [
+     "92025",
+     "Escondido",
+     1
+    ],
+    [
+     "92004",
+     "Borrego Springs",
+     1
+    ],
+    [
+     "91905",
+     "Boulevard",
+     1
+    ],
+    [
+     "92061",
+     "Pauma Valley",
+     1
+    ],
+    [
+     "92014",
+     "Del Mar",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 16,
+   "builders": [
+    [
+     "Walter Anderson Plumbing LLC",
+     17
+    ],
+    [
+     "Lifetime Home Remodeling",
+     7
+    ],
+    [
+     "The White Glove Guys, Plumbing Drains Heating Air Conditioning",
+     5
+    ],
+    [
+     "Mauzy Cooling Heating Plumbing And Electrical",
+     5
+    ],
+    [
+     "Yanchewski &Amp; Wardell Enterprises Inc Dba Ecowater Systems Of San",
+     3
+    ],
+    [
+     "Windowfits.Com Dba M W D Specialists",
+     3
+    ],
+    [
+     "Semper Solaris",
+     3
+    ],
+    [
+     "King Remodeling Inc",
+     2
+    ],
+    [
+     "Same Day Heating Cooling Plumbing",
+     2
+    ],
+    [
+     "Creative Design &Amp; Build Dba Creative Design Build",
+     2
+    ]
+   ]
+  },
+  "pools": {
+   "cur": 22,
+   "prev": 24,
+   "weekly": [
+    6,
+    9,
+    5,
+    4,
+    2,
+    4,
+    6,
+    10
+   ],
+   "areas": [
+    [
+     "92127",
+     "San Diego",
+     3
+    ],
+    [
+     "92021",
+     "El Cajon",
+     2
+    ],
+    [
+     "91902",
+     "Bonita",
+     2
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     2
+    ],
+    [
+     "92069",
+     "San Marcos",
+     2
+    ],
+    [
+     "92004",
+     "Borrego Springs",
+     2
+    ],
+    [
+     "92082",
+     "Valley Center",
+     2
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     1
+    ],
+    [
+     "92084",
+     "Vista",
+     1
+    ],
+    [
+     "91941",
+     "La Mesa",
+     1
+    ],
+    [
+     "91906",
+     "Campo",
+     1
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     1
+    ],
+    [
+     "91901",
+     "Alpine",
+     1
+    ],
+    [
+     "92003",
+     "Bonsall",
+     1
+    ]
+   ],
+   "median_value": 45122.0,
+   "valued": 19,
+   "builders": [
+    [
+     "Sundancer Pools Inc",
+     3
+    ],
+    [
+     "Ramos Pool &Amp; Spa Construction Inc",
+     2
+    ]
+   ]
+  },
+  "foundation": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "water-heaters": {
+   "cur": 33,
+   "prev": 27,
+   "weekly": [
+    4,
+    9,
+    6,
+    8,
+    8,
+    11,
+    6,
+    8
+   ],
+   "areas": [
+    [
+     "91977",
+     "Spring Valley",
+     5
+    ],
+    [
+     "92040",
+     "Lakeside",
+     3
+    ],
+    [
+     "92065",
+     "Ramona",
+     3
+    ],
+    [
+     "92019",
+     "El Cajon",
+     3
+    ],
+    [
+     "92127",
+     "San Diego",
+     3
+    ],
+    [
+     "91978",
+     "Spring Valley",
+     2
+    ],
+    [
+     "92036",
+     "Julian",
+     2
+    ],
+    [
+     "92021",
+     "El Cajon",
+     2
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     2
+    ],
+    [
+     "92082",
+     "Valley Center",
+     1
+    ],
+    [
+     "91902",
+     "Bonita",
+     1
+    ],
+    [
+     "92069",
+     "San Marcos",
+     1
+    ],
+    [
+     "91941",
+     "La Mesa",
+     1
+    ],
+    [
+     "92026",
+     "Escondido",
+     1
+    ],
+    [
+     "91901",
+     "Alpine",
+     1
+    ],
+    [
+     "92084",
+     "Vista",
+     1
+    ],
+    [
+     "91935",
+     "Jamul",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": [
+    [
+     "The White Glove Guys, Plumbing Drains Heating Air Conditioning",
+     12
+    ],
+    [
+     "Greencat Inc",
+     5
+    ],
+    [
+     "Rescue Rooter",
+     4
+    ],
+    [
+     "Walter Anderson Plumbing LLC",
+     4
+    ],
+    [
+     "Harris Water Heaters Inc",
+     2
+    ],
+    [
+     "Mauzy Cooling Heating Plumbing And Electrical",
+     2
+    ]
+   ]
+  },
+  "hvac": {
+   "cur": 126,
+   "prev": 142,
+   "weekly": [
+    41,
+    34,
+    29,
+    38,
+    40,
+    31,
+    25,
+    30
+   ],
+   "areas": [
+    [
+     "91977",
+     "Spring Valley",
+     20
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     15
+    ],
+    [
+     "92019",
+     "El Cajon",
+     13
+    ],
+    [
+     "92069",
+     "San Marcos",
+     8
+    ],
+    [
+     "92127",
+     "San Diego",
+     8
+    ],
+    [
+     "92021",
+     "El Cajon",
+     7
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     7
+    ],
+    [
+     "92040",
+     "Lakeside",
+     6
+    ],
+    [
+     "91941",
+     "La Mesa",
+     6
+    ],
+    [
+     "91901",
+     "Alpine",
+     6
+    ],
+    [
+     "92065",
+     "Ramona",
+     5
+    ],
+    [
+     "92082",
+     "Valley Center",
+     4
+    ],
+    [
+     "92014",
+     "Del Mar",
+     4
+    ],
+    [
+     "91902",
+     "Bonita",
+     3
+    ],
+    [
+     "92026",
+     "Escondido",
+     3
+    ],
+    [
+     "92025",
+     "Escondido",
+     2
+    ],
+    [
+     "92084",
+     "Vista",
+     2
+    ],
+    [
+     "92027",
+     "Escondido",
+     1
+    ],
+    [
+     "92004",
+     "Borrego Springs",
+     1
+    ],
+    [
+     "92091",
+     "Rancho Santa Fe",
+     1
+    ],
+    [
+     "92020",
+     "El Cajon",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": [
+    [
+     "The White Glove Guys, Plumbing Drains Heating Air Conditioning",
+     26
+    ],
+    [
+     "Airmaxx Inc",
+     14
+    ],
+    [
+     "Rescue Rooter",
+     7
+    ],
+    [
+     "Baker Home Energy",
+     6
+    ],
+    [
+     "Greencat Inc",
+     6
+    ],
+    [
+     "Comfort Bros Heating And Air",
+     5
+    ],
+    [
+     "We Care",
+     5
+    ],
+    [
+     "Mauzy Cooling Heating Plumbing And Electrical",
+     4
+    ],
+    [
+     "Green Future USA Inc",
+     4
+    ],
+    [
+     "West Coast Heating Air Solar Plumbing",
+     4
+    ]
+   ]
+  },
+  "batteries": {
+   "cur": 30,
+   "prev": 45,
+   "weekly": [
+    7,
+    14,
+    5,
+    19,
+    13,
+    8,
+    3,
+    6
+   ],
+   "areas": [
+    [
+     "92028",
+     "Fallbrook",
+     6
+    ],
+    [
+     "92082",
+     "Valley Center",
+     6
+    ],
+    [
+     "92065",
+     "Ramona",
+     5
+    ],
+    [
+     "92003",
+     "Bonsall",
+     3
+    ],
+    [
+     "91901",
+     "Alpine",
+     2
+    ],
+    [
+     "91902",
+     "Bonita",
+     2
+    ],
+    [
+     "92026",
+     "Escondido",
+     1
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     1
+    ],
+    [
+     "92040",
+     "Lakeside",
+     1
+    ],
+    [
+     "92029",
+     "Escondido",
+     1
+    ],
+    [
+     "92086",
+     "Warner Springs",
+     1
+    ],
+    [
+     "92019",
+     "El Cajon",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": [
+    [
+     "Tesla Energy Operations Inc",
+     8
+    ],
+    [
+     "Sunrun",
+     8
+    ],
+    [
+     "Aloha Solar Power And Electrical Services Inc",
+     4
+    ],
+    [
+     "San Diego County Solar",
+     2
+    ]
+   ]
+  },
+  "electrical-service": {
+   "cur": 61,
+   "prev": 67,
+   "weekly": [
+    18,
+    19,
+    21,
+    9,
+    21,
+    20,
+    10,
+    10
+   ],
+   "areas": [
+    [
+     "91941",
+     "La Mesa",
+     6
+    ],
+    [
+     "92021",
+     "El Cajon",
+     6
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     5
+    ],
+    [
+     "92040",
+     "Lakeside",
+     5
+    ],
+    [
+     "92065",
+     "Ramona",
+     5
+    ],
+    [
+     "92029",
+     "Escondido",
+     4
+    ],
+    [
+     "92019",
+     "El Cajon",
+     4
+    ],
+    [
+     "91902",
+     "Bonita",
+     4
+    ],
+    [
+     "92082",
+     "Valley Center",
+     2
+    ],
+    [
+     "92083",
+     "Vista",
+     2
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     2
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     2
+    ],
+    [
+     "91931",
+     "Guatay",
+     1
+    ],
+    [
+     "92084",
+     "Vista",
+     1
+    ],
+    [
+     "91978",
+     "Spring Valley",
+     1
+    ],
+    [
+     "92026",
+     "Escondido",
+     1
+    ],
+    [
+     "91962",
+     "Pine Valley",
+     1
+    ],
+    [
+     "91935",
+     "Jamul",
+     1
+    ],
+    [
+     "92036",
+     "Julian",
+     1
+    ],
+    [
+     "91963",
+     "Potrero",
+     1
+    ],
+    [
+     "91950",
+     "National City",
+     1
+    ],
+    [
+     "92020",
+     "El Cajon",
+     1
+    ],
+    [
+     "92014",
+     "Del Mar",
+     1
+    ],
+    [
+     "91916",
+     "Descanso",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": [
+    [
+     "Srp Electric Inc",
+     3
+    ],
+    [
+     "Tcb Electric &Amp; Lighting Services Inc",
+     2
+    ],
+    [
+     "Solid Electrical Services LLC",
+     2
+    ],
+    [
+     "Aloha Solar Power And Electrical Services Inc",
+     2
+    ],
+    [
+     "Ground Up Electric",
+     2
+    ],
+    [
+     "Dbk Electric",
+     2
+    ],
+    [
+     "Baker Home Energy",
+     2
+    ]
+   ]
+  },
+  "ev-chargers": {
+   "cur": 18,
+   "prev": 12,
+   "weekly": [
+    4,
+    1,
+    1,
+    6,
+    4,
+    5,
+    5,
+    4
+   ],
+   "areas": [
+    [
+     "92021",
+     "El Cajon",
+     4
+    ],
+    [
+     "92127",
+     "San Diego",
+     3
+    ],
+    [
+     "92029",
+     "Escondido",
+     3
+    ],
+    [
+     "92082",
+     "Valley Center",
+     2
+    ],
+    [
+     "91902",
+     "Bonita",
+     1
+    ],
+    [
+     "92020",
+     "El Cajon",
+     1
+    ],
+    [
+     "92065",
+     "Ramona",
+     1
+    ],
+    [
+     "91977",
+     "Spring Valley",
+     1
+    ],
+    [
+     "92025",
+     "Escondido",
+     1
+    ],
+    [
+     "92028",
+     "Fallbrook",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": [
+    [
+     "Smith Electrical Contractors Inc",
+     2
+    ]
+   ]
+  },
+  "demolition": {
+   "cur": 6,
+   "prev": 4,
+   "weekly": [
+    1,
+    0,
+    0,
+    3,
+    2,
+    1,
+    2,
+    1
+   ],
+   "areas": [
+    [
+     "91977",
+     "Spring Valley",
+     1
+    ],
+    [
+     "91901",
+     "Alpine",
+     1
+    ],
+    [
+     "92069",
+     "San Marcos",
+     1
+    ],
+    [
+     "91902",
+     "Bonita",
+     1
+    ],
+    [
+     "92070",
+     "Santa Ysabel",
+     1
+    ],
+    [
+     "92067",
+     "Rancho Santa Fe",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  }
+ }
+}

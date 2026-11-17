@@ -1,0 +1,26 @@
+{
+  "company": "Your Pool Company",
+  "phone": "(512) 555-0100",
+  "website": "yourpoolcompany.com",
+  "offer": "New pool owners: your first month of weekly service is free when you sign up for a year. Call and mention code {code}.",
+  "headlines": {
+    "finished": "Your new pool is finished. Let's keep it that way.",
+    "issued": "Building a pool? Line up its care now."
+  },
+  "reason": "pool",
+  "metro": "austin",
+  "cats": ["pools"],
+  "zips": ["78703", "78704", "78739", "78745", "78757"],
+  "stages": ["finished", "issued"],
+  "days": 7,
+  "monthly_cards": 300,
+  "color": "#164b63",
+  "from": {
+    "companyName": "Your Pool Company",
+    "addressLine1": "123 Example St",
+    "city": "Austin",
+    "provinceOrState": "TX",
+    "postalOrZip": "78704"
+  },
+  "approved": false
+}

@@ -1,0 +1,3327 @@
+{
+ "metro": "los-angeles",
+ "built": "2026-11-17",
+ "latest": "2026-11-14",
+ "end": "2026-11-10",
+ "start": "2026-10-14",
+ "weeks": [
+  [
+   "2026-09-16",
+   "2026-09-22"
+  ],
+  [
+   "2026-09-23",
+   "2026-09-29"
+  ],
+  [
+   "2026-09-30",
+   "2026-10-06"
+  ],
+  [
+   "2026-10-07",
+   "2026-10-13"
+  ],
+  [
+   "2026-10-14",
+   "2026-10-20"
+  ],
+  [
+   "2026-10-21",
+   "2026-10-27"
+  ],
+  [
+   "2026-10-28",
+   "2026-11-03"
+  ],
+  [
+   "2026-11-04",
+   "2026-11-10"
+  ]
+ ],
+ "total": {
+  "cur": 2869,
+  "prev": 2860,
+  "weekly": [
+   698,
+   726,
+   748,
+   688,
+   764,
+   714,
+   729,
+   662
+  ],
+  "areas": [
+   [
+    "90272",
+    "Brentwood - Pacific Palisades",
+    177
+   ],
+   [
+    "90066",
+    "Palms - Mar Vista - Del Rey",
+    89
+   ],
+   [
+    "91335",
+    "Reseda - West Van Nuys",
+    85
+   ],
+   [
+    "91344",
+    "Granada Hills - Knollwood",
+    82
+   ],
+   [
+    "91367",
+    "Canoga Park-West Hills-Winnetka-Woodland Hills",
+    71
+   ],
+   [
+    "91364",
+    "Canoga Park-West Hills-Winnetka-Woodland Hills",
+    65
+   ],
+   [
+    "90049",
+    "Brentwood - Pacific Palisades",
+    64
+   ],
+   [
+    "90065",
+    "Northeast Los Angeles",
+    58
+   ],
+   [
+    "91342",
+    "Sylmar",
+    54
+   ],
+   [
+    "90041",
+    "Northeast Los Angeles",
+    53
+   ],
+   [
+    "90042",
+    "Northeast Los Angeles",
+    53
+   ],
+   [
+    "91307",
+    "Canoga Park-West Hills-Winnetka-Woodland Hills",
+    53
+   ],
+   [
+    "90045",
+    "Westchester - Playa Del Rey",
+    51
+   ],
+   [
+    "91306",
+    "Canoga Park-West Hills-Winnetka-Woodland Hills",
+    51
+   ],
+   [
+    "90019",
+    "Wilshire",
+    50
+   ],
+   [
+    "91401",
+    "Van Nuys - North Sherman Oaks",
+    48
+   ],
+   [
+    "90026",
+    "Silver Lake - Echo Park - Elysian Valley",
+    47
+   ],
+   [
+    "90027",
+    "Hollywood",
+    47
+   ],
+   [
+    "91343",
+    "Mission Hills - Panorama City - North Hills",
+    46
+   ],
+   [
+    "91326",
+    "Chatsworth - Porter Ranch",
+    45
+   ],
+   [
+    "91316",
+    "Encino - Tarzana",
+    44
+   ],
+   [
+    "90039",
+    "Northeast Los Angeles",
+    43
+   ],
+   [
+    "90034",
+    "West Los Angeles",
+    41
+   ],
+   [
+    "91406",
+    "Reseda - West Van Nuys",
+    40
+   ],
+   [
+    "90068",
+    "Hollywood",
+    40
+   ],
+   [
+    "90046",
+    "Hollywood",
+    39
+   ],
+   [
+    "90018",
+    "West Adams - Baldwin Hills - Leimert",
+    38
+   ],
+   [
+    "90064",
+    "West Los Angeles",
+    38
+   ],
+   [
+    "91325",
+    "Northridge",
+    38
+   ],
+   [
+    "91304",
+    "Canoga Park-West Hills-Winnetka-Woodland Hills",
+    37
+   ],
+   [
+    "90016",
+    "West Adams - Baldwin Hills - Leimert",
+    35
+   ],
+   [
+    "90043",
+    "West Adams - Baldwin Hills - Leimert",
+    35
+   ],
+   [
+    "91356",
+    "Encino - Tarzana",
+    34
+   ],
+   [
+    "91607",
+    "North Hollywood - Valley Village",
+    34
+   ],
+   [
+    "91604",
+    "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+    33
+   ],
+   [
+    "90032",
+    "Northeast Los Angeles",
+    33
+   ],
+   [
+    "90044",
+    "South Los Angeles",
+    33
+   ],
+   [
+    "90004",
+    "Wilshire",
+    32
+   ],
+   [
+    "91331",
+    "Arleta - Pacoima",
+    32
+   ],
+   [
+    "90008",
+    "West Adams - Baldwin Hills - Leimert",
+    31
+   ],
+   [
+    "91352",
+    "Sun Valley - La Tuna Canyon",
+    30
+   ],
+   [
+    "91311",
+    "Chatsworth - Porter Ranch",
+    29
+   ],
+   [
+    "91042",
+    "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+    28
+   ],
+   [
+    "91423",
+    "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+    28
+   ],
+   [
+    "90291",
+    "Venice",
+    27
+   ],
+   [
+    "90731",
+    "San Pedro",
+    27
+   ],
+   [
+    "91605",
+    "Sun Valley - La Tuna Canyon",
+    25
+   ],
+   [
+    "91040",
+    "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+    25
+   ],
+   [
+    "90036",
+    "Wilshire",
+    25
+   ],
+   [
+    "90062",
+    "South Los Angeles",
+    24
+   ],
+   [
+    "91403",
+    "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+    23
+   ],
+   [
+    "90047",
+    "South Los Angeles",
+    22
+   ],
+   [
+    "90035",
+    "Wilshire",
+    22
+   ],
+   [
+    "91324",
+    "Northridge",
+    22
+   ],
+   [
+    "91402",
+    "Mission Hills - Panorama City - North Hills",
+    21
+   ],
+   [
+    "90048",
+    "Wilshire",
+    21
+   ],
+   [
+    "91405",
+    "Van Nuys - North Sherman Oaks",
+    21
+   ],
+   [
+    "91606",
+    "North Hollywood - Valley Village",
+    21
+   ],
+   [
+    "90210",
+    "Bel Air - Beverly Crest",
+    21
+   ],
+   [
+    "90031",
+    "Northeast Los Angeles",
+    20
+   ],
+   [
+    "91436",
+    "Encino - Tarzana",
+    19
+   ],
+   [
+    "91601",
+    "North Hollywood - Valley Village",
+    18
+   ],
+   [
+    "91411",
+    "Van Nuys - North Sherman Oaks",
+    17
+   ],
+   [
+    "90744",
+    "Wilmington - Harbor City",
+    17
+   ],
+   [
+    "90069",
+    "Hollywood",
+    17
+   ],
+   [
+    "90710",
+    "Wilmington - Harbor City",
+    16
+   ],
+   [
+    "91303",
+    "Canoga Park-West Hills-Winnetka-Woodland Hills",
+    15
+   ],
+   [
+    "90011",
+    "Southeast Los Angeles",
+    14
+   ],
+   [
+    "90025",
+    "West Los Angeles",
+    14
+   ],
+   [
+    "90732",
+    "San Pedro",
+    13
+   ],
+   [
+    "90029",
+    "Hollywood",
+    13
+   ],
+   [
+    "90033",
+    "Boyle Heights",
+    12
+   ],
+   [
+    "90024",
+    "Westwood",
+    12
+   ],
+   [
+    "90292",
+    "Venice",
+    11
+   ],
+   [
+    "90230",
+    "Palms - Mar Vista - Del Rey",
+    11
+   ],
+   [
+    "91340",
+    "Arleta - Pacoima",
+    11
+   ],
+   [
+    "91602",
+    "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+    10
+   ],
+   [
+    "90003",
+    "Southeast Los Angeles",
+    10
+   ],
+   [
+    "90037",
+    "South Los Angeles",
+    9
+   ],
+   [
+    "90002",
+    "Southeast Los Angeles",
+    8
+   ],
+   [
+    "90006",
+    "South Los Angeles",
+    8
+   ],
+   [
+    "90501",
+    "Harbor Gateway",
+    8
+   ],
+   [
+    "90077",
+    "Bel Air - Beverly Crest",
+    7
+   ],
+   [
+    "90023",
+    "Boyle Heights",
+    7
+   ],
+   [
+    "90061",
+    "Southeast Los Angeles",
+    7
+   ],
+   [
+    "90007",
+    "South Los Angeles",
+    7
+   ],
+   [
+    "90063",
+    "Boyle Heights",
+    6
+   ],
+   [
+    "91345",
+    "Mission Hills - Panorama City - North Hills",
+    6
+   ],
+   [
+    "90248",
+    "Harbor Gateway",
+    6
+   ],
+   [
+    "90028",
+    "Hollywood",
+    5
+   ],
+   [
+    "90038",
+    "Hollywood",
+    4
+   ],
+   [
+    "90020",
+    "Wilshire",
+    4
+   ],
+   [
+    "90232",
+    "Palms - Mar Vista - Del Rey",
+    4
+   ],
+   [
+    "90402",
+    "Brentwood - Pacific Palisades",
+    4
+   ],
+   [
+    "90001",
+    "Southeast Los Angeles",
+    3
+   ],
+   [
+    "90012",
+    "Downtown",
+    3
+   ],
+   [
+    "90247",
+    "Harbor Gateway",
+    3
+   ],
+   [
+    "90293",
+    "Westchester - Playa Del Rey",
+    2
+   ],
+   [
+    "91505",
+    "Sun Valley - La Tuna Canyon",
+    2
+   ],
+   [
+    "90059",
+    "Southeast Los Angeles",
+    2
+   ],
+   [
+    "90056",
+    "Westchester - Playa Del Rey",
+    2
+   ],
+   [
+    "90005",
+    "Wilshire",
+    1
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": []
+ },
+ "cats": {
+  "pools": {
+   "cur": 137,
+   "prev": 124,
+   "weekly": [
+    27,
+    34,
+    36,
+    27,
+    38,
+    34,
+    29,
+    36
+   ],
+   "areas": [
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     23
+    ],
+    [
+     "91356",
+     "Encino - Tarzana",
+     7
+    ],
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     7
+    ],
+    [
+     "91423",
+     "Van Nuys - North Sherman Oaks",
+     6
+    ],
+    [
+     "91326",
+     "Chatsworth - Porter Ranch",
+     6
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     5
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     5
+    ],
+    [
+     "91604",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     4
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     4
+    ],
+    [
+     "91307",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     4
+    ],
+    [
+     "90069",
+     "Hollywood",
+     4
+    ],
+    [
+     "91325",
+     "Northridge",
+     4
+    ],
+    [
+     "90027",
+     "Hollywood",
+     4
+    ],
+    [
+     "91316",
+     "Encino - Tarzana",
+     4
+    ],
+    [
+     "90045",
+     "Westchester - Playa Del Rey",
+     3
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     3
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     3
+    ],
+    [
+     "90039",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "90019",
+     "West Adams - Baldwin Hills - Leimert",
+     2
+    ],
+    [
+     "91306",
+     "Chatsworth - Porter Ranch",
+     2
+    ],
+    [
+     "90036",
+     "Wilshire",
+     2
+    ],
+    [
+     "91403",
+     "Van Nuys - North Sherman Oaks",
+     2
+    ],
+    [
+     "90068",
+     "Hollywood",
+     2
+    ],
+    [
+     "90004",
+     "Wilshire",
+     2
+    ],
+    [
+     "91304",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     2
+    ],
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     2
+    ],
+    [
+     "90034",
+     "West Los Angeles",
+     2
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     2
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     1
+    ],
+    [
+     "90024",
+     "Westwood",
+     1
+    ],
+    [
+     "91605",
+     "Sun Valley - La Tuna Canyon",
+     1
+    ],
+    [
+     "90020",
+     "Wilshire",
+     1
+    ],
+    [
+     "91324",
+     "Northridge",
+     1
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     1
+    ],
+    [
+     "91601",
+     "North Hollywood - Valley Village",
+     1
+    ],
+    [
+     "90077",
+     "Bel Air - Beverly Crest",
+     1
+    ],
+    [
+     "91602",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     1
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90016",
+     "West Adams - Baldwin Hills - Leimert",
+     1
+    ],
+    [
+     "90065",
+     "Northeast Los Angeles",
+     1
+    ],
+    [
+     "90038",
+     "Hollywood",
+     1
+    ],
+    [
+     "90402",
+     "Brentwood - Pacific Palisades",
+     1
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     1
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     1
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90744",
+     "Wilmington - Harbor City",
+     1
+    ]
+   ],
+   "median_value": 35000.0,
+   "valued": 135,
+   "builders": []
+  },
+  "windows-doors": {
+   "cur": 197,
+   "prev": 188,
+   "weekly": [
+    46,
+    60,
+    34,
+    48,
+    54,
+    37,
+    59,
+    47
+   ],
+   "areas": [
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     7
+    ],
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     7
+    ],
+    [
+     "90027",
+     "Hollywood",
+     7
+    ],
+    [
+     "90045",
+     "Westchester - Playa Del Rey",
+     6
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     6
+    ],
+    [
+     "90041",
+     "Northeast Los Angeles",
+     6
+    ],
+    [
+     "91316",
+     "Encino - Tarzana",
+     5
+    ],
+    [
+     "91403",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     5
+    ],
+    [
+     "91326",
+     "Chatsworth - Porter Ranch",
+     5
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     5
+    ],
+    [
+     "90042",
+     "Northeast Los Angeles",
+     5
+    ],
+    [
+     "90043",
+     "West Adams - Baldwin Hills - Leimert",
+     5
+    ],
+    [
+     "90291",
+     "Venice",
+     5
+    ],
+    [
+     "91307",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     5
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     4
+    ],
+    [
+     "90008",
+     "West Adams - Baldwin Hills - Leimert",
+     4
+    ],
+    [
+     "91304",
+     "Chatsworth - Porter Ranch",
+     4
+    ],
+    [
+     "90016",
+     "West Adams - Baldwin Hills - Leimert",
+     4
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     4
+    ],
+    [
+     "90068",
+     "Hollywood",
+     4
+    ],
+    [
+     "90039",
+     "Silver Lake - Echo Park - Elysian Valley",
+     4
+    ],
+    [
+     "90019",
+     "West Adams - Baldwin Hills - Leimert",
+     4
+    ],
+    [
+     "91342",
+     "Sylmar",
+     3
+    ],
+    [
+     "90065",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "90047",
+     "South Los Angeles",
+     3
+    ],
+    [
+     "90024",
+     "Westwood",
+     3
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     3
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     3
+    ],
+    [
+     "90731",
+     "San Pedro",
+     3
+    ],
+    [
+     "90046",
+     "Hollywood",
+     3
+    ],
+    [
+     "90210",
+     "Bel Air - Beverly Crest",
+     3
+    ],
+    [
+     "90034",
+     "West Adams - Baldwin Hills - Leimert",
+     2
+    ],
+    [
+     "90036",
+     "Wilshire",
+     2
+    ],
+    [
+     "91605",
+     "Sun Valley - La Tuna Canyon",
+     2
+    ],
+    [
+     "91356",
+     "Encino - Tarzana",
+     2
+    ],
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     2
+    ],
+    [
+     "90292",
+     "Venice",
+     2
+    ],
+    [
+     "90031",
+     "Northeast Los Angeles",
+     2
+    ],
+    [
+     "90064",
+     "West Los Angeles",
+     2
+    ],
+    [
+     "90062",
+     "South Los Angeles",
+     2
+    ],
+    [
+     "90069",
+     "Hollywood",
+     2
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     2
+    ],
+    [
+     "90044",
+     "South Los Angeles",
+     2
+    ],
+    [
+     "90732",
+     "San Pedro",
+     2
+    ],
+    [
+     "91325",
+     "Reseda - West Van Nuys",
+     2
+    ],
+    [
+     "91607",
+     "North Hollywood - Valley Village",
+     2
+    ],
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     2
+    ],
+    [
+     "91604",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     2
+    ],
+    [
+     "90023",
+     "Boyle Heights",
+     1
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     1
+    ],
+    [
+     "90004",
+     "Wilshire",
+     1
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90002",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     1
+    ],
+    [
+     "90007",
+     "South Los Angeles",
+     1
+    ],
+    [
+     "90018",
+     "West Adams - Baldwin Hills - Leimert",
+     1
+    ],
+    [
+     "91340",
+     "Arleta - Pacoima",
+     1
+    ],
+    [
+     "90033",
+     "Boyle Heights",
+     1
+    ],
+    [
+     "91423",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     1
+    ],
+    [
+     "91306",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     1
+    ],
+    [
+     "90048",
+     "Wilshire",
+     1
+    ],
+    [
+     "90025",
+     "West Los Angeles",
+     1
+    ],
+    [
+     "90077",
+     "Bel Air - Beverly Crest",
+     1
+    ],
+    [
+     "90035",
+     "West Los Angeles",
+     1
+    ],
+    [
+     "90056",
+     "Westchester - Playa Del Rey",
+     1
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     1
+    ],
+    [
+     "91606",
+     "North Hollywood - Valley Village",
+     1
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90710",
+     "Wilmington - Harbor City",
+     1
+    ],
+    [
+     "90029",
+     "Hollywood",
+     1
+    ],
+    [
+     "91411",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     1
+    ],
+    [
+     "90038",
+     "Hollywood",
+     1
+    ]
+   ],
+   "median_value": 4100.0,
+   "valued": 197,
+   "builders": []
+  },
+  "roofing": {
+   "cur": 1194,
+   "prev": 1355,
+   "weekly": [
+    321,
+    316,
+    378,
+    340,
+    318,
+    303,
+    315,
+    258
+   ],
+   "areas": [
+    [
+     "90065",
+     "Northeast Los Angeles",
+     38
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     37
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     36
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     32
+    ],
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     31
+    ],
+    [
+     "90042",
+     "Northeast Los Angeles",
+     31
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     28
+    ],
+    [
+     "90045",
+     "Westchester - Playa Del Rey",
+     26
+    ],
+    [
+     "90027",
+     "Hollywood",
+     24
+    ],
+    [
+     "91307",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     24
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     23
+    ],
+    [
+     "90041",
+     "Northeast Los Angeles",
+     23
+    ],
+    [
+     "90032",
+     "Northeast Los Angeles",
+     22
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     22
+    ],
+    [
+     "91342",
+     "Sylmar",
+     22
+    ],
+    [
+     "90046",
+     "Hollywood",
+     21
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     21
+    ],
+    [
+     "91306",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     20
+    ],
+    [
+     "91326",
+     "Chatsworth - Porter Ranch",
+     19
+    ],
+    [
+     "90004",
+     "Wilshire",
+     18
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     18
+    ],
+    [
+     "90019",
+     "Wilshire",
+     18
+    ],
+    [
+     "90064",
+     "West Los Angeles",
+     18
+    ],
+    [
+     "90731",
+     "San Pedro",
+     18
+    ],
+    [
+     "91607",
+     "North Hollywood - Valley Village",
+     18
+    ],
+    [
+     "90039",
+     "Silver Lake - Echo Park - Elysian Valley",
+     17
+    ],
+    [
+     "90068",
+     "Hollywood",
+     17
+    ],
+    [
+     "90291",
+     "Venice",
+     17
+    ],
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     17
+    ],
+    [
+     "90034",
+     "Palms - Mar Vista - Del Rey",
+     16
+    ],
+    [
+     "90016",
+     "West Adams - Baldwin Hills - Leimert",
+     16
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     15
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     15
+    ],
+    [
+     "91324",
+     "Northridge",
+     15
+    ],
+    [
+     "91325",
+     "Northridge",
+     15
+    ],
+    [
+     "90043",
+     "West Adams - Baldwin Hills - Leimert",
+     15
+    ],
+    [
+     "90018",
+     "West Adams - Baldwin Hills - Leimert",
+     14
+    ],
+    [
+     "91604",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     14
+    ],
+    [
+     "91356",
+     "Encino - Tarzana",
+     13
+    ],
+    [
+     "91304",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     13
+    ],
+    [
+     "90008",
+     "West Adams - Baldwin Hills - Leimert",
+     13
+    ],
+    [
+     "90031",
+     "Northeast Los Angeles",
+     12
+    ],
+    [
+     "91040",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     12
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     12
+    ],
+    [
+     "90044",
+     "South Los Angeles",
+     12
+    ],
+    [
+     "91411",
+     "Van Nuys - North Sherman Oaks",
+     11
+    ],
+    [
+     "90744",
+     "Wilmington - Harbor City",
+     11
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     11
+    ],
+    [
+     "90062",
+     "South Los Angeles",
+     10
+    ],
+    [
+     "91606",
+     "North Hollywood - Valley Village",
+     10
+    ],
+    [
+     "90035",
+     "Wilshire",
+     10
+    ],
+    [
+     "91423",
+     "Van Nuys - North Sherman Oaks",
+     10
+    ],
+    [
+     "90732",
+     "San Pedro",
+     9
+    ],
+    [
+     "90048",
+     "Wilshire",
+     9
+    ],
+    [
+     "91405",
+     "Van Nuys - North Sherman Oaks",
+     9
+    ],
+    [
+     "91316",
+     "Encino - Tarzana",
+     9
+    ],
+    [
+     "90710",
+     "Wilmington - Harbor City",
+     9
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     8
+    ],
+    [
+     "90033",
+     "Boyle Heights",
+     8
+    ],
+    [
+     "90047",
+     "South Los Angeles",
+     8
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     8
+    ],
+    [
+     "90069",
+     "Hollywood",
+     8
+    ],
+    [
+     "90292",
+     "Venice",
+     7
+    ],
+    [
+     "91601",
+     "North Hollywood - Valley Village",
+     7
+    ],
+    [
+     "91403",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     7
+    ],
+    [
+     "90025",
+     "West Los Angeles",
+     7
+    ],
+    [
+     "91605",
+     "Sun Valley - La Tuna Canyon",
+     6
+    ],
+    [
+     "91340",
+     "Arleta - Pacoima",
+     6
+    ],
+    [
+     "90011",
+     "Southeast Los Angeles",
+     6
+    ],
+    [
+     "90210",
+     "Bel Air - Beverly Crest",
+     6
+    ],
+    [
+     "90036",
+     "Wilshire",
+     6
+    ],
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     5
+    ],
+    [
+     "90024",
+     "Westwood",
+     5
+    ],
+    [
+     "90002",
+     "Southeast Los Angeles",
+     5
+    ],
+    [
+     "90230",
+     "Palms - Mar Vista - Del Rey",
+     5
+    ],
+    [
+     "90006",
+     "South Los Angeles",
+     5
+    ],
+    [
+     "90023",
+     "Boyle Heights",
+     5
+    ],
+    [
+     "90007",
+     "South Los Angeles",
+     4
+    ],
+    [
+     "90037",
+     "South Los Angeles",
+     4
+    ],
+    [
+     "90029",
+     "Hollywood",
+     4
+    ],
+    [
+     "90077",
+     "Bel Air - Beverly Crest",
+     3
+    ],
+    [
+     "91345",
+     "Mission Hills - Panorama City - North Hills",
+     3
+    ],
+    [
+     "90248",
+     "Harbor Gateway",
+     3
+    ],
+    [
+     "91602",
+     "North Hollywood - Valley Village",
+     3
+    ],
+    [
+     "90063",
+     "Boyle Heights",
+     3
+    ],
+    [
+     "90232",
+     "Palms - Mar Vista - Del Rey",
+     3
+    ],
+    [
+     "91303",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     3
+    ],
+    [
+     "90501",
+     "Harbor Gateway",
+     3
+    ],
+    [
+     "90012",
+     "Downtown",
+     2
+    ],
+    [
+     "90003",
+     "Southeast Los Angeles",
+     2
+    ],
+    [
+     "90247",
+     "Harbor Gateway",
+     2
+    ],
+    [
+     "90038",
+     "Hollywood",
+     1
+    ],
+    [
+     "90020",
+     "Wilshire",
+     1
+    ],
+    [
+     "90005",
+     "Wilshire",
+     1
+    ],
+    [
+     "90059",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "90056",
+     "Westchester - Playa Del Rey",
+     1
+    ],
+    [
+     "90001",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "90293",
+     "Westchester - Playa Del Rey",
+     1
+    ],
+    [
+     "90061",
+     "Southeast Los Angeles",
+     1
+    ]
+   ],
+   "median_value": 5000.0,
+   "valued": 1193,
+   "builders": []
+  },
+  "adus": {
+   "cur": 515,
+   "prev": 469,
+   "weekly": [
+    111,
+    121,
+    128,
+    109,
+    137,
+    126,
+    124,
+    128
+   ],
+   "areas": [
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     28
+    ],
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     23
+    ],
+    [
+     "91306",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     17
+    ],
+    [
+     "91342",
+     "Sylmar",
+     17
+    ],
+    [
+     "90018",
+     "West Adams - Baldwin Hills - Leimert",
+     16
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     15
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     14
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     14
+    ],
+    [
+     "90019",
+     "Wilshire",
+     13
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     12
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     11
+    ],
+    [
+     "91605",
+     "Sun Valley - La Tuna Canyon",
+     11
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     11
+    ],
+    [
+     "90062",
+     "South Los Angeles",
+     10
+    ],
+    [
+     "91307",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     10
+    ],
+    [
+     "90043",
+     "West Adams - Baldwin Hills - Leimert",
+     9
+    ],
+    [
+     "90044",
+     "South Los Angeles",
+     9
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     9
+    ],
+    [
+     "91304",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     9
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     8
+    ],
+    [
+     "90041",
+     "Northeast Los Angeles",
+     8
+    ],
+    [
+     "90016",
+     "West Adams - Baldwin Hills - Leimert",
+     8
+    ],
+    [
+     "90039",
+     "Northeast Los Angeles",
+     8
+    ],
+    [
+     "91316",
+     "Encino - Tarzana",
+     7
+    ],
+    [
+     "90065",
+     "Northeast Los Angeles",
+     7
+    ],
+    [
+     "90034",
+     "West Los Angeles",
+     7
+    ],
+    [
+     "90042",
+     "Northeast Los Angeles",
+     7
+    ],
+    [
+     "91040",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     7
+    ],
+    [
+     "91606",
+     "North Hollywood - Valley Village",
+     7
+    ],
+    [
+     "90045",
+     "Westchester - Playa Del Rey",
+     7
+    ],
+    [
+     "91405",
+     "Van Nuys - North Sherman Oaks",
+     7
+    ],
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     7
+    ],
+    [
+     "90008",
+     "West Adams - Baldwin Hills - Leimert",
+     7
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     6
+    ],
+    [
+     "91325",
+     "Northridge",
+     6
+    ],
+    [
+     "91326",
+     "Northridge",
+     6
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     6
+    ],
+    [
+     "91607",
+     "North Hollywood - Valley Village",
+     6
+    ],
+    [
+     "90048",
+     "Wilshire",
+     6
+    ],
+    [
+     "91303",
+     "Canoga Park-West Hills-Winnetka-Woodland Hill",
+     5
+    ],
+    [
+     "90027",
+     "Hollywood",
+     5
+    ],
+    [
+     "90710",
+     "Wilmington - Harbor City",
+     5
+    ],
+    [
+     "91356",
+     "Encino - Tarzana",
+     5
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     5
+    ],
+    [
+     "90036",
+     "Hollywood",
+     5
+    ],
+    [
+     "90047",
+     "South Los Angeles",
+     5
+    ],
+    [
+     "90046",
+     "Hollywood",
+     4
+    ],
+    [
+     "90004",
+     "Wilshire",
+     4
+    ],
+    [
+     "90061",
+     "Southeast Los Angeles",
+     4
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     4
+    ],
+    [
+     "90003",
+     "Southeast Los Angeles",
+     4
+    ],
+    [
+     "91601",
+     "North Hollywood - Valley Village",
+     4
+    ],
+    [
+     "90035",
+     "West Los Angeles",
+     4
+    ],
+    [
+     "90032",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "91602",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     3
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     3
+    ],
+    [
+     "91340",
+     "Arleta - Pacoima",
+     3
+    ],
+    [
+     "91324",
+     "Northridge",
+     3
+    ],
+    [
+     "90064",
+     "West Los Angeles",
+     3
+    ],
+    [
+     "90006",
+     "South Los Angeles",
+     3
+    ],
+    [
+     "91604",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     3
+    ],
+    [
+     "90011",
+     "Southeast Los Angeles",
+     3
+    ],
+    [
+     "90037",
+     "South Los Angeles",
+     2
+    ],
+    [
+     "91423",
+     "Van Nuys - North Sherman Oaks",
+     2
+    ],
+    [
+     "90063",
+     "Boyle Heights",
+     1
+    ],
+    [
+     "90293",
+     "Westchester - Playa Del Rey",
+     1
+    ],
+    [
+     "90068",
+     "Hollywood",
+     1
+    ],
+    [
+     "91505",
+     "Sun Valley - La Tuna Canyon",
+     1
+    ],
+    [
+     "90291",
+     "Venice",
+     1
+    ],
+    [
+     "91403",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     1
+    ],
+    [
+     "90007",
+     "South Los Angeles",
+     1
+    ],
+    [
+     "91411",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "90031",
+     "Northeast Los Angeles",
+     1
+    ],
+    [
+     "90002",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "90033",
+     "Boyle Heights",
+     1
+    ],
+    [
+     "90248",
+     "Harbor Gateway",
+     1
+    ],
+    [
+     "90024",
+     "Westwood",
+     1
+    ],
+    [
+     "90210",
+     "Bel Air - Beverly Crest",
+     1
+    ],
+    [
+     "90038",
+     "Hollywood",
+     1
+    ],
+    [
+     "90023",
+     "Boyle Heights",
+     1
+    ],
+    [
+     "90232",
+     "Palms - Mar Vista - Del Rey",
+     1
+    ],
+    [
+     "90059",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "90744",
+     "Wilmington - Harbor City",
+     1
+    ],
+    [
+     "90731",
+     "San Pedro",
+     1
+    ],
+    [
+     "90292",
+     "Venice",
+     1
+    ],
+    [
+     "90230",
+     "Palms - Mar Vista - Del Rey",
+     1
+    ],
+    [
+     "90025",
+     "West Los Angeles",
+     1
+    ],
+    [
+     "91345",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ]
+   ],
+   "median_value": 83000.0,
+   "valued": 514,
+   "builders": []
+  },
+  "new-homes": {
+   "cur": 109,
+   "prev": 98,
+   "weekly": [
+    33,
+    30,
+    17,
+    18,
+    37,
+    24,
+    21,
+    27
+   ],
+   "areas": [
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     65
+    ],
+    [
+     "90004",
+     "Wilshire",
+     3
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     3
+    ],
+    [
+     "91405",
+     "Van Nuys - North Sherman Oaks",
+     3
+    ],
+    [
+     "90064",
+     "West Los Angeles",
+     2
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     2
+    ],
+    [
+     "91316",
+     "Reseda - West Van Nuys",
+     2
+    ],
+    [
+     "90029",
+     "Silver Lake - Echo Park - Elysian Valley",
+     2
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     2
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     2
+    ],
+    [
+     "91601",
+     "North Hollywood - Valley Village",
+     2
+    ],
+    [
+     "90063",
+     "Boyle Heights",
+     2
+    ],
+    [
+     "90046",
+     "Hollywood",
+     1
+    ],
+    [
+     "90047",
+     "South Los Angeles",
+     1
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     1
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     1
+    ],
+    [
+     "91342",
+     "Sylmar",
+     1
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     1
+    ],
+    [
+     "90291",
+     "Venice",
+     1
+    ],
+    [
+     "90019",
+     "Wilshire",
+     1
+    ],
+    [
+     "91307",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     1
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     1
+    ],
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     1
+    ],
+    [
+     "90034",
+     "Palms - Mar Vista - Del Rey",
+     1
+    ],
+    [
+     "91505",
+     "Sun Valley - La Tuna Canyon",
+     1
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     1
+    ],
+    [
+     "90003",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90710",
+     "Wilmington - Harbor City",
+     1
+    ],
+    [
+     "91403",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ]
+   ],
+   "median_value": 500000.0,
+   "valued": 109,
+   "builders": []
+  },
+  "wildfire-rebuilds": {
+   "cur": 65,
+   "prev": 62,
+   "weekly": [
+    22,
+    17,
+    12,
+    11,
+    27,
+    13,
+    12,
+    13
+   ],
+   "areas": [
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     65
+    ]
+   ],
+   "median_value": 700000.0,
+   "valued": 65,
+   "builders": []
+  },
+  "fences-patios": {
+   "cur": 101,
+   "prev": 76,
+   "weekly": [
+    21,
+    16,
+    19,
+    20,
+    24,
+    31,
+    19,
+    27
+   ],
+   "areas": [
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     36
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     6
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     6
+    ],
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     5
+    ],
+    [
+     "90034",
+     "West Los Angeles",
+     4
+    ],
+    [
+     "90046",
+     "Hollywood",
+     3
+    ],
+    [
+     "90065",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "90068",
+     "Hollywood",
+     3
+    ],
+    [
+     "91342",
+     "Sylmar",
+     2
+    ],
+    [
+     "90210",
+     "Bel Air - Beverly Crest",
+     2
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     2
+    ],
+    [
+     "90042",
+     "Northeast Los Angeles",
+     2
+    ],
+    [
+     "90027",
+     "Hollywood",
+     2
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     2
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     2
+    ],
+    [
+     "91326",
+     "Chatsworth - Porter Ranch",
+     2
+    ],
+    [
+     "90039",
+     "Silver Lake - Echo Park - Elysian Valley",
+     1
+    ],
+    [
+     "90018",
+     "West Adams - Baldwin Hills - Leimert",
+     1
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     1
+    ],
+    [
+     "90230",
+     "Palms - Mar Vista - Del Rey",
+     1
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     1
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     1
+    ],
+    [
+     "90069",
+     "Hollywood",
+     1
+    ],
+    [
+     "91423",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     1
+    ],
+    [
+     "90008",
+     "West Adams - Baldwin Hills - Leimert",
+     1
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     1
+    ],
+    [
+     "90029",
+     "Silver Lake - Echo Park - Elysian Valley",
+     1
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     1
+    ],
+    [
+     "90043",
+     "West Adams - Baldwin Hills - Leimert",
+     1
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     1
+    ],
+    [
+     "90020",
+     "Wilshire",
+     1
+    ],
+    [
+     "91304",
+     "Chatsworth - Porter Ranch",
+     1
+    ],
+    [
+     "90064",
+     "Palms - Mar Vista - Del Rey",
+     1
+    ],
+    [
+     "90036",
+     "Hollywood",
+     1
+    ]
+   ],
+   "median_value": 16000.0,
+   "valued": 101,
+   "builders": []
+  },
+  "additions-remodels": {
+   "cur": 517,
+   "prev": 462,
+   "weekly": [
+    111,
+    123,
+    116,
+    112,
+    135,
+    127,
+    139,
+    116
+   ],
+   "areas": [
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     22
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     19
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     16
+    ],
+    [
+     "91316",
+     "Encino - Tarzana",
+     15
+    ],
+    [
+     "90068",
+     "Hollywood",
+     13
+    ],
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     12
+    ],
+    [
+     "90041",
+     "Northeast Los Angeles",
+     12
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     11
+    ],
+    [
+     "91306",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     11
+    ],
+    [
+     "90064",
+     "West Los Angeles",
+     11
+    ],
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     11
+    ],
+    [
+     "90019",
+     "Wilshire",
+     10
+    ],
+    [
+     "90039",
+     "Silver Lake - Echo Park - Elysian Valley",
+     10
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     10
+    ],
+    [
+     "91325",
+     "Northridge",
+     10
+    ],
+    [
+     "91342",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     9
+    ],
+    [
+     "90044",
+     "South Los Angeles",
+     9
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     9
+    ],
+    [
+     "90045",
+     "Westchester - Playa Del Rey",
+     9
+    ],
+    [
+     "91307",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     9
+    ],
+    [
+     "90210",
+     "Bel Air - Beverly Crest",
+     9
+    ],
+    [
+     "91304",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     8
+    ],
+    [
+     "91423",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     8
+    ],
+    [
+     "91604",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     8
+    ],
+    [
+     "90042",
+     "Northeast Los Angeles",
+     8
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     8
+    ],
+    [
+     "91311",
+     "Chatsworth - Porter Ranch",
+     8
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     7
+    ],
+    [
+     "91326",
+     "Chatsworth - Porter Ranch",
+     7
+    ],
+    [
+     "91303",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     7
+    ],
+    [
+     "91607",
+     "North Hollywood - Valley Village",
+     7
+    ],
+    [
+     "91356",
+     "Encino - Tarzana",
+     7
+    ],
+    [
+     "90046",
+     "Hollywood",
+     7
+    ],
+    [
+     "90032",
+     "Northeast Los Angeles",
+     7
+    ],
+    [
+     "90034",
+     "West Los Angeles",
+     6
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     6
+    ],
+    [
+     "90008",
+     "West Adams - Baldwin Hills - Leimert",
+     6
+    ],
+    [
+     "90036",
+     "Wilshire",
+     6
+    ],
+    [
+     "90047",
+     "South Los Angeles",
+     5
+    ],
+    [
+     "90016",
+     "West Adams - Baldwin Hills - Leimert",
+     5
+    ],
+    [
+     "90011",
+     "Southeast Los Angeles",
+     5
+    ],
+    [
+     "90025",
+     "West Los Angeles",
+     5
+    ],
+    [
+     "90018",
+     "West Adams - Baldwin Hills - Leimert",
+     5
+    ],
+    [
+     "90035",
+     "Wilshire",
+     5
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     5
+    ],
+    [
+     "91605",
+     "Sun Valley - La Tuna Canyon",
+     5
+    ],
+    [
+     "90043",
+     "West Adams - Baldwin Hills - Leimert",
+     5
+    ],
+    [
+     "91040",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     5
+    ],
+    [
+     "90731",
+     "San Pedro",
+     5
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     4
+    ],
+    [
+     "90027",
+     "Hollywood",
+     4
+    ],
+    [
+     "90501",
+     "Harbor Gateway",
+     4
+    ],
+    [
+     "91403",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     4
+    ],
+    [
+     "90004",
+     "Wilshire",
+     4
+    ],
+    [
+     "90029",
+     "Silver Lake - Echo Park - Elysian Valley",
+     3
+    ],
+    [
+     "90744",
+     "Wilmington - Harbor City",
+     3
+    ],
+    [
+     "90037",
+     "South Los Angeles",
+     3
+    ],
+    [
+     "90291",
+     "Venice",
+     3
+    ],
+    [
+     "91411",
+     "Van Nuys - North Sherman Oaks",
+     3
+    ],
+    [
+     "90065",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "91606",
+     "North Hollywood - Valley Village",
+     3
+    ],
+    [
+     "90031",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "90003",
+     "Southeast Los Angeles",
+     3
+    ],
+    [
+     "90230",
+     "Palms - Mar Vista - Del Rey",
+     3
+    ],
+    [
+     "90402",
+     "Brentwood - Pacific Palisades",
+     3
+    ],
+    [
+     "91324",
+     "Chatsworth - Porter Ranch",
+     3
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     3
+    ],
+    [
+     "91345",
+     "Mission Hills - Panorama City - North Hills",
+     2
+    ],
+    [
+     "90062",
+     "South Los Angeles",
+     2
+    ],
+    [
+     "90001",
+     "Southeast Los Angeles",
+     2
+    ],
+    [
+     "90248",
+     "Harbor Gateway",
+     2
+    ],
+    [
+     "91602",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     2
+    ],
+    [
+     "90069",
+     "Hollywood",
+     2
+    ],
+    [
+     "90732",
+     "San Pedro",
+     2
+    ],
+    [
+     "91436",
+     "Encino - Tarzana",
+     2
+    ],
+    [
+     "90048",
+     "Wilshire",
+     2
+    ],
+    [
+     "90033",
+     "Boyle Heights",
+     2
+    ],
+    [
+     "90024",
+     "Westwood",
+     2
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     2
+    ],
+    [
+     "90020",
+     null,
+     1
+    ],
+    [
+     "90007",
+     "South Los Angeles",
+     1
+    ],
+    [
+     "90012",
+     "Downtown",
+     1
+    ],
+    [
+     "90247",
+     "Harbor Gateway",
+     1
+    ],
+    [
+     "91405",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "90002",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "91340",
+     "Arleta - Pacoima",
+     1
+    ],
+    [
+     "90292",
+     "Venice",
+     1
+    ],
+    [
+     "90061",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "91601",
+     "North Hollywood - Valley Village",
+     1
+    ],
+    [
+     "90077",
+     "Bel Air - Beverly Crest",
+     1
+    ]
+   ],
+   "median_value": 20150.0,
+   "valued": 517,
+   "builders": []
+  },
+  "demolition": {
+   "cur": 96,
+   "prev": 80,
+   "weekly": [
+    27,
+    23,
+    18,
+    12,
+    21,
+    31,
+    21,
+    23
+   ],
+   "areas": [
+    [
+     "91335",
+     "Reseda - West Van Nuys",
+     14
+    ],
+    [
+     "90066",
+     "Palms - Mar Vista - Del Rey",
+     8
+    ],
+    [
+     "90028",
+     "Hollywood",
+     5
+    ],
+    [
+     "90049",
+     "Brentwood - Pacific Palisades",
+     4
+    ],
+    [
+     "90041",
+     "Northeast Los Angeles",
+     4
+    ],
+    [
+     "91601",
+     "North Hollywood - Valley Village",
+     3
+    ],
+    [
+     "91403",
+     "Van Nuys - North Sherman Oaks",
+     3
+    ],
+    [
+     "90036",
+     "Wilshire",
+     3
+    ],
+    [
+     "90034",
+     "West Adams - Baldwin Hills - Leimert",
+     3
+    ],
+    [
+     "90065",
+     "Northeast Los Angeles",
+     3
+    ],
+    [
+     "91344",
+     "Granada Hills - Knollwood",
+     3
+    ],
+    [
+     "90048",
+     "Wilshire",
+     3
+    ],
+    [
+     "91604",
+     "Sherman Oaks-Studio City-Toluca Lake-Cahuenga Pass",
+     2
+    ],
+    [
+     "90272",
+     "Brentwood - Pacific Palisades",
+     2
+    ],
+    [
+     "91401",
+     "Van Nuys - North Sherman Oaks",
+     2
+    ],
+    [
+     "90019",
+     "West Adams - Baldwin Hills - Leimert",
+     2
+    ],
+    [
+     "90029",
+     "Hollywood",
+     2
+    ],
+    [
+     "90035",
+     "Wilshire",
+     2
+    ],
+    [
+     "91316",
+     "Encino - Tarzana",
+     2
+    ],
+    [
+     "90027",
+     "Hollywood",
+     1
+    ],
+    [
+     "90077",
+     "Bel Air - Beverly Crest",
+     1
+    ],
+    [
+     "90061",
+     "Southeast Los Angeles",
+     1
+    ],
+    [
+     "91402",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "91343",
+     "Mission Hills - Panorama City - North Hills",
+     1
+    ],
+    [
+     "90044",
+     "South Los Angeles",
+     1
+    ],
+    [
+     "91364",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     1
+    ],
+    [
+     "90501",
+     "Harbor Gateway",
+     1
+    ],
+    [
+     "91042",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     1
+    ],
+    [
+     "91325",
+     "Northridge",
+     1
+    ],
+    [
+     "91602",
+     "North Hollywood - Valley Village",
+     1
+    ],
+    [
+     "91331",
+     "Arleta - Pacoima",
+     1
+    ],
+    [
+     "91411",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "91352",
+     "Sun Valley - La Tuna Canyon",
+     1
+    ],
+    [
+     "90032",
+     "Northeast Los Angeles",
+     1
+    ],
+    [
+     "91367",
+     "Canoga Park-West Hills-Winnetka-Woodland Hills",
+     1
+    ],
+    [
+     "91607",
+     "North Hollywood - Valley Village",
+     1
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     1
+    ],
+    [
+     "90064",
+     "West Los Angeles",
+     1
+    ],
+    [
+     "91406",
+     "Reseda - West Van Nuys",
+     1
+    ],
+    [
+     "91405",
+     "Van Nuys - North Sherman Oaks",
+     1
+    ],
+    [
+     "90018",
+     "South Los Angeles",
+     1
+    ],
+    [
+     "90230",
+     "Palms - Mar Vista - Del Rey",
+     1
+    ],
+    [
+     "91040",
+     "Sunland-E Latuna Cyn-Lakevw Ter-Shadow Hls-Tujunga",
+     1
+    ],
+    [
+     "90744",
+     "Wilmington - Harbor City",
+     1
+    ],
+    [
+     "90016",
+     "West Adams - Baldwin Hills - Leimert",
+     1
+    ]
+   ],
+   "median_value": 5000.0,
+   "valued": 96,
+   "builders": []
+  },
+  "seismic": {
+   "cur": 3,
+   "prev": 8,
+   "weekly": [
+    1,
+    3,
+    2,
+    2,
+    0,
+    1,
+    2,
+    0
+   ],
+   "areas": [
+    [
+     "90031",
+     "Northeast Los Angeles",
+     2
+    ],
+    [
+     "90026",
+     "Silver Lake - Echo Park - Elysian Valley",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  }
+ },
+ "finished": {
+  "fences-patios": 52,
+  "roofing": 936,
+  "adus": 15,
+  "additions-remodels": 235,
+  "windows-doors": 140,
+  "demolition": 72,
+  "pools": 5,
+  "seismic": 8
+ }
+}

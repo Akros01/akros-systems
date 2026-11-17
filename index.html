@@ -174,6 +174,14 @@
     .plan--territory .button { background: var(--orange); border-color: var(--orange); color: var(--ink); }
     .plan--territory .button:hover { background: var(--sheet); border-color: var(--sheet); color: var(--ink); }
     .plan-note { margin: 18px 0 0; color: var(--muted); font-size: 12px; }
+    .roi { margin: 30px 0 0; padding: 24px; background: var(--sheet); border: 1px solid var(--ink); }
+    .roi h3 { margin: 0 0 8px; font: 700 28px/1 "Barlow Condensed", "Arial Narrow", sans-serif; }
+    .roi p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+    .roi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .roi label { display: grid; gap: 6px; font-size: 13px; font-weight: 600; }
+    .roi input { font: 500 18px/1.2 "Barlow", sans-serif; padding: 10px 12px; border: 1px solid var(--ink); background: #fff; color: var(--ink); width: 100%; box-sizing: border-box; }
+    .roi .roi-out { margin: 18px 0 0; color: var(--ink); font-size: 16px; font-weight: 600; }
+    @media (max-width: 760px) { .roi-grid { grid-template-columns: 1fr; } }
     .faq-layout { display: grid; grid-template-columns: .78fr 1.22fr; gap: clamp(30px, 7vw, 95px); }
     .faq-layout .section-head { margin-bottom: 0; }
     .faq-list { border-top: 1px solid var(--ink); }
@@ -298,12 +306,12 @@
             <div class="brief-top"><span>Tipoff / weekly brief</span><span>Sample</span></div>
             <div class="brief-body">
               <p class="brief-kicker">New residential permit</p>
-              <h2>Reroof / tear-off and replacement</h2>
+              <h2>New in-ground pool and spa</h2>
               <dl class="brief-fields">
-                <div><dt>Trade</dt><dd>Gutters</dd></div>
-                <div><dt>ZIP</dt><dd>02139</dd></div>
+                <div><dt>Trade</dt><dd>Pool service</dd></div>
+                <div><dt>ZIP</dt><dd>75009</dd></div>
                 <div><dt>Filed</dt><dd>This week</dd></div>
-                <div><dt>Property</dt><dd>Single-family, 2 story</dd></div>
+                <div><dt>Property</dt><dd>Single-family home</dd></div>
               </dl>
               <div class="brief-foot">
                 <p>Property and job details come from the public permit record.</p>
@@ -354,8 +362,8 @@
             <p>The brief arrives in your inbox with the facts that are in the public record.</p>
           </div>
           <dl class="record-list">
-            <div class="record"><dt>The permit</dt><dd>Job type and filed scope, so you can tell a reroof from a new addition.</dd></div>
-            <div class="record"><dt>The property</dt><dd>Address and property details included in the permit record.</dd></div>
+            <div class="record"><dt>The permit</dt><dd>Job type and filed scope, so you can tell a new pool from a remodel. In Austin and Los Angeles, also the work the city just signed off at final inspection.</dd></div>
+            <div class="record"><dt>The property</dt><dd>Address and property details included in the permit record, and the builder named on it where the city lists one.</dd></div>
             <div class="record"><dt>The fit</dt><dd>Only permits that match your trade and ZIP codes.</dd></div>
             <div class="record"><dt>The next step</dt><dd>A short list you can work through in one sitting.</dd></div>
           </dl>
@@ -434,18 +442,47 @@
             <a class="button" href="https://buy.stripe.com/6oUdR37QZ56la9LbyE7IY00">Start 14-day trial — card required</a>
           </article>
           <article class="plan plan--territory" data-tab="Territory">
-            <div class="plan-head"><h3>Territory</h3><p class="price">From $697<small> / month</small></p></div>
-            <p class="plan-copy">The weekly brief plus an exclusive trade and ZIP territory.</p>
+            <div class="plan-head"><h3>Territory</h3><p class="price">$1,000<small> / month</small></p></div>
+            <p class="plan-copy">Your trade and ZIP group to yourself, and the first outreach done for you.</p>
             <ul>
               <li>Everything in Report</li>
-              <li>Exclusive trade and ZIP territory</li>
-              <li>Weekly reports for the area</li>
+              <li>Exclusive: one company per trade in your ZIP group</li>
+              <li>We mail a postcard with your name and offer to every matching homeowner: up to 300 a month, printing and postage included</li>
+              <li>Finished-work alerts where the city records final inspections (Austin and Los Angeles)</li>
+              <li>Builder report: the companies pulling permits in your ZIPs</li>
+              <li>Monthly territory report and a setup call</li>
               <li>Coverage confirmed before activation</li>
             </ul>
-            <a class="button" href="#contact">Check Territory availability</a>
+            <a class="button" href="mailto:abdul321@gmail.com?subject=Territory%20check&body=Is%20a%20Tipoff%20Territory%20open%20for%20me%3F%0A%0AMetro%3A%0ATrade%3A%0AZIP%20codes%20I%20serve%3A%0ACompany%3A%0AWebsite%3A%0A">Check if your ZIPs are open</a>
           </article>
         </div>
-        <p class="plan-note">Report: 14-day free trial, card required, then $297/month. Territory: $697/month, billed after we confirm coverage and availability. Both auto-renew monthly; cancel any time by emailing <a href="mailto:abdul321@gmail.com?subject=Tipoff%20cancellation">abdul321@gmail.com</a>. Territory is subject to trade/ZIP availability; if we cannot cover you, we do not charge you.</p>
+        <p class="plan-note">Report: 14-day free trial, card required, then $297/month. Territory: $1,000/month, billed after we confirm coverage and availability; it includes up to 300 postcards a month, and every card design is yours to approve before it mails. Both auto-renew monthly; cancel any time by emailing <a href="mailto:abdul321@gmail.com?subject=Tipoff%20cancellation">abdul321@gmail.com</a>. Territory is subject to trade/ZIP availability; if we cannot cover you, we do not charge you.</p>
+        <div class="roi" id="roi">
+          <h3>Is a Territory worth $1,000 a month to you?</h3>
+          <p>Use your own numbers. <a href="https://akros01.github.io/akros-systems/permits/">The permit counts by ZIP</a> show how many new jobs your area gets. Nothing you type leaves this page.</p>
+          <div class="roi-grid">
+            <label>Matching permits a month in your ZIPs<input id="roi-permits" type="number" inputmode="numeric" min="0" placeholder="e.g. 40"></label>
+            <label>What one new customer is worth to you in a year ($)<input id="roi-value" type="number" inputmode="numeric" min="0" placeholder="e.g. 1800"></label>
+            <label>Of every 100 homeowners you reach, how many become customers?<input id="roi-rate" type="number" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 2"></label>
+          </div>
+          <p class="roi-out" id="roi-out" aria-live="polite">Fill in all three to see the math.</p>
+        </div>
+        <script>
+          (function () {
+            var ids = ["roi-permits", "roi-value", "roi-rate"], out = document.getElementById("roi-out");
+            function money(n) { return "$" + Math.round(n).toLocaleString("en-US"); }
+            function update() {
+              var v = ids.map(function (id) { return parseFloat(document.getElementById(id).value); });
+              if (v.some(function (x) { return isNaN(x) || x < 0; })) { out.textContent = "Fill in all three to see the math."; return; }
+              var customers = v[0] * 12 * v[2] / 100, worth = customers * v[1];
+              out.textContent = "About " + customers.toFixed(1) + " new customers a year, worth " + money(worth) +
+                " in their first year, against " + money(12000) + " for a year of Territory: " +
+                (worth >= 12000 ? money(worth - 12000) + " ahead." : money(12000 - worth) + " short.");
+            }
+            ids.forEach(function (id) { document.getElementById(id).addEventListener("input", update); });
+          })();
+        </script>
+        <p class="plan-note">Not ready for a subscription? The <a href="https://akros01.github.io/permit-sample/">Permit Almanac</a> sells one-time metro reports: every residential permit for one month, $29 per metro.</p>
       </section>
     </div>
 
@@ -479,7 +516,7 @@
             </details>
             <details>
               <summary>Which areas and trades do you cover?</summary>
-              <p>Current data coverage: Austin, Los Angeles, Collin County, Dallas, and Sacramento. We support solar, HVAC, electrical, pool service, landscaping, fencing, insulation, remodeling, security, and window coverings. We do not sell roofing permits: a roofing permit is normally pulled by the roofer who already won the job. Pool service is Report-only. Territory is limited to the trades and ZIP codes we have sized; Dallas and Sacramento are not yet Territory markets. We confirm availability before sending a checkout link.</p>
+              <p>Current data coverage: Austin, Collin County, Dallas and College Station in Texas; Los Angeles, San Diego County, Sacramento and Marin County in California; Seattle; New York City; Montgomery County, Maryland; Cincinnati; and Baton Rouge. We add cities as their permit feeds check out. We support solar, HVAC, electrical, pool service, landscaping, fencing, insulation, remodeling, security, and window coverings. We do not sell roofing permits: a roofing permit is normally pulled by the roofer who already won the job. For roofing, siding, gutter and window companies we send storm reports instead: every hail, damaging-wind and tornado report in your counties, in any state, with the nearest ZIP code. Territory is open in every city we cover except Sacramento, whose feed runs about three weeks behind: one company per trade in each ZIP group. We confirm availability before sending a checkout link. <a href="https://akros01.github.io/akros-systems/permits/">See the latest permit counts for each metro, by ZIP</a>, and <a href="https://akros01.github.io/akros-systems/permits/storms/">storm reports by state</a>.</p>
             </details>
             <details>
               <summary>Is Report exclusive?</summary>
@@ -487,7 +524,7 @@
             </details>
             <details>
               <summary>How do I cancel?</summary>
-              <p>Email abdul321@gmail.com with your business name. Report trials and subscriptions renew automatically until canceled; cancel before day 14 to avoid the first $297 charge. Territory is $697/month and can be canceled at the end of any billing month.</p>
+              <p>Email abdul321@gmail.com with your business name. Report trials and subscriptions renew automatically until canceled; cancel before day 14 to avoid the first $297 charge. Territory is $1,000/month and can be canceled at the end of any billing month.</p>
             </details>
             <details>
               <summary>What if my area is not covered?</summary>
@@ -502,7 +539,7 @@
       <div class="wrap">
         <section class="section" aria-labelledby="contact-title">
           <h2 id="contact-title">Tell us your trade and ZIPs.</h2>
-          <p>Questions about coverage or the plans? Want a free sample before you pay? Email your trade and ZIP codes; we will send the latest matching permits and confirm coverage before you start.</p>
+          <p>Questions about coverage or the plans? Want a free sample before you pay? Email your trade and ZIP codes; we will send the latest matching permits and confirm coverage before you start. Or <a href="https://akros01.github.io/permit-sample/sample.html">open a real sample report</a> now.</p>
           <a class="contact-link" href="mailto:abdul321@gmail.com?subject=Tipoff%20sample%20request">abdul321@gmail.com</a>
         </section>
       </div>
@@ -518,7 +555,7 @@
             </div>
             <div id="terms">
               <h2>Terms</h2>
-              <p>Tipoff reports are provided for business lead research. Permit data comes from public records and may be incomplete or delayed; a permit is not a guarantee of a job or a homeowner response. Report is shared with up to 3 contractors in the same trade and ZIP; Territory is exclusive subject to availability. Report trials renew automatically at $297/month after 14 days unless canceled; Territory renews at $697/month. Subscriptions are month to month; email us to cancel. If we cannot deliver coverage, we cancel and refund any amount charged for a period we cannot serve. You are responsible for complying with solicitation and do-not-call laws.</p>
+              <p>Tipoff reports are provided for business lead research. Permit data comes from public records and may be incomplete or delayed; a permit is not a guarantee of a job or a homeowner response. Report is shared with up to 3 contractors in the same trade and ZIP; Territory is exclusive subject to availability. Report trials renew automatically at $297/month after 14 days unless canceled; Territory renews at $1,000/month. Subscriptions are month to month; email us to cancel. If we cannot deliver coverage, we cancel and refund any amount charged for a period we cannot serve. You are responsible for complying with solicitation and do-not-call laws.</p>
             </div>
           </div>
         </section>
@@ -534,6 +571,7 @@
         <a href="#plans">Plans</a>
         <a href="#privacy">Privacy</a>
         <a href="#terms">Terms</a>
+        <a href="https://akros01.github.io/akros-systems/permits/">Permit data</a>
       </nav>
     </div>
   </footer>

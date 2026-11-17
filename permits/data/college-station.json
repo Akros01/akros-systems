@@ -1,0 +1,307 @@
+{
+ "metro": "college-station",
+ "built": "2026-11-17",
+ "latest": "2026-11-13",
+ "end": "2026-11-10",
+ "start": "2026-10-14",
+ "weeks": [
+  [
+   "2026-09-16",
+   "2026-09-22"
+  ],
+  [
+   "2026-09-23",
+   "2026-09-29"
+  ],
+  [
+   "2026-09-30",
+   "2026-10-06"
+  ],
+  [
+   "2026-10-07",
+   "2026-10-13"
+  ],
+  [
+   "2026-10-14",
+   "2026-10-20"
+  ],
+  [
+   "2026-10-21",
+   "2026-10-27"
+  ],
+  [
+   "2026-10-28",
+   "2026-11-03"
+  ],
+  [
+   "2026-11-04",
+   "2026-11-10"
+  ]
+ ],
+ "total": {
+  "cur": 38,
+  "prev": 26,
+  "weekly": [
+   4,
+   10,
+   8,
+   4,
+   15,
+   8,
+   7,
+   8
+  ],
+  "areas": [
+   [
+    "77845",
+    "College Station",
+    28
+   ],
+   [
+    "77840",
+    "College Station",
+    10
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": []
+ },
+ "cats": {
+  "roofing": {
+   "cur": 16,
+   "prev": 7,
+   "weekly": [
+    0,
+    6,
+    0,
+    1,
+    9,
+    2,
+    4,
+    1
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     13
+    ],
+    [
+     "77840",
+     "College Station",
+     3
+    ]
+   ],
+   "median_value": 15800.0,
+   "valued": 14,
+   "builders": []
+  },
+  "hvac": {
+   "cur": 0,
+   "prev": 1,
+   "weekly": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "additions-remodels": {
+   "cur": 3,
+   "prev": 3,
+   "weekly": [
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    2
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     2
+    ],
+    [
+     "77840",
+     "College Station",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 2,
+   "builders": []
+  },
+  "windows-doors": {
+   "cur": 6,
+   "prev": 3,
+   "weekly": [
+    0,
+    0,
+    1,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     4
+    ],
+    [
+     "77840",
+     "College Station",
+     2
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "foundation": {
+   "cur": 3,
+   "prev": 3,
+   "weekly": [
+    0,
+    1,
+    2,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "areas": [
+    [
+     "77840",
+     "College Station",
+     2
+    ],
+    [
+     "77845",
+     "College Station",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  },
+  "pools": {
+   "cur": 4,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     3
+    ],
+    [
+     "77840",
+     "College Station",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 4,
+   "builders": []
+  },
+  "demolition": {
+   "cur": 1,
+   "prev": 4,
+   "weekly": [
+    1,
+    1,
+    2,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "areas": [
+    [
+     "77840",
+     "College Station",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "fences-patios": {
+   "cur": 2,
+   "prev": 4,
+   "weekly": [
+    2,
+    0,
+    2,
+    0,
+    1,
+    0,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     2
+    ]
+   ],
+   "median_value": null,
+   "valued": 2,
+   "builders": []
+  },
+  "solar": {
+   "cur": 3,
+   "prev": 1,
+   "weekly": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    2
+   ],
+   "areas": [
+    [
+     "77845",
+     "College Station",
+     3
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  }
+ }
+}

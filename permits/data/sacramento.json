@@ -1,0 +1,1132 @@
+{
+ "metro": "sacramento",
+ "built": "2026-11-17",
+ "latest": "2026-10-25",
+ "end": "2026-10-25",
+ "start": "2026-09-28",
+ "weeks": [
+  [
+   "2026-08-31",
+   "2026-09-06"
+  ],
+  [
+   "2026-09-07",
+   "2026-09-13"
+  ],
+  [
+   "2026-09-14",
+   "2026-09-20"
+  ],
+  [
+   "2026-09-21",
+   "2026-09-27"
+  ],
+  [
+   "2026-09-28",
+   "2026-10-04"
+  ],
+  [
+   "2026-10-05",
+   "2026-10-11"
+  ],
+  [
+   "2026-10-12",
+   "2026-10-18"
+  ],
+  [
+   "2026-10-19",
+   "2026-10-25"
+  ]
+ ],
+ "total": {
+  "cur": 777,
+  "prev": 789,
+  "weekly": [
+   136,
+   202,
+   224,
+   227,
+   199,
+   190,
+   196,
+   192
+  ],
+  "areas": [
+   [
+    "95831",
+    "Pocket",
+    94
+   ],
+   [
+    "95835",
+    "North Natomas",
+    83
+   ],
+   [
+    "95822",
+    "Land Park",
+    75
+   ],
+   [
+    "95819",
+    "East Sacramento",
+    65
+   ],
+   [
+    "95838",
+    "North Sacramento",
+    56
+   ],
+   [
+    "95818",
+    "Land Park",
+    52
+   ],
+   [
+    "95820",
+    "Fruitridge/Broadway",
+    51
+   ],
+   [
+    "95823",
+    "South Area",
+    47
+   ],
+   [
+    "95833",
+    "South Natomas",
+    44
+   ],
+   [
+    "95816",
+    "Central City",
+    32
+   ],
+   [
+    "95834",
+    "North Natomas",
+    30
+   ],
+   [
+    "95815",
+    "North Sacramento",
+    30
+   ],
+   [
+    "95817",
+    "Fruitridge/Broadway",
+    28
+   ],
+   [
+    "95826",
+    "East Sacramento",
+    23
+   ],
+   [
+    "95824",
+    "Fruitridge/Broadway",
+    20
+   ],
+   [
+    "95832",
+    "South Area",
+    15
+   ],
+   [
+    "95825",
+    "Arden Arcade",
+    8
+   ],
+   [
+    "95828",
+    "Fruitridge/Broadway",
+    8
+   ],
+   [
+    "95758",
+    "South Area",
+    7
+   ],
+   [
+    "95814",
+    null,
+    5
+   ],
+   [
+    "95811",
+    "Central City",
+    2
+   ],
+   [
+    "95864",
+    null,
+    2
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": [
+   [
+    "Sierra Valley Mechanical",
+    16
+   ],
+   [
+    "North Valley LLC",
+    14
+   ],
+   [
+    "Haven Energy Services Inc",
+    14
+   ],
+   [
+    "Nanofy Of California LLC",
+    14
+   ],
+   [
+    "Ilum Solar",
+    13
+   ],
+   [
+    "Bell Brother's Heating And Air Inc",
+    12
+   ],
+   [
+    "Clarke & Rush Mechanical Inc",
+    12
+   ],
+   [
+    "Evergold Construction",
+    10
+   ],
+   [
+    "Es Solar LLC",
+    9
+   ],
+   [
+    "Lennar Homes Of California LLC",
+    9
+   ]
+  ]
+ },
+ "cats": {
+  "additions-remodels": {
+   "cur": 130,
+   "prev": 103,
+   "weekly": [
+    20,
+    30,
+    28,
+    25,
+    27,
+    34,
+    36,
+    33
+   ],
+   "areas": [
+    [
+     "95831",
+     "Pocket",
+     20
+    ],
+    [
+     "95835",
+     "North Natomas",
+     18
+    ],
+    [
+     "95818",
+     "Land Park",
+     11
+    ],
+    [
+     "95838",
+     "North Sacramento",
+     11
+    ],
+    [
+     "95822",
+     "Land Park",
+     10
+    ],
+    [
+     "95819",
+     "East Sacramento",
+     10
+    ],
+    [
+     "95823",
+     "South Area",
+     8
+    ],
+    [
+     "95834",
+     "North Natomas",
+     7
+    ],
+    [
+     "95816",
+     "Central City",
+     7
+    ],
+    [
+     "95833",
+     "South Natomas",
+     5
+    ],
+    [
+     "95826",
+     "East Sacramento",
+     5
+    ],
+    [
+     "95817",
+     "Fruitridge/Broadway",
+     4
+    ],
+    [
+     "95832",
+     "South Area",
+     3
+    ],
+    [
+     "95815",
+     "North Sacramento",
+     3
+    ],
+    [
+     "95824",
+     "Fruitridge/Broadway",
+     2
+    ],
+    [
+     "95825",
+     "Arden Arcade",
+     2
+    ],
+    [
+     "95828",
+     "Fruitridge/Broadway",
+     1
+    ],
+    [
+     "95820",
+     "Fruitridge/Broadway",
+     1
+    ],
+    [
+     "95758",
+     "South Area",
+     1
+    ],
+    [
+     "95811",
+     "Central City",
+     1
+    ]
+   ],
+   "median_value": 4750.0,
+   "valued": 130,
+   "builders": [
+    [
+     "Sierra Valley Mechanical",
+     12
+    ],
+    [
+     "Cronus Service Inc",
+     7
+    ],
+    [
+     "Sagan Electric",
+     7
+    ],
+    [
+     "High Energy Electric",
+     7
+    ],
+    [
+     "Super Brothers Plumbing Heating & Air",
+     3
+    ],
+    [
+     "Oldtown Electric Inc",
+     3
+    ],
+    [
+     "Peach Electric Inc",
+     3
+    ],
+    [
+     "Connected Technology",
+     3
+    ],
+    [
+     "Depiazza And Reed Construction",
+     2
+    ],
+    [
+     "Rose Remodeling",
+     2
+    ]
+   ]
+  },
+  "adus": {
+   "cur": 21,
+   "prev": 17,
+   "weekly": [
+    3,
+    3,
+    4,
+    7,
+    4,
+    7,
+    5,
+    5
+   ],
+   "areas": [
+    [
+     "95820",
+     "Fruitridge/Broadway",
+     5
+    ],
+    [
+     "95815",
+     "North Sacramento",
+     3
+    ],
+    [
+     "95838",
+     "North Sacramento",
+     3
+    ],
+    [
+     "95818",
+     "Land Park",
+     3
+    ],
+    [
+     "95819",
+     "East Sacramento",
+     2
+    ],
+    [
+     "95817",
+     "Fruitridge/Broadway",
+     2
+    ],
+    [
+     "95831",
+     "Pocket",
+     2
+    ],
+    [
+     "95816",
+     null,
+     1
+    ]
+   ],
+   "median_value": 50000.0,
+   "valued": 21,
+   "builders": []
+  },
+  "new-homes": {
+   "cur": 50,
+   "prev": 74,
+   "weekly": [
+    1,
+    33,
+    34,
+    6,
+    14,
+    12,
+    12,
+    12
+   ],
+   "areas": [
+    [
+     "95835",
+     "North Natomas",
+     22
+    ],
+    [
+     "95819",
+     "East Sacramento",
+     4
+    ],
+    [
+     "95832",
+     "South Area",
+     4
+    ],
+    [
+     "95820",
+     "Fruitridge/Broadway",
+     3
+    ],
+    [
+     "95815",
+     "North Sacramento",
+     3
+    ],
+    [
+     "95818",
+     "Land Park",
+     3
+    ],
+    [
+     "95838",
+     "North Sacramento",
+     3
+    ],
+    [
+     "95817",
+     "Fruitridge/Broadway",
+     2
+    ],
+    [
+     "95831",
+     "Pocket",
+     2
+    ],
+    [
+     "95816",
+     "Central City",
+     1
+    ],
+    [
+     "95822",
+     "South Area",
+     1
+    ],
+    [
+     "95834",
+     "North Natomas",
+     1
+    ],
+    [
+     "95826",
+     "East Sacramento",
+     1
+    ]
+   ],
+   "median_value": 370637.66,
+   "valued": 50,
+   "builders": [
+    [
+     "Lennar Homes Of California LLC",
+     9
+    ],
+    [
+     "Kb Home Sacramento Inc",
+     6
+    ],
+    [
+     "Meritage Homes Of California Inc",
+     5
+    ],
+    [
+     "Pulte Home Company LLC",
+     4
+    ],
+    [
+     "Tri Pointe Homes Holdings Inc",
+     3
+    ]
+   ]
+  },
+  "solar": {
+   "cur": 123,
+   "prev": 153,
+   "weekly": [
+    24,
+    20,
+    38,
+    71,
+    46,
+    29,
+    25,
+    23
+   ],
+   "areas": [
+    [
+     "95835",
+     "North Natomas",
+     23
+    ],
+    [
+     "95838",
+     null,
+     17
+    ],
+    [
+     "95831",
+     null,
+     14
+    ],
+    [
+     "95822",
+     "Land Park",
+     13
+    ],
+    [
+     "95834",
+     null,
+     10
+    ],
+    [
+     "95833",
+     null,
+     9
+    ],
+    [
+     "95815",
+     "North Sacramento",
+     8
+    ],
+    [
+     "95832",
+     null,
+     6
+    ],
+    [
+     "95819",
+     null,
+     4
+    ],
+    [
+     "95820",
+     null,
+     4
+    ],
+    [
+     "95758",
+     null,
+     4
+    ],
+    [
+     "95816",
+     null,
+     3
+    ],
+    [
+     "95823",
+     "South Area",
+     3
+    ],
+    [
+     "95818",
+     "Central City",
+     2
+    ],
+    [
+     "95824",
+     null,
+     2
+    ],
+    [
+     "95826",
+     null,
+     1
+    ]
+   ],
+   "median_value": 28000.0,
+   "valued": 123,
+   "builders": [
+    [
+     "North Valley LLC",
+     14
+    ],
+    [
+     "Haven Energy Services Inc",
+     14
+    ],
+    [
+     "Ilum Solar",
+     13
+    ],
+    [
+     "Nanofy Of California LLC",
+     13
+    ],
+    [
+     "Es Solar LLC",
+     9
+    ],
+    [
+     "Superior Solar Inc",
+     6
+    ],
+    [
+     "Tesla Energy Operations Inc",
+     6
+    ],
+    [
+     "Axia Solar Corp",
+     5
+    ],
+    [
+     "Sameday Solar Inc",
+     4
+    ],
+    [
+     "Kin Home Electric LLC",
+     4
+    ]
+   ]
+  },
+  "hvac": {
+   "cur": 196,
+   "prev": 192,
+   "weekly": [
+    35,
+    49,
+    55,
+    53,
+    55,
+    38,
+    54,
+    49
+   ],
+   "areas": [
+    [
+     "95831",
+     "Pocket",
+     22
+    ],
+    [
+     "95823",
+     "South Area",
+     20
+    ],
+    [
+     "95835",
+     null,
+     16
+    ],
+    [
+     "95822",
+     "South Area",
+     16
+    ],
+    [
+     "95820",
+     "Fruitridge/Broadway",
+     15
+    ],
+    [
+     "95838",
+     "North Sacramento",
+     15
+    ],
+    [
+     "95833",
+     null,
+     15
+    ],
+    [
+     "95819",
+     "East Sacramento",
+     10
+    ],
+    [
+     "95834",
+     null,
+     10
+    ],
+    [
+     "95826",
+     null,
+     9
+    ],
+    [
+     "95818",
+     null,
+     9
+    ],
+    [
+     "95824",
+     "Fruitridge/Broadway",
+     8
+    ],
+    [
+     "95817",
+     null,
+     7
+    ],
+    [
+     "95816",
+     "Central City",
+     7
+    ],
+    [
+     "95825",
+     null,
+     5
+    ],
+    [
+     "95815",
+     "North Sacramento",
+     5
+    ],
+    [
+     "95814",
+     null,
+     2
+    ],
+    [
+     "95864",
+     null,
+     2
+    ],
+    [
+     "95758",
+     null,
+     1
+    ],
+    [
+     "95832",
+     null,
+     1
+    ],
+    [
+     "95828",
+     null,
+     1
+    ]
+   ],
+   "median_value": 15783.869999999999,
+   "valued": 196,
+   "builders": [
+    [
+     "Bell Brother's Heating And Air Inc",
+     12
+    ],
+    [
+     "Clarke & Rush Mechanical Inc",
+     12
+    ],
+    [
+     "Water Heater Experts",
+     9
+    ],
+    [
+     "Bonney Plumbing LLC",
+     8
+    ],
+    [
+     "Sierra Pacific Home & Comfort Inc",
+     8
+    ],
+    [
+     "On-Time Air Conditioning & Heating LLC",
+     7
+    ],
+    [
+     "Eagle Systems International Inc",
+     6
+    ],
+    [
+     "Jaguar Heating & Air Inc",
+     6
+    ],
+    [
+     "Same Day Sacramento LLC",
+     6
+    ],
+    [
+     "Ars American Residential Services Of California Inc",
+     6
+    ]
+   ]
+  },
+  "roofing": {
+   "cur": 234,
+   "prev": 234,
+   "weekly": [
+    50,
+    65,
+    56,
+    63,
+    49,
+    64,
+    59,
+    62
+   ],
+   "areas": [
+    [
+     "95822",
+     null,
+     33
+    ],
+    [
+     "95819",
+     "East Sacramento",
+     31
+    ],
+    [
+     "95831",
+     "Pocket",
+     29
+    ],
+    [
+     "95820",
+     null,
+     23
+    ],
+    [
+     "95818",
+     "Central City",
+     22
+    ],
+    [
+     "95823",
+     "South Area",
+     15
+    ],
+    [
+     "95816",
+     null,
+     13
+    ],
+    [
+     "95833",
+     null,
+     13
+    ],
+    [
+     "95817",
+     null,
+     12
+    ],
+    [
+     "95824",
+     "Fruitridge/Broadway",
+     8
+    ],
+    [
+     "95826",
+     null,
+     7
+    ],
+    [
+     "95815",
+     null,
+     7
+    ],
+    [
+     "95838",
+     "North Sacramento",
+     7
+    ],
+    [
+     "95828",
+     null,
+     6
+    ],
+    [
+     "95814",
+     null,
+     3
+    ],
+    [
+     "95834",
+     null,
+     2
+    ],
+    [
+     "95825",
+     null,
+     1
+    ],
+    [
+     "95811",
+     null,
+     1
+    ],
+    [
+     "95832",
+     null,
+     1
+    ]
+   ],
+   "median_value": 15947.5,
+   "valued": 232,
+   "builders": [
+    [
+     "Evergold Construction",
+     9
+    ],
+    [
+     "Straight Line Roofing & Construction LLC",
+     8
+    ],
+    [
+     "Alex Perez Roofing Inc",
+     7
+    ],
+    [
+     "Sacramento Roofing Services LLC",
+     7
+    ],
+    [
+     "American Cool Construction Inc",
+     6
+    ],
+    [
+     "Bob Jahn's Roofing Inc",
+     6
+    ],
+    [
+     "Cobex Construction Group",
+     5
+    ],
+    [
+     "Smith Roofing",
+     5
+    ],
+    [
+     "Sacramento Roofing Inc",
+     4
+    ],
+    [
+     "Harlan Quality Roofing Inc",
+     4
+    ]
+   ]
+  },
+  "pools": {
+   "cur": 18,
+   "prev": 13,
+   "weekly": [
+    2,
+    1,
+    9,
+    1,
+    3,
+    6,
+    3,
+    6
+   ],
+   "areas": [
+    [
+     "95831",
+     "Pocket",
+     5
+    ],
+    [
+     "95835",
+     "North Natomas",
+     4
+    ],
+    [
+     "95819",
+     "East Sacramento",
+     2
+    ],
+    [
+     "95833",
+     "South Natomas",
+     2
+    ],
+    [
+     "95823",
+     "South Area",
+     1
+    ],
+    [
+     "95818",
+     "Land Park",
+     1
+    ],
+    [
+     "95758",
+     "South Area",
+     1
+    ],
+    [
+     "95815",
+     "North Sacramento",
+     1
+    ],
+    [
+     "95822",
+     "Land Park",
+     1
+    ]
+   ],
+   "median_value": 60806.0,
+   "valued": 18,
+   "builders": [
+    [
+     "Premier Pools Sacramento LLC",
+     9
+    ],
+    [
+     "M J Excavating Co Inc",
+     2
+    ],
+    [
+     "Dave Gross Enterprises Inc",
+     2
+    ]
+   ]
+  },
+  "demolition": {
+   "cur": 4,
+   "prev": 3,
+   "weekly": [
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    2,
+    2
+   ],
+   "areas": [
+    [
+     "95819",
+     "East Sacramento",
+     2
+    ],
+    [
+     "95817",
+     "Fruitridge/Broadway",
+     1
+    ],
+    [
+     "95818",
+     "Land Park",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 4,
+   "builders": []
+  },
+  "fences-patios": {
+   "cur": 1,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    [
+     "95822",
+     "South Area",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
+  }
+ }
+}

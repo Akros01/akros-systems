@@ -1,0 +1,1528 @@
+{
+ "metro": "new-york-city",
+ "built": "2026-11-17",
+ "latest": "2026-11-13",
+ "end": "2026-11-13",
+ "start": "2026-10-17",
+ "weeks": [
+  [
+   "2026-09-19",
+   "2026-09-25"
+  ],
+  [
+   "2026-09-26",
+   "2026-10-02"
+  ],
+  [
+   "2026-10-03",
+   "2026-10-09"
+  ],
+  [
+   "2026-10-10",
+   "2026-10-16"
+  ],
+  [
+   "2026-10-17",
+   "2026-10-23"
+  ],
+  [
+   "2026-10-24",
+   "2026-10-30"
+  ],
+  [
+   "2026-10-31",
+   "2026-11-06"
+  ],
+  [
+   "2026-11-07",
+   "2026-11-13"
+  ]
+ ],
+ "total": {
+  "cur": 203,
+  "prev": 231,
+  "weekly": [
+   65,
+   48,
+   64,
+   54,
+   57,
+   38,
+   51,
+   57
+  ],
+  "areas": [
+   [
+    "11361",
+    "Queens",
+    6
+   ],
+   [
+    "11385",
+    "Queens",
+    6
+   ],
+   [
+    "11217",
+    "Brooklyn",
+    6
+   ],
+   [
+    "11235",
+    "Brooklyn",
+    6
+   ],
+   [
+    "10314",
+    "Staten Island",
+    6
+   ],
+   [
+    "11222",
+    "Brooklyn",
+    5
+   ],
+   [
+    "11215",
+    "Brooklyn",
+    5
+   ],
+   [
+    "10306",
+    "Staten Island",
+    4
+   ],
+   [
+    "11218",
+    "Brooklyn",
+    4
+   ],
+   [
+    "11232",
+    "Brooklyn",
+    4
+   ],
+   [
+    "10307",
+    "Staten Island",
+    4
+   ],
+   [
+    "11214",
+    "Brooklyn",
+    4
+   ],
+   [
+    "11221",
+    "Brooklyn",
+    4
+   ],
+   [
+    "10021",
+    "Manhattan",
+    4
+   ],
+   [
+    "10309",
+    "Staten Island",
+    4
+   ],
+   [
+    "11231",
+    "Brooklyn",
+    4
+   ],
+   [
+    "11237",
+    "Brooklyn",
+    4
+   ],
+   [
+    "11433",
+    "Queens",
+    3
+   ],
+   [
+    "11357",
+    "Queens",
+    3
+   ],
+   [
+    "10471",
+    "Bronx",
+    3
+   ],
+   [
+    "10014",
+    "Manhattan",
+    3
+   ],
+   [
+    "11427",
+    "Queens",
+    3
+   ],
+   [
+    "10024",
+    "Manhattan",
+    3
+   ],
+   [
+    "11229",
+    "Brooklyn",
+    3
+   ],
+   [
+    "11420",
+    "Queens",
+    3
+   ],
+   [
+    "11423",
+    "Queens",
+    3
+   ],
+   [
+    "11375",
+    "Queens",
+    3
+   ],
+   [
+    "11362",
+    "Queens",
+    3
+   ],
+   [
+    "10304",
+    "Staten Island",
+    3
+   ],
+   [
+    "11106",
+    "Queens",
+    2
+   ],
+   [
+    "11364",
+    "Queens",
+    2
+   ],
+   [
+    "11377",
+    "Queens",
+    2
+   ],
+   [
+    "11378",
+    "Queens",
+    2
+   ],
+   [
+    "11207",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11422",
+    "Queens",
+    2
+   ],
+   [
+    "11411",
+    "Queens",
+    2
+   ],
+   [
+    "11365",
+    "Queens",
+    2
+   ],
+   [
+    "11209",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11204",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11230",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11368",
+    "Queens",
+    2
+   ],
+   [
+    "11233",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11208",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11434",
+    "Queens",
+    2
+   ],
+   [
+    "11220",
+    "Brooklyn",
+    2
+   ],
+   [
+    "10028",
+    "Manhattan",
+    2
+   ],
+   [
+    "11418",
+    "Queens",
+    2
+   ],
+   [
+    "11210",
+    "Brooklyn",
+    2
+   ],
+   [
+    "11203",
+    "Brooklyn",
+    1
+   ],
+   [
+    "11436",
+    "Queens",
+    1
+   ],
+   [
+    "10012",
+    "Manhattan",
+    1
+   ],
+   [
+    "10305",
+    "Staten Island",
+    1
+   ],
+   [
+    "11228",
+    "Brooklyn",
+    1
+   ],
+   [
+    "11102",
+    "Queens",
+    1
+   ],
+   [
+    "10462",
+    "Bronx",
+    1
+   ],
+   [
+    "11374",
+    "Queens",
+    1
+   ],
+   [
+    "11435",
+    "Queens",
+    1
+   ],
+   [
+    "11694",
+    "Queens",
+    1
+   ],
+   [
+    "11223",
+    "Brooklyn",
+    1
+   ],
+   [
+    "11205",
+    "Brooklyn",
+    1
+   ],
+   [
+    "11216",
+    "Brooklyn",
+    1
+   ],
+   [
+    "10023",
+    "Manhattan",
+    1
+   ],
+   [
+    "11419",
+    "Queens",
+    1
+   ],
+   [
+    "10467",
+    "Bronx",
+    1
+   ],
+   [
+    "11103",
+    "Queens",
+    1
+   ],
+   [
+    "10301",
+    "Staten Island",
+    1
+   ],
+   [
+    "11414",
+    "Queens",
+    1
+   ],
+   [
+    "10065",
+    "Manhattan",
+    1
+   ],
+   [
+    "11379",
+    "Queens",
+    1
+   ],
+   [
+    "11004",
+    "Queens",
+    1
+   ],
+   [
+    "11366",
+    "Queens",
+    1
+   ],
+   [
+    "11413",
+    "Queens",
+    1
+   ],
+   [
+    "11367",
+    "Queens",
+    1
+   ],
+   [
+    "11432",
+    "Queens",
+    1
+   ],
+   [
+    "10468",
+    "Bronx",
+    1
+   ],
+   [
+    "10016",
+    "Manhattan",
+    1
+   ],
+   [
+    "11238",
+    "Brooklyn",
+    1
+   ],
+   [
+    "10011",
+    "Manhattan",
+    1
+   ],
+   [
+    "11211",
+    "Brooklyn",
+    1
+   ],
+   [
+    "11226",
+    "Brooklyn",
+    1
+   ],
+   [
+    "10075",
+    "Manhattan",
+    1
+   ],
+   [
+    "11201",
+    "Brooklyn",
+    1
+   ],
+   [
+    "10038",
+    "Manhattan",
+    1
+   ],
+   [
+    "10469",
+    "Bronx",
+    1
+   ],
+   [
+    "10465",
+    "Bronx",
+    1
+   ],
+   [
+    "11040",
+    "Queens",
+    1
+   ],
+   [
+    "11104",
+    "Queens",
+    1
+   ],
+   [
+    "10463",
+    "Bronx",
+    1
+   ],
+   [
+    "10312",
+    "Staten Island",
+    1
+   ],
+   [
+    "11105",
+    "Queens",
+    1
+   ],
+   [
+    "10044",
+    "Manhattan",
+    1
+   ],
+   [
+    "11369",
+    "Queens",
+    1
+   ],
+   [
+    "10025",
+    "Manhattan",
+    1
+   ],
+   [
+    "10002",
+    "Manhattan",
+    1
+   ],
+   [
+    "11354",
+    "Queens",
+    1
+   ],
+   [
+    "11213",
+    "Brooklyn",
+    1
+   ],
+   [
+    "11356",
+    "Queens",
+    1
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": [
+   [
+    "Mercury Building Asso Inc",
+    5
+   ],
+   [
+    "Yafe Meod Corp",
+    3
+   ],
+   [
+    "Tls Construction Group I",
+    3
+   ],
+   [
+    "Jz Construction Group Inc",
+    3
+   ],
+   [
+    "Precision Home Dev Inc",
+    3
+   ],
+   [
+    "Coly Construction Inc",
+    3
+   ],
+   [
+    "Beyer Construction Corp",
+    3
+   ],
+   [
+    "Ntf Management Inc",
+    3
+   ],
+   [
+    "Urena Const & Design Inc",
+    3
+   ],
+   [
+    "Golden Time Contracting I",
+    2
+   ]
+  ]
+ },
+ "cats": {
+  "hvac": {
+   "cur": 3,
+   "prev": 5,
+   "weekly": [
+    2,
+    1,
+    0,
+    2,
+    0,
+    0,
+    0,
+    3
+   ],
+   "areas": [
+    [
+     "11104",
+     "Queens",
+     1
+    ],
+    [
+     "10312",
+     "Staten Island",
+     1
+    ],
+    [
+     "11237",
+     "Brooklyn",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  },
+  "additions-remodels": {
+   "cur": 155,
+   "prev": 181,
+   "weekly": [
+    51,
+    35,
+    50,
+    45,
+    49,
+    30,
+    36,
+    40
+   ],
+   "areas": [
+    [
+     "11217",
+     "Brooklyn",
+     6
+    ],
+    [
+     "11222",
+     "Brooklyn",
+     5
+    ],
+    [
+     "11215",
+     "Brooklyn",
+     5
+    ],
+    [
+     "11385",
+     "Queens",
+     5
+    ],
+    [
+     "11218",
+     "Brooklyn",
+     4
+    ],
+    [
+     "11214",
+     "Brooklyn",
+     4
+    ],
+    [
+     "11221",
+     "Brooklyn",
+     4
+    ],
+    [
+     "11235",
+     "Brooklyn",
+     4
+    ],
+    [
+     "11232",
+     "Brooklyn",
+     3
+    ],
+    [
+     "11433",
+     "Queens",
+     3
+    ],
+    [
+     "10014",
+     "Manhattan",
+     3
+    ],
+    [
+     "10021",
+     "Manhattan",
+     3
+    ],
+    [
+     "10314",
+     "Staten Island",
+     3
+    ],
+    [
+     "11229",
+     "Brooklyn",
+     3
+    ],
+    [
+     "11375",
+     "Queens",
+     3
+    ],
+    [
+     "11231",
+     "Brooklyn",
+     3
+    ],
+    [
+     "11237",
+     "Brooklyn",
+     3
+    ],
+    [
+     "10306",
+     "Staten Island",
+     2
+    ],
+    [
+     "11364",
+     "Queens",
+     2
+    ],
+    [
+     "11357",
+     "Queens",
+     2
+    ],
+    [
+     "11378",
+     "Queens",
+     2
+    ],
+    [
+     "11207",
+     "Brooklyn",
+     2
+    ],
+    [
+     "10309",
+     "Staten Island",
+     2
+    ],
+    [
+     "11411",
+     "Queens",
+     2
+    ],
+    [
+     "11209",
+     "Brooklyn",
+     2
+    ],
+    [
+     "11427",
+     "Queens",
+     2
+    ],
+    [
+     "11204",
+     "Brooklyn",
+     2
+    ],
+    [
+     "11230",
+     "Brooklyn",
+     2
+    ],
+    [
+     "11361",
+     "Queens",
+     2
+    ],
+    [
+     "11368",
+     "Queens",
+     2
+    ],
+    [
+     "11233",
+     "Brooklyn",
+     2
+    ],
+    [
+     "11434",
+     "Queens",
+     2
+    ],
+    [
+     "10024",
+     "Manhattan",
+     2
+    ],
+    [
+     "11423",
+     "Queens",
+     2
+    ],
+    [
+     "11220",
+     "Brooklyn",
+     2
+    ],
+    [
+     "10028",
+     "Manhattan",
+     2
+    ],
+    [
+     "11418",
+     "Queens",
+     2
+    ],
+    [
+     "10304",
+     "Staten Island",
+     2
+    ],
+    [
+     "11203",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11436",
+     "Queens",
+     1
+    ],
+    [
+     "11106",
+     "Queens",
+     1
+    ],
+    [
+     "10307",
+     "Staten Island",
+     1
+    ],
+    [
+     "10012",
+     "Manhattan",
+     1
+    ],
+    [
+     "11377",
+     "Queens",
+     1
+    ],
+    [
+     "10471",
+     "Bronx",
+     1
+    ],
+    [
+     "11228",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11102",
+     "Queens",
+     1
+    ],
+    [
+     "11374",
+     "Queens",
+     1
+    ],
+    [
+     "11435",
+     "Queens",
+     1
+    ],
+    [
+     "11694",
+     "Queens",
+     1
+    ],
+    [
+     "11223",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11205",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11216",
+     "Brooklyn",
+     1
+    ],
+    [
+     "10023",
+     "Manhattan",
+     1
+    ],
+    [
+     "11419",
+     "Queens",
+     1
+    ],
+    [
+     "10467",
+     "Bronx",
+     1
+    ],
+    [
+     "11103",
+     "Queens",
+     1
+    ],
+    [
+     "10301",
+     "Staten Island",
+     1
+    ],
+    [
+     "11414",
+     "Queens",
+     1
+    ],
+    [
+     "11420",
+     "Queens",
+     1
+    ],
+    [
+     "10065",
+     "Manhattan",
+     1
+    ],
+    [
+     "11379",
+     "Queens",
+     1
+    ],
+    [
+     "11004",
+     "Queens",
+     1
+    ],
+    [
+     "11366",
+     "Queens",
+     1
+    ],
+    [
+     "11413",
+     "Queens",
+     1
+    ],
+    [
+     "11432",
+     "Queens",
+     1
+    ],
+    [
+     "10468",
+     "Bronx",
+     1
+    ],
+    [
+     "10016",
+     "Manhattan",
+     1
+    ],
+    [
+     "11238",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11362",
+     "Queens",
+     1
+    ],
+    [
+     "11226",
+     "Brooklyn",
+     1
+    ],
+    [
+     "10075",
+     "Manhattan",
+     1
+    ],
+    [
+     "11201",
+     "Brooklyn",
+     1
+    ],
+    [
+     "10038",
+     "Manhattan",
+     1
+    ],
+    [
+     "10469",
+     "Bronx",
+     1
+    ],
+    [
+     "10465",
+     "Bronx",
+     1
+    ],
+    [
+     "10463",
+     "Bronx",
+     1
+    ],
+    [
+     "11422",
+     "Queens",
+     1
+    ],
+    [
+     "11105",
+     "Queens",
+     1
+    ],
+    [
+     "10044",
+     "Manhattan",
+     1
+    ],
+    [
+     "11369",
+     "Queens",
+     1
+    ],
+    [
+     "10025",
+     "Manhattan",
+     1
+    ],
+    [
+     "10002",
+     "Manhattan",
+     1
+    ],
+    [
+     "11213",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11208",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11356",
+     "Queens",
+     1
+    ],
+    [
+     "11210",
+     "Brooklyn",
+     1
+    ]
+   ],
+   "median_value": 132420.0,
+   "valued": 152,
+   "builders": [
+    [
+     "Mercury Building Asso Inc",
+     5
+    ],
+    [
+     "Tls Construction Group I",
+     3
+    ],
+    [
+     "Jz Construction Group Inc",
+     3
+    ],
+    [
+     "Precision Home Dev Inc",
+     3
+    ],
+    [
+     "Coly Construction Inc",
+     3
+    ],
+    [
+     "Urena Const & Design Inc",
+     3
+    ],
+    [
+     "Yafe Meod Corp",
+     2
+    ],
+    [
+     "Ace Group Ny Corp",
+     2
+    ],
+    [
+     "Rauch Design Build Inc",
+     2
+    ],
+    [
+     "The Plumbing And Sprinkler Corp",
+     2
+    ]
+   ]
+  },
+  "new-homes": {
+   "cur": 14,
+   "prev": 24,
+   "weekly": [
+    9,
+    6,
+    6,
+    3,
+    2,
+    0,
+    5,
+    7
+   ],
+   "areas": [
+    [
+     "10307",
+     "Staten Island",
+     3
+    ],
+    [
+     "10306",
+     "Staten Island",
+     2
+    ],
+    [
+     "10314",
+     "Staten Island",
+     2
+    ],
+    [
+     "11235",
+     "Brooklyn",
+     2
+    ],
+    [
+     "10309",
+     "Staten Island",
+     2
+    ],
+    [
+     "10305",
+     "Staten Island",
+     1
+    ],
+    [
+     "11361",
+     "Queens",
+     1
+    ],
+    [
+     "10304",
+     "Staten Island",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": [
+    [
+     "Beyer Construction Corp",
+     3
+    ],
+    [
+     "Cavagnaro Contracting LLC",
+     2
+    ],
+    [
+     "Real Plumbing Corp",
+     2
+    ],
+    [
+     "Dae Development Corp",
+     2
+    ]
+   ]
+  },
+  "windows-doors": {
+   "cur": 3,
+   "prev": 1,
+   "weekly": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "11385",
+     "Queens",
+     1
+    ],
+    [
+     "10024",
+     "Manhattan",
+     1
+    ],
+    [
+     "11232",
+     "Brooklyn",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  },
+  "demolition": {
+   "cur": 8,
+   "prev": 8,
+   "weekly": [
+    1,
+    4,
+    3,
+    0,
+    1,
+    3,
+    4,
+    0
+   ],
+   "areas": [
+    [
+     "11422",
+     "Queens",
+     1
+    ],
+    [
+     "11361",
+     "Queens",
+     1
+    ],
+    [
+     "11423",
+     "Queens",
+     1
+    ],
+    [
+     "11367",
+     "Queens",
+     1
+    ],
+    [
+     "10314",
+     "Staten Island",
+     1
+    ],
+    [
+     "11106",
+     "Queens",
+     1
+    ],
+    [
+     "11377",
+     "Queens",
+     1
+    ],
+    [
+     "11040",
+     "Queens",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 7,
+   "builders": []
+  },
+  "adus": {
+   "cur": 8,
+   "prev": 6,
+   "weekly": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    0,
+    1,
+    4
+   ],
+   "areas": [
+    [
+     "11361",
+     "Queens",
+     2
+    ],
+    [
+     "11365",
+     "Queens",
+     2
+    ],
+    [
+     "11362",
+     "Queens",
+     2
+    ],
+    [
+     "11357",
+     "Queens",
+     1
+    ],
+    [
+     "11354",
+     "Queens",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 6,
+   "builders": [
+    [
+     "Golden Time Contracting I",
+     2
+    ],
+    [
+     "Gx Construction Mgmt Inc",
+     2
+    ],
+    [
+     "Dhc Power Management Corp",
+     2
+    ]
+   ]
+  },
+  "siding": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "fences-patios": {
+   "cur": 6,
+   "prev": 5,
+   "weekly": [
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    4,
+    0
+   ],
+   "areas": [
+    [
+     "10462",
+     "Bronx",
+     1
+    ],
+    [
+     "10471",
+     "Bronx",
+     1
+    ],
+    [
+     "10011",
+     "Manhattan",
+     1
+    ],
+    [
+     "10021",
+     "Manhattan",
+     1
+    ],
+    [
+     "11210",
+     "Brooklyn",
+     1
+    ],
+    [
+     "11231",
+     "Brooklyn",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 6,
+   "builders": []
+  },
+  "roofing": {
+   "cur": 1,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "areas": [
+    [
+     "11211",
+     "Brooklyn",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
+  },
+  "solar": {
+   "cur": 0,
+   "prev": 1,
+   "weekly": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "pools": {
+   "cur": 2,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "10471",
+     "Bronx",
+     1
+    ],
+    [
+     "11427",
+     "Queens",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 2,
+   "builders": []
+  },
+  "foundation": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "water-heaters": {
+   "cur": 3,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "areas": [
+    [
+     "11420",
+     "Queens",
+     2
+    ],
+    [
+     "11208",
+     "Brooklyn",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 2,
+   "builders": []
+  }
+ }
+}

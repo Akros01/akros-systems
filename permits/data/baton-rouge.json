@@ -1,0 +1,865 @@
+{
+ "metro": "baton-rouge",
+ "built": "2026-11-17",
+ "latest": "2026-11-13",
+ "end": "2026-11-13",
+ "start": "2026-10-17",
+ "weeks": [
+  [
+   "2026-09-19",
+   "2026-09-25"
+  ],
+  [
+   "2026-09-26",
+   "2026-10-02"
+  ],
+  [
+   "2026-10-03",
+   "2026-10-09"
+  ],
+  [
+   "2026-10-10",
+   "2026-10-16"
+  ],
+  [
+   "2026-10-17",
+   "2026-10-23"
+  ],
+  [
+   "2026-10-24",
+   "2026-10-30"
+  ],
+  [
+   "2026-10-31",
+   "2026-11-06"
+  ],
+  [
+   "2026-11-07",
+   "2026-11-13"
+  ]
+ ],
+ "total": {
+  "cur": 245,
+  "prev": 212,
+  "weekly": [
+   50,
+   54,
+   61,
+   47,
+   85,
+   50,
+   53,
+   57
+  ],
+  "areas": [
+   [
+    "70808",
+    "Baton Rouge",
+    56
+   ],
+   [
+    "70816",
+    "Baton Rouge",
+    36
+   ],
+   [
+    "70806",
+    "Baton Rouge",
+    26
+   ],
+   [
+    "70815",
+    "Baton Rouge",
+    19
+   ],
+   [
+    "70802",
+    "Baton Rouge",
+    14
+   ],
+   [
+    "70820",
+    "Baton Rouge",
+    14
+   ],
+   [
+    "70809",
+    "Baton Rouge",
+    12
+   ],
+   [
+    "70811",
+    "Baton Rouge",
+    11
+   ],
+   [
+    "70814",
+    "Baton Rouge",
+    9
+   ],
+   [
+    "70810",
+    "Baton Rouge",
+    9
+   ],
+   [
+    "70805",
+    "Baton Rouge",
+    8
+   ],
+   [
+    "70791",
+    "Baton Rouge",
+    8
+   ],
+   [
+    "70807",
+    "Baton Rouge",
+    8
+   ],
+   [
+    "70812",
+    "Baton Rouge",
+    5
+   ],
+   [
+    "70714",
+    "Baton Rouge",
+    4
+   ],
+   [
+    "70777",
+    "Baton Rouge",
+    2
+   ],
+   [
+    "70739",
+    "Baton Rouge",
+    1
+   ],
+   [
+    "70770",
+    "Baton Rouge",
+    1
+   ],
+   [
+    "70819",
+    "Baton Rouge",
+    1
+   ],
+   [
+    "70836",
+    "Baton Rouge",
+    1
+   ]
+  ],
+  "median_value": null,
+  "valued": 0,
+  "builders": [
+   [
+    "Premier South LLC",
+    19
+   ],
+   [
+    "Lifetime Roofing LLC",
+    15
+   ],
+   [
+    "Premier South LLC - Christopher Todd Sutton",
+    10
+   ],
+   [
+    "Garcia Roofing - Drew Braud",
+    6
+   ],
+   [
+    "Lifetime Roofing LLC - Corey Nolan Coxe",
+    5
+   ],
+   [
+    "Hargrove Roofing, LLC",
+    5
+   ],
+   [
+    "Parish Construction & Roofing LLC",
+    5
+   ],
+   [
+    "Johnson Industries, LLC",
+    4
+   ],
+   [
+    "Jones Home Services LLC",
+    4
+   ],
+   [
+    "Redstick Roofing Specialists LLC",
+    3
+   ]
+  ]
+ },
+ "cats": {
+  "electrical-service": {
+   "cur": 11,
+   "prev": 11,
+   "weekly": [
+    2,
+    5,
+    3,
+    1,
+    5,
+    3,
+    1,
+    2
+   ],
+   "areas": [
+    [
+     "70805",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70802",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70811",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70806",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70808",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70820",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": 5500.0,
+   "valued": 11,
+   "builders": [
+    [
+     "B.A.T. Services LLC - Blake Thibodeaux",
+     2
+    ]
+   ]
+  },
+  "roofing": {
+   "cur": 152,
+   "prev": 116,
+   "weekly": [
+    22,
+    37,
+    32,
+    25,
+    49,
+    31,
+    36,
+    36
+   ],
+   "areas": [
+    [
+     "70808",
+     "Baton Rouge",
+     37
+    ],
+    [
+     "70816",
+     "Baton Rouge",
+     34
+    ],
+    [
+     "70806",
+     "Baton Rouge",
+     16
+    ],
+    [
+     "70815",
+     "Baton Rouge",
+     14
+    ],
+    [
+     "70814",
+     "Baton Rouge",
+     8
+    ],
+    [
+     "70809",
+     "Baton Rouge",
+     7
+    ],
+    [
+     "70810",
+     "Baton Rouge",
+     6
+    ],
+    [
+     "70811",
+     "Baton Rouge",
+     5
+    ],
+    [
+     "70802",
+     "Baton Rouge",
+     5
+    ],
+    [
+     "70820",
+     "Baton Rouge",
+     5
+    ],
+    [
+     "70805",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70791",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70807",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70777",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70812",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70739",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70770",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70819",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": 20022.0,
+   "valued": 151,
+   "builders": [
+    [
+     "Premier South LLC",
+     19
+    ],
+    [
+     "Lifetime Roofing LLC",
+     15
+    ],
+    [
+     "Premier South LLC - Christopher Todd Sutton",
+     10
+    ],
+    [
+     "Garcia Roofing - Drew Braud",
+     6
+    ],
+    [
+     "Lifetime Roofing LLC - Corey Nolan Coxe",
+     5
+    ],
+    [
+     "Hargrove Roofing, LLC",
+     5
+    ],
+    [
+     "Parish Construction & Roofing LLC",
+     5
+    ],
+    [
+     "Johnson Industries, LLC",
+     4
+    ],
+    [
+     "Jones Home Services LLC",
+     4
+    ],
+    [
+     "Redstick Roofing Specialists LLC",
+     3
+    ]
+   ]
+  },
+  "new-homes": {
+   "cur": 17,
+   "prev": 12,
+   "weekly": [
+    4,
+    1,
+    4,
+    3,
+    10,
+    0,
+    2,
+    5
+   ],
+   "areas": [
+    [
+     "70714",
+     "Baton Rouge",
+     4
+    ],
+    [
+     "70820",
+     "Baton Rouge",
+     4
+    ],
+    [
+     "70811",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70808",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70810",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70815",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70836",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": 236487.5,
+   "valued": 16,
+   "builders": [
+    [
+     "D.R. Horton, Inc. - Gulf Coast",
+     2
+    ],
+    [
+     "D.R. Horton, Inc. - Gulf Coast - Brad Bowling",
+     2
+    ],
+    [
+     "Level Construction & Development, LLC",
+     2
+    ],
+    [
+     "A. P. Dodson, L.L.C",
+     2
+    ],
+    [
+     "Winfield & Company Inc",
+     2
+    ]
+   ]
+  },
+  "demolition": {
+   "cur": 3,
+   "prev": 5,
+   "weekly": [
+    2,
+    2,
+    0,
+    1,
+    3,
+    0,
+    0,
+    0
+   ],
+   "areas": [
+    [
+     "70808",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70802",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70811",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  },
+  "pools": {
+   "cur": 9,
+   "prev": 3,
+   "weekly": [
+    0,
+    0,
+    2,
+    1,
+    4,
+    2,
+    1,
+    2
+   ],
+   "areas": [
+    [
+     "70808",
+     "Baton Rouge",
+     5
+    ],
+    [
+     "70820",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70809",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70815",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70806",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": 110085.0,
+   "valued": 9,
+   "builders": []
+  },
+  "additions-remodels": {
+   "cur": 26,
+   "prev": 35,
+   "weekly": [
+    12,
+    4,
+    10,
+    9,
+    6,
+    10,
+    6,
+    4
+   ],
+   "areas": [
+    [
+     "70802",
+     "Baton Rouge",
+     5
+    ],
+    [
+     "70807",
+     "Baton Rouge",
+     5
+    ],
+    [
+     "70808",
+     "Baton Rouge",
+     4
+    ],
+    [
+     "70809",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70806",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70820",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70805",
+     "Baton Rouge",
+     2
+    ],
+    [
+     "70791",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70812",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70810",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": 49500.0,
+   "valued": 26,
+   "builders": [
+    [
+     "Guarantee Restoration Services, LLC",
+     2
+    ]
+   ]
+  },
+  "foundation": {
+   "cur": 1,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "areas": [
+    [
+     "70806",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
+  },
+  "fences-patios": {
+   "cur": 13,
+   "prev": 19,
+   "weekly": [
+    4,
+    3,
+    7,
+    5,
+    5,
+    2,
+    2,
+    4
+   ],
+   "areas": [
+    [
+     "70808",
+     "Baton Rouge",
+     6
+    ],
+    [
+     "70791",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70812",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70820",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70815",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70802",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": 4838.0,
+   "valued": 13,
+   "builders": []
+  },
+  "windows-doors": {
+   "cur": 5,
+   "prev": 3,
+   "weekly": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    3,
+    1
+   ],
+   "areas": [
+    [
+     "70791",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70812",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70815",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70809",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70807",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 5,
+   "builders": [
+    [
+     "Home Depot USA, Inc. - Mindy Winkler",
+     2
+    ],
+    [
+     "Windows USA, LLC - Justin Cash",
+     2
+    ]
+   ]
+  },
+  "water-heaters": {
+   "cur": 4,
+   "prev": 4,
+   "weekly": [
+    2,
+    0,
+    1,
+    1,
+    2,
+    0,
+    1,
+    1
+   ],
+   "areas": [
+    [
+     "70806",
+     "Baton Rouge",
+     3
+    ],
+    [
+     "70814",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  },
+  "hvac": {
+   "cur": 1,
+   "prev": 4,
+   "weekly": [
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "areas": [
+    [
+     "70816",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 1,
+   "builders": []
+  },
+  "ev-chargers": {
+   "cur": 3,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1
+   ],
+   "areas": [
+    [
+     "70816",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70815",
+     "Baton Rouge",
+     1
+    ],
+    [
+     "70806",
+     "Baton Rouge",
+     1
+    ]
+   ],
+   "median_value": null,
+   "valued": 3,
+   "builders": []
+  },
+  "adus": {
+   "cur": 0,
+   "prev": 0,
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "areas": [],
+   "median_value": null,
+   "valued": 0,
+   "builders": []
+  }
+ }
+}

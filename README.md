@@ -20,7 +20,7 @@ The pages show counts only: no owner names, phone numbers or street addresses.
 ## How it runs
 
 - `tools/permits/build.py` downloads recent residential permits from each feed, sorts them into job types, and writes `permits/` and `sitemap.xml`. A metro whose feed fails keeps last week's numbers.
-- `.github/workflows/refresh-permit-pages.yml` runs the build every Monday, commits any changes and notifies IndexNow (Bing and others) with `tools/permits/indexnow.py`. Start it by hand from the **Actions** tab with **Run workflow**.
+- `.github/workflows/refresh-permit-pages.yml` runs the build every Monday (and right after the page code changes), commits any changes, asks GitHub Pages to publish them and notifies IndexNow (Bing and others) with `tools/permits/indexnow.py`. Start it by hand from the **Actions** tab with **Run workflow**.
 - To turn the weekly refresh off, disable that workflow in the Actions tab.
 
 Run it locally with Python 3.10 or newer, no packages needed:

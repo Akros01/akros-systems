@@ -1,15 +1,20 @@
 name: Refresh permit pages
 
-# Rebuilds /permits/ from the cities' open-data feeds every Monday, commits the
-# new pages, and tells IndexNow search engines about them. Run it by hand from
-# the Actions tab with "Run workflow".
+# Rebuilds /permits/ from the cities' open-data feeds every Monday (and once
+# right after the page code changes), commits the new pages, asks GitHub Pages
+# to publish them, and tells IndexNow search engines. Run it by hand from the
+# Actions tab with "Run workflow".
 on:
   schedule:
     - cron: "37 13 * * 1"
+  push:
+    branches: [main]
+    paths: ["tools/permits/**", ".github/workflows/refresh-permit-pages.yml"]
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: refresh-permit-pages
@@ -40,8 +45,16 @@ jobs:
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Notify IndexNow
+      # Pushes made with the workflow token don't start a Pages build on their
+      # own, so request one.
+      - name: Publish to GitHub Pages
         if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || echo "Pages build request was refused; the site updates on the next push."
+
+      - name: Notify IndexNow
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
         run: |
-          sleep 90
+          sleep 120
           python3 tools/permits/indexnow.py

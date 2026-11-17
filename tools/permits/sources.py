@@ -1,9 +1,15 @@
 """Fetch residential permits from six public open-data feeds and sort them
 into job types.
 
-Every record that leaves this module carries only: permit id, issue date,
-ZIP (or Chicago community area), a place label, job types and declared value.
-No owner names, addresses, phone numbers or descriptions are kept.
+By default every record that leaves this module carries only: permit id,
+issue date, ZIP (or Chicago community area), a place label, job types and
+declared value. That is all the public pages ever see.
+
+With detail=True (used only by brief.py, for private customer lists and
+samples that are never committed or published) each record also carries the
+property address, the filed description, the permit type, the contractor named
+on the permit and a link to the source record. Owner names, owner phone numbers
+and applicant contacts are never requested from any feed.
 """
 import datetime as dt
 import json
@@ -74,9 +80,18 @@ def place_name(value):
     return re.sub(r"\bMc([a-z])", lambda m: "Mc" + m.group(1).upper(), text) or None
 
 
-def record(pid, issued, area, place, cats, value=None):
-    return {"id": str(pid), "issued": issued.isoformat(), "area": area, "place": place_name(place),
-            "cats": cats, "value": value}
+def record(pid, issued, area, place, cats, value=None, detail=None):
+    rec = {"id": str(pid), "issued": issued.isoformat(), "area": area, "place": place_name(place),
+           "cats": cats, "value": value}
+    if detail is not None:
+        rec["detail"] = {k: re.sub(r"\s+", " ", str(v)).strip() if v not in (None, "") else ""
+                         for k, v in detail.items()}
+    return rec
+
+
+def link_url(value):
+    """Socrata URL columns arrive as {'url': ...}; plain strings pass through."""
+    return value.get("url", "") if isinstance(value, dict) else (value or "")
 
 
 POOL = re.compile(r"\b(pool|spa|swimming)\b", re.I)
@@ -88,11 +103,12 @@ ADU = re.compile(r"accessory dwelling|\bj?adu\b|junior accessory", re.I)
 
 
 # ---------------------------------------------------------------- Austin
-def austin(since):
+def austin(since, detail=False):
     rows = socrata(
         "data.austintexas.gov", "3syk-w9eu",
         f"issue_date >= '{since}T00:00:00' AND permit_class_mapped = 'Residential'",
-        "permit_number,permittype,work_class,permit_class,description,issue_date,original_zip,original_city,total_job_valuation")
+        "permit_number,permittype,work_class,permit_class,description,issue_date,original_zip,original_city,total_job_valuation"
+        + (",permit_type_desc,original_address1,contractor_company_name,link" if detail else ""))
     out = []
     for r in rows:
         pt, wc = r.get("permittype", ""), r.get("work_class", "")
@@ -125,7 +141,11 @@ def austin(since):
             continue
         place = (r.get("original_city") or "").title() or None
         out.append(record(r["permit_number"], iso_date(r["issue_date"]), zip5(r.get("original_zip")),
-                          place, [cat], money(r.get("total_job_valuation"))))
+                          place, [cat], money(r.get("total_job_valuation")),
+                          dict(address=r.get("original_address1"), description=d,
+                               permit_type=" / ".join(x for x in (r.get("permit_type_desc") or pt, pc, wc) if x),
+                               contractor=r.get("contractor_company_name"),
+                               source_link=link_url(r.get("link"))) if detail else None))
     return out
 
 
@@ -143,11 +163,12 @@ COLLIN_TYPES = {
 }
 
 
-def collin(since):
+def collin(since, detail=False):
     rows = socrata(
         "data.texas.gov", "82ee-gbj5",
         f"permitissueddate >= '{since}T00:00:00' AND proprescom = 'Residential'",
-        "permitid,permittypedescr,permitissueddate,permitcomments,situscity,situszip,permitvalue")
+        "permitid,permittypedescr,permitissueddate,permitcomments,situscity,situszip,permitvalue"
+        + (",situsconcatshort,permitbuildername,:id" if detail else ""))
     out = []
     for r in rows:
         t, c = r.get("permittypedescr", ""), (r.get("permitcomments") or "").upper()
@@ -160,7 +181,11 @@ def collin(since):
         if not cat or not r.get("permitissueddate"):
             continue
         out.append(record(r["permitid"], iso_date(r["permitissueddate"]), zip5(r.get("situszip")),
-                          (r.get("situscity") or "").title() or None, [cat], money(r.get("permitvalue"))))
+                          (r.get("situscity") or "").title() or None, [cat], money(r.get("permitvalue")),
+                          dict(address=r.get("situsconcatshort"), description=r.get("permitcomments"),
+                               permit_type=t, contractor=r.get("permitbuildername"),
+                               source_link=f"https://data.texas.gov/resource/82ee-gbj5/{r[':id']}" if r.get(":id") else "")
+                          if detail else None))
     return out
 
 
@@ -178,12 +203,13 @@ DALLAS_TYPES = {
 }
 
 
-def dallas(since):
+def dallas(since, detail=False):
     today = dt.date.today()
     months = months_back(today, 4)
     likes = " OR ".join(f"issued_date like '{m:02d}/%/{y % 100:02d}'" for m, y in months)
     rows = socrata("www.dallasopendata.com", "e7gq-4sah", f"({likes})",
-                   "permit_number,permit_type,issued_date,zip_code,value")
+                   "permit_number,permit_type,issued_date,zip_code,value"
+                   + (",street_address,contractor,work_description,:id" if detail else ""))
     out = []
     for r in rows:
         cat = DALLAS_TYPES.get(r.get("permit_type", ""))
@@ -195,7 +221,12 @@ def dallas(since):
             continue
         if issued.isoformat() < since:
             continue
-        out.append(record(r["permit_number"], issued, zip5(r.get("zip_code")), None, [cat], money(r.get("value"))))
+        street = re.sub(r",\s*Dallas,\s*TX\s*$", "", r.get("street_address") or "", flags=re.I)
+        out.append(record(r["permit_number"], issued, zip5(r.get("zip_code")), None, [cat], money(r.get("value")),
+                          dict(address=street, description=r.get("work_description"),
+                               permit_type=r.get("permit_type"), contractor=r.get("contractor"),
+                               source_link=f"https://www.dallasopendata.com/resource/e7gq-4sah/{r[':id']}" if r.get(":id") else "")
+                          if detail else None))
     return out
 
 
@@ -207,11 +238,12 @@ LA_REMODEL = re.compile(r"REMODEL|KITCHEN|BATH|ALTERATION|INTERIOR|RENOVAT|ADDIT
 LA_WILDFIRE = re.compile(r"WILDFIRE|FIRE REBUILD|REBUILD[^.]{0,40}FIRE", re.I)
 
 
-def los_angeles(since):
+def los_angeles(since, detail=False):
     rows = socrata(
         "data.lacity.org", "pi9x-tg5x",
         f"issue_date >= '{since}T00:00:00' AND permit_sub_type = '1 or 2 Family Dwelling'",
-        "permit_nbr,zip_code,cpa,permit_type,use_desc,work_desc,issue_date,valuation,status_desc")
+        "permit_nbr,zip_code,cpa,permit_type,use_desc,work_desc,issue_date,valuation,status_desc"
+        + (",primary_address,:id" if detail else ""))
     out = []
     for r in rows:
         wd, pt, use = r.get("work_desc", "") or "", r.get("permit_type", ""), r.get("use_desc", "")
@@ -242,7 +274,11 @@ def los_angeles(since):
         if not cats or not r.get("issue_date"):
             continue
         out.append(record(r["permit_nbr"], iso_date(r["issue_date"]), zip5(r.get("zip_code")),
-                          r.get("cpa") or None, cats, money(r.get("valuation"))))
+                          r.get("cpa") or None, cats, money(r.get("valuation")),
+                          dict(address=r.get("primary_address"), description=wd,
+                               permit_type=" / ".join(x for x in (pt, use) if x), contractor="",
+                               source_link=f"https://data.lacity.org/resource/pi9x-tg5x/{r[':id']}" if r.get(":id") else "")
+                          if detail else None))
     return out
 
 
@@ -266,11 +302,23 @@ def chicago_areas():
     return {str(int(float(r["area_numbe"]))): r["community"].title() for r in rows}
 
 
-def chicago(since):
+CHI_CONTACTS = ",".join(f"contact_{n}_type,contact_{n}_name" for n in range(1, 6))
+
+
+def chicago_contractor(r):
+    """First contact the feed labels as a contractor; owners are skipped."""
+    for n in range(1, 6):
+        if "CONTRACTOR" in (r.get(f"contact_{n}_type") or "").upper():
+            return r.get(f"contact_{n}_name") or ""
+    return ""
+
+
+def chicago(since, detail=False):
     names = chicago_areas()
     rows = socrata(
         "data.cityofchicago.org", "ydr8-5enu", f"issue_date >= '{since}T00:00:00'",
-        "id,permit_type,work_type,work_description,issue_date,community_area,reported_cost")
+        "id,permit_type,work_type,work_description,issue_date,community_area,reported_cost"
+        + (",permit_,street_number,street_direction,street_name," + CHI_CONTACTS if detail else ""))
     out = []
     for r in rows:
         pt, wt, d = r.get("permit_type", ""), r.get("work_type", ""), r.get("work_description", "") or ""
@@ -288,7 +336,14 @@ def chicago(since):
         ca = r.get("community_area")
         area = str(int(float(ca))) if ca else None
         out.append(record(r["id"], iso_date(r["issue_date"]), area, names.get(area) if area else None,
-                          [cat], money(r.get("reported_cost"))))
+                          [cat], money(r.get("reported_cost")),
+                          dict(permit_number=r.get("permit_"),
+                               address=" ".join(x for x in (r.get("street_number"), r.get("street_direction"),
+                                                            r.get("street_name")) if x),
+                               description=d, permit_type=" / ".join(x for x in (pt, wt) if x),
+                               contractor=chicago_contractor(r),
+                               source_link=f"https://data.cityofchicago.org/resource/ydr8-5enu.json?id={r['id']}")
+                          if detail else None))
     return out
 
 
@@ -298,10 +353,12 @@ SAC_URL = ("https://services5.arcgis.com/54falWtcpty3V47Z/ArcGIS/rest/services/"
 SAC_HOMES = ("Single Family", "Duplex", "Half Plex")
 
 
-def sacramento(since):
+def sacramento(since, detail=False):
     today = dt.date.today()
     likes = " OR ".join(f"Status_Date LIKE '{m:02d}/%/{y}'" for m, y in months_back(today, 4))
     fields = "OBJECTID,Application,Type,Sub_Type,Category,Status_Date,Current_Status,ZIP,Comm_Plan_Area,Activity_Code,Work_Desc,Valuation"
+    if detail:
+        fields += ",Address,Contractor"
     rows, offset = [], 0
     while True:
         params = {"where": f"Type = 'Residential' AND ({likes})", "outFields": fields, "f": "json",
@@ -347,7 +404,10 @@ def sacramento(since):
             continue
         place = (r.get("Comm_Plan_Area") or "").strip().title() or None
         out.append(record(r.get("Application") or r["OBJECTID"], issued, zip5(r.get("ZIP")), place, [cat],
-                          money(r.get("Valuation"))))
+                          money(r.get("Valuation")),
+                          dict(address=r.get("Address"), description=wd,
+                               permit_type=" / ".join(x for x in (st, cat_) if x), contractor=r.get("Contractor"),
+                               source_link="") if detail else None))
     return out
 
 

@@ -28,3 +28,18 @@ Run it locally with Python 3.10 or newer, no packages needed:
 ```
 python3 tools/permits/build.py
 ```
+
+## Customer lists and free samples
+
+`tools/permits/brief.py` uses the same feeds and job types to write one customer's list: every matching permit with the address, filed scope, permit type and contractor (owner names are never collected). It writes a spreadsheet and a short text summary to `briefs/`, which git ignores. These lists are private: send each one only to the customer it was made for, and never commit or publish them.
+
+```
+# Free sample: every pool permit in Collin County over four weeks
+python3 tools/permits/brief.py --metro collin-county --cats pools --since 2026-10-13 --until 2026-11-09
+
+# A customer's Monday list: pools and new homes in three Dallas ZIPs, last 7 days
+python3 tools/permits/brief.py --metro dallas --cats pools,new-homes --zips 75214,75218,75230 --days 7 --name "Customer Name"
+
+# Job types each metro supports
+python3 tools/permits/brief.py --list
+```
